@@ -137,3 +137,6 @@ dist
 
 # bun
 bun.lockb
+
+# package-lock.json
+package-lock.json
