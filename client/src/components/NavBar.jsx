@@ -3,16 +3,14 @@ import { NavLink } from 'react-router-dom';
 import logo from '../images/logo.png';
 
 const NavBar = () => {
+    const navitems=[{key:'Home',path:'/'},{key:'Search College',path:'searchcolleges'},{key:'Academics',path:'academics'},{key:'Blogs',path:'blogs'}];
     return (
         <>
             <div className="nav-container nav-bar">
                 <img src={logo} alt="" className='logo' />
                 <div className="mid-link">
                     <ul className="nav-items">
-                        <NavLink to='/' className='li-item'>Home</NavLink>
-                        <NavLink to='searchcolleges' className='li-item'>Search Colleges</NavLink>
-                        <NavLink to='academics' className='li-item'>Academics</NavLink>
-                        <NavLink to='blogs' className='li-item'>Blogs</NavLink>
+                        {navitems.map((elem,ind)=><NavLink to={elem.path} className='li-item' key={ind}>{elem.key}</NavLink>)}
                     </ul>
                 </div>
                 <div className="search-box">
