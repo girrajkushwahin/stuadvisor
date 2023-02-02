@@ -7,15 +7,11 @@ import Footer from './Footer';
 const Template = () => {
   return (
     <>
-      {/* <div className="container-fluid main-container"> */}
       <div className="main-container">
         <NavBar />
         <div className="main-content">
           <SideBar />
-          <div className="main-item main-right">
-            <Outlet />
-          </div>
-          
+          <Outlet />
         </div>
         <Footer />
       </div>

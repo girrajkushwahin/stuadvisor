@@ -87,6 +87,8 @@ body{
   position: relative;
   text-transform: uppercase;
   font-weight: var(--wight-3);
+  text-decoration: none;
+  color: var(--white);
 }
 .nav-items .li-item:hover{
   cursor: pointer;

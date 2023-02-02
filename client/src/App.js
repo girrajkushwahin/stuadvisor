@@ -2,8 +2,9 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Template from './components/Template';
 import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
+import SearchCollege from './components/SearchCollege';
+import Academics from './components/Academics';
+import Blogs from './components/Blogs';
 import Error from './components/Error';
 
 const App = () => {
@@ -12,10 +13,11 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Template />}>
           <Route index element={<Home />} />
-          <Route path='about' element ={<About/>} />
-          <Route path='contact' element ={<Contact/>} />
+          <Route path='searchcolleges' element={<SearchCollege />} />
+          <Route path='academics' element={<Academics />} />
+          <Route path='blogs' element={<Blogs />} />
         </Route>
-        <Route path='*' element ={<Error/>} />
+        <Route path='*' element={<Error />} />
       </Routes>
     </>
   )
