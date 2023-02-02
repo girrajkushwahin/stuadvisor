@@ -1,41 +1,27 @@
 import React from 'react';
+import logo from '../images/logo.png';
+import searchIcon from '../images/search-icon.png'
+import searchIcon1 from '../images/search-icon-black.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const NavBar = () => {
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="https://www.google.com">Navbar</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="https://www.google.com">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="https://www.google.com">Link</a>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="https://www.google.com" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="https://www.google.com">Action</a></li>
-                                    <li><a className="dropdown-item" href="https://www.google.com">Another action</a></li>
-                                    <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="https://www.google.com">Something else here</a></li>
-                                </ul>
-                            </li>
+            <div className="nav-container nav-bar">
+                    <img src={logo} alt="" className='logo'/>
+                    <div className="mid-link">
+                        <ul className="nav-items">
+                            <li className="li-item nav-item1 active">Home</li>
+                            <li className="li-item nav-item2">Blogs</li>
+                            <li className="li-item nav-item3">Accadmics</li>
+                            <li className="li-item nav-item4">Search Colleges</li>
                         </ul>
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                                <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>
                     </div>
-                </div>
-            </nav>
+                    <div className="search-box">
+                        <input type="text" placeholder='Search ' />
+                        <img src={searchIcon1} alt="" />
+                    </div>
+            </div>
         </>
     )
 }
