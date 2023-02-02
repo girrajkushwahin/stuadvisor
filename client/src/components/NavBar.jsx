@@ -1,8 +1,5 @@
 import React from 'react';
 import logo from '../images/logo.png';
-import searchIcon from '../images/search-icon.png'
-import searchIcon1 from '../images/search-icon-black.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const NavBar = () => {
     return (
