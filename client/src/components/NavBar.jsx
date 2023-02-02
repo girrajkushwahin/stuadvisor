@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../images/logo.png';
 
 const NavBar = () => {
@@ -7,7 +7,7 @@ const NavBar = () => {
     return (
         <>
             <div className="nav-container nav-bar">
-                <img src={logo} alt="" className='logo' />
+                <Link to='/'><img src={logo} alt="stuadvisor" className='logo' /></Link>
                 <div className="mid-link">
                     <ul className="nav-items">
                         {navitems.map((elem,ind)=><NavLink to={elem.path} className='li-item' key={ind}>{elem.key}</NavLink>)}
