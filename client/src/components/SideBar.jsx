@@ -3,21 +3,15 @@ import React from 'react'
 const SideBar = () => {
     return (
         <>
-            {/* <h2>create sidebar</h2>
-            <div className="side-bar">
-                
-            </div> */}
-
 
             <div className="main-item main-left">
-                hello
-                {/* <div className="nav"></div>
-                <div className="content">
-                    <div className="left"></div>
-                    <div className="right"></div>
-                </div>
-                <div className="footer"></div> */}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque ea. Accusamus quo fugit exercitationem quisquam voluptate. Laborum sunt pariatur eum, ratione dolore laboriosam numquam illum expedita id atque consequuntur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, reiciendis, beatae omnis tenetur veritatis, ad ex ipsum vel magni fugit exercitationem? Magnam eius quod, ipsam officiis temporibus natus voluptas quam neque officia itaque dolore qui aliquid, consequuntur incidunt. Labore reiciendis placeat voluptatum nisi, totam excepturi accusamus nostrum, magni commodi magnam quaerat fugit exercitationem a tenetur quas alias accusantium? Voluptatibus dolorem consectetur aliquam veritatis inventore voluptatum velit temporibus sed autem. Magnam nemo ad asperiores cumque? Accusamus unde porro quam omnis illo ullam deleniti, veritatis, reiciendis atque, est quaerat. Nesciunt ut neque corrupti modi tempora incidunt velit, fuga, sapiente fugit a mollitia.
+                <ul className='side-ul'>
+                    <li className='side-li side-li1'><i className="i-tag fa-solid fa-house"></i><span>Home</span></li>
+                    <li className='side-li side-li2'><i className="i-tag fa-solid fa-address-card"></i><span>About</span></li>
+                    <li className='side-li side-li3'><i className="i-tag fa-sharp fa-solid fa-laptop"></i><span>Courses</span></li>
+                    <li className='side-li side-li4'><i className="i-tag fa-brands fa-blogger-b"></i><span>Blogs</span></li>
+                    <li className='side-li side-li5'><i className="i-tag fa-solid fa-magnifying-glass-chart"></i><span>Top Colleges</span></li>
+                </ul>
             </div>
         </>
     )
