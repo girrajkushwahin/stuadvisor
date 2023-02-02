@@ -19,7 +19,8 @@ const NavBar = () => {
                     </div>
                     <div className="search-box">
                         <input type="text" placeholder='Search ' />
-                        <img src={searchIcon1} alt="" />
+                        {/* <button className='search-btn'><img src={searchIcon1} alt="" /></button> */}
+                        <button className='search-btn'><i className="fa-solid fa-magnifying-glass"></i></button>
                     </div>
             </div>
         </>
