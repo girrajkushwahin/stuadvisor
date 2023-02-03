@@ -4,6 +4,7 @@ import logo from '../images/logo.png';
 
 const NavBar = () => {
     const navitems=[{key:'Home',path:'/'},{key:'Search College',path:'searchcolleges'},{key:'Academics',path:'academics'},{key:'Blogs',path:'blogs'}];
+    
     return (
         <>
             <div className="nav-container nav-bar">

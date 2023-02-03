@@ -16,7 +16,7 @@
   --light-gray: #f1f0f0;
   --white: #FFFFFF;
   --yellow: #ffff00;
-  
+
 }
 
 :root {
@@ -92,7 +92,7 @@ p{
   width: 200px;
   height: 40px;
   cursor: pointer;
-  color:white;
+  color: white;
 }
 
 .mid-link .nav-items {
@@ -222,4 +222,8 @@ p{
 
 .side-ul .side-li:hover .i-tag {
   color: var(--dark-red-1);
+}
+
+.active{
+  border-bottom: 3px solid red;
 }
