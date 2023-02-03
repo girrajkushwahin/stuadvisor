@@ -5,10 +5,10 @@ import SideBar from './SideBar';
 import Footer from './Footer';
 
 const Template = () => {
-  const [sidebarData, setSidebarData] = useState({});
+  const [sidebarData, setSidebarData] = useState([]);
 
   const getData = data => {
-    setSidebarData(data)
+    setSidebarData(data);
   }
 
   return (
@@ -17,7 +17,7 @@ const Template = () => {
         <NavBar />
         <div className="main-content">
           <SideBar setData={sidebarData} />
-          <Outlet context={[getData]} />
+          <Outlet context={{key:getData}} />
         </div>
         <Footer />
       </div>

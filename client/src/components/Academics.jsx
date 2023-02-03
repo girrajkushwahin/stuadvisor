@@ -2,18 +2,12 @@ import React, { useEffect } from 'react';
 import { useOutletContext } from 'react-router-dom';
 
 const Academics = () => {
-  const [getData] = useOutletContext();
+  const {key} = useOutletContext();
   
-  const sideMenu = {
-    item1: 'a1',
-    item2: 'a2',
-    item3: 'a3',
-    item4: 'a4',
-    item5: 'a5'
-  }
+  const sideMenu = [{ text: 'A1', icon: <i className="i-tag fa-solid fa-house"></i> }, { text: 'A2', icon: <i className="i-tag fa-solid fa-address-card"></i> }, { text: 'A3', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i> }, { text: 'A4', icon: <i className="i-tag fa-brands fa-blogger-b"></i> }, { text: 'A5', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i> }];
 
   useEffect(() => {
-    getData(sideMenu);
+    key(sideMenu);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
