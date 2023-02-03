@@ -229,6 +229,18 @@ p{
   color: var(--dark-red-1);
 }
 
+.bottom-side{
+  margin-left: 1.4rem;
+}
+.bottom-side .sign-btn{
+  border: none;
+  outline: none;
+  /* bottom: ; */
+  margin-right: .5rem;
+  padding: .5rem 1.5rem;
+  background: var(--dark-red-1);
+  color: var(--white);
+}
 
 /* *********************** ERROR PAGE *************************** */
 .error-main-container{
@@ -307,5 +319,22 @@ p{
   font-weight: 500;
   font-size: 1.1rem;
   color: var(--light-black);
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* *************************************** FOOTER CSS ************************ */
+.footer-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-container .footer-img{
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.footer-container .copyright-pera{
+  padding-top: 1rem;
+  color: var(--white);
 }
