@@ -50,6 +50,19 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+h1{
+  font-size: 1.2rem;
+}
+h2{
+  font-size: 1.7rem;
+}
+h3{
+  font-size: 2rem;
+}
+p{
+  font-size: var(--md-1);
+}
+
 /* Main Container */
 .main-container {
   height: 100vh;
