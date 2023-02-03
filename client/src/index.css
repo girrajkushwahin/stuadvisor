@@ -286,18 +286,26 @@ p{
 
 /* error button */
 .error-btn{
-  margin-top: 1rem;
+  /* margin-top: 3rem; */
   padding: .8rem 2rem;
   border: none;
   outline: none;
   border-radius: .5rem;
-  background: var(--dark-black);
+  /* background: var(--dark-black); */
+  background: var(--dark-red-1);
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+
   color: white;
   font-weight: 500;
+  transition: all .3s ease-in;
+  text-decoration: none;
 }
-
+.error-btn:hover{
+  color: var(--dark-black);
+}
 .error-pera{
   font-weight: 500;
   font-size: 1.1rem;
   color: var(--light-black);
+  margin-bottom: 1rem;
 }
