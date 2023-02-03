@@ -1,0 +1,9 @@
+const homeMenu = [{ text: 'Get Started', icon: <i className="i-tag fa-solid fa-house"></i> }, { text: 'News', icon: <i className="i-tag fa-solid fa-address-card"></i> }, { text: 'about', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i> }, { text: 'contact', icon: <i className="i-tag fa-brands fa-blogger-b"></i> }, { text: 'last', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i> }];
+
+const searchCollegeMenu = [{ text: 'Search', icon: <i className="i-tag fa-solid fa-house"></i> }, { text: 'btech', icon: <i className="i-tag fa-solid fa-address-card"></i> }, { text: 'mtech', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i> }, { text: 'b pharma', icon: <i className="i-tag fa-brands fa-blogger-b"></i> }, { text: 'phd', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i> }];
+
+const academicsMenu = [{ text: 'Homework', icon: <i className="i-tag fa-solid fa-house"></i> }, { text: 'Assignments', icon: <i className="i-tag fa-solid fa-address-card"></i> }, { text: 'Previous year papers', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i> }, { text: 'practise sets', icon: <i className="i-tag fa-brands fa-blogger-b"></i> }, { text: 'important questions', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i> }];
+
+const blogsMenu = [{ text: 'Search blog', icon: <i className="i-tag fa-solid fa-house"></i> }, { text: 'Technology', icon: <i className="i-tag fa-solid fa-address-card"></i> }, { text: 'study blogs', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i> }, { text: 'news blogs', icon: <i className="i-tag fa-brands fa-blogger-b"></i> }, { text: 'trending blogs', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i> }];
+
+export {homeMenu, searchCollegeMenu, academicsMenu, blogsMenu};

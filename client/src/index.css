@@ -229,18 +229,6 @@ p{
   color: var(--dark-red-1);
 }
 
-.bottom-side{
-  margin-left: 1.4rem;
-}
-.bottom-side .sign-btn{
-  border: none;
-  outline: none;
-  /* bottom: ; */
-  margin-right: .5rem;
-  padding: .5rem 1.5rem;
-  background: var(--dark-red-1);
-  color: var(--white);
-}
 
 /* *********************** ERROR PAGE *************************** */
 .error-main-container{
@@ -337,4 +325,25 @@ p{
 .footer-container .copyright-pera{
   padding-top: 1rem;
   color: var(--white);
+}
+
+
+.footer-side{
+  margin-left: 1.3rem;
+}
+.footer-side .sign-btn{
+  border: none;
+  outline: none;
+  /* bottom: ; */
+  margin-right: .5rem;
+  padding: .5rem 1.5rem;
+  background: var(--dark-red-1);
+  color: var(--white);
+  transition: all .3s ease-in;
+  font-weight: 500;
+  border-radius: .5rem;
+}
+
+.footer-side .sign-btn:hover{
+ color: var(--dark-black);
 }
