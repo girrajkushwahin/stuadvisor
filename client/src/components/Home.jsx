@@ -24,7 +24,6 @@ const Home = () => {
   return (
     <>
       <div className="main-item main-right">
-        <h1>HomePage</h1>
         {state === 0 ? <GetStarted /> : null}
         {state === 1 ? <News /> : null}
         {state === 2 ? <About /> : null}
