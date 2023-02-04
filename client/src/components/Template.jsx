@@ -6,11 +6,6 @@ import Footer from './Footer';
 
 const Template = () => {
   const [sidebarData, setSidebarData] = useState([]);
-  // const [clickid, setClickid] = useState(0);
-
-  // const menuClick = id => {
-  //   setClickid(id);
-  // }
 
   const getData = data => {
     setSidebarData(data);
@@ -23,7 +18,6 @@ const Template = () => {
         <div className="main-content">
           <SideBar setData={sidebarData} />
           <Outlet context={{ key: getData }} />
-          {/* <Outlet context={{ key: getData, menuClick: menuClick, clickid: clickid }} /> */}
         </div>
         <Footer />
       </div>
