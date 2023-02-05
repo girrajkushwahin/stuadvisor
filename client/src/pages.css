@@ -1,0 +1,87 @@
+
+/* **************************************** SIGN IN PAGE ************************************************** */
+.sign-in-container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 76vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7feff;
+  }
+  
+  .sign-in-container .left-sign-in{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+  }
+  
+  .sign-in-container .left-sign-in .left-sign-img{
+    width: 500px;
+    margin-top: var(--md-1-5);
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* right side */
+  .right-sign-in{
+    line-height: 3rem;
+    
+  }
+  .right-sign-in .right-heading{
+    color: var(--white);
+    color: var(--dark-red-1);
+    /* text-shadow: 0 0 10px var(--dark-black); */
+    font-size: var(--md-2-5);
+    margin-bottom: 2rem;
+  }
+  .right-sign-in .right-heading .right-span{
+    margin-top: 1rem;
+    display: block;
+    font-size: var(--md-3);
+  }
+  .sign-in-form .heding-inside{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sign-in-tags{
+    display: block;
+  }
+  .input-sign{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1rem;
+    border-radius: .3rem;
+    padding: 1rem;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    /* border-bottom: 2px solid var(--dark-red-1); */
+    margin-bottom: .3rem;
+    background: var(--white);
+  }
+  .btn-div{
+    width: 40%;
+    margin: 0 auto;
+  
+  }
+  
+  .sign-in-btn{
+    /* width: 100% ; */
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    padding: .8rem 3rem;
+    font-size: var(--md-1);
+    font-weight: 600;
+    color: var(--white);
+    background: var(--dark-black);
+    border-radius: .3rem;
+  }
+  
+  
