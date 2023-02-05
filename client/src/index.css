@@ -239,7 +239,8 @@ p{
 
 .sign-btn{
   background: var(--dark-red-1);
-  color: var(--dark-black);
+  /* color: var(--dark-black); */
+  color: var(--white);
   transition: all .3s ease-in;
   font-weight: 500;
 }
