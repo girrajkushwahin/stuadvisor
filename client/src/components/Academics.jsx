@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 import Homework from './Homework';
 import Assignments from './Assignments';
 import Prepaper from './Prepaper';
@@ -14,7 +16,7 @@ const Academics = () => {
     setState(id);
   }
 
-  const academicsMenu = [{ text: 'Homework', icon: <i className="i-tag fa-solid fa-house"></i>, click: menuClick }, { text: 'Assignments', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'Previous year papers', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i>, click: menuClick }, { text: 'practise sets', icon: <i className="i-tag fa-brands fa-blogger-b"></i>, click: menuClick }, { text: 'important questions', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i>, click: menuClick }];
+  const academicsMenu = [{ text: 'Homework', icon: <i className="i-tag fa-solid fa-house"></i>, click: menuClick }, { text: 'Assignments', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'Previous year papers', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i>, click: menuClick }, { text: 'practise sets', icon: <i className="i-tag fa-brands fa-blogger-b"></i>, click: menuClick }, { text: 'important questions', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i>, click: menuClick },{ text: 'Sign in', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i>, click: menuClick },{ text: 'Sign up', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i>, click: menuClick }];
 
   useEffect(() => {
     key(academicsMenu);
@@ -29,6 +31,8 @@ const Academics = () => {
         {state === 2 ? <Prepaper /> : null}
         {state === 3 ? <Practiseset /> : null}
         {state === 4 ? <Impque /> : null}
+        {state === 5 ? <SignIn /> : null}
+        {state === 6 ? <SignUp /> : null}
       </div>
     </>
   )
