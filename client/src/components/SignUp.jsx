@@ -16,15 +16,15 @@ const SignUp = () => {
               <div className="form-container">
                 <div className="left-form">
                   <label className='sign-up-tags lable' htmlFor="">Full Name</label>
-                  <input className='sign-up-tags input-sign' placeholder='Please enter full name' type="text" required autoFocus/>
+                  <input className='sign-up-tags input-sign' placeholder='Please enter full name' type="text" required autoFocus='true' />
                   <label className='sign-up-tags lable' htmlFor="">Email</label>
-                  <input className='sign-up-tags input-sign' placeholder='Please enter email' type="email" required autoComplete='off'/>
+                  <input className='sign-up-tags input-sign' placeholder='Please enter email' type="email" required />
                   <label className='sign-up-tags lable' htmlFor="">Password</label>
                   <input className='sign-up-tags input-sign' placeholder='Please enter password' type="password" required autoComplete='off'/>
                 </div>
                 <div className="right-form">
                   <label className='sign-up-tags lable' htmlFor="">Phone Number</label>
-                  <input className='sign-up-tags input-sign' placeholder='Please enter mobile' type="tel" required autoFocus/>
+                  <input className='sign-up-tags input-sign' placeholder='Please enter mobile' type="tel" required />
                   <label className='sign-up-tags lable' htmlFor="">DOB</label>
                   <input className='sign-up-tags input-sign' placeholder='Please enter password again' type="date" required autoComplete='off'/>
                   <label className='sign-up-tags lable' htmlFor="">Confirm password</label>
@@ -35,11 +35,11 @@ const SignUp = () => {
                   <h1 className=''>Select your gender</h1>
 
                   <label className='' htmlFor="">Male </label>
-                  <input className='' name="gender" type="radio" required autoFocus/>
+                  <input className='' name="gender" type="radio" required />
                   <label className='gender-lable' htmlFor="">Female </label>
-                  <input className='' name="gender" type="radio" required autoFocus/>
+                  <input className='' name="gender" type="radio" required />
                   <label className='gender-lable' htmlFor="">Others </label>
-                  <input className='' name="gender" type="radio" required autoFocus/>
+                  <input className='' name="gender" type="radio" required />
                   
               </div>
               <div className="btn-div">
