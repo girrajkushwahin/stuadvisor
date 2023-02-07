@@ -1,87 +1,147 @@
 
 /* **************************************** SIGN IN PAGE ************************************************** */
+.cont{
+  /* background: url('./images/back.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  /* border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  
+}
 .sign-in-container{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 76vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f9feff;
-  }
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 76vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgba(255, 255, 255, 0.4); */
+  backdrop-filter: blur(2px);
+}
+
+.left-sign-in , .right-sign-in{
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+.left-sign-in .left-sign-img{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.right-sign-in .right-heading{
+  display: block;
+  font-size: var(--md-1-5);
+  margin-left: var(--md-2);
+
+}
+
+.right-sign-in .right-heading .right-span{
+  font-size: var(--md-2-5);
+  display: block;
+  color: var(--dark-red-1);
+}
+.right-sign-in{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.heding-inside{
+  text-align: center;
+  display: block;
+  margin-bottom: var(--md-1);
   
-  .sign-in-container .left-sign-in{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-  }
+}
+.heading{
+  margin-bottom: var(--md-2);
+  margin-top: .5rem;
+}
+.sign-in-tags,.sign-in-btn{
+  display: block;
+  margin-left: var(--md-2);
+}
+.input-sign,.sign-in-btn{
+  margin-bottom: var(--md-1-5);
+
+}
+.sign-in-form .input-sign,.sign-up-form .input-sign{
+  width: 90%;
+  height: var(--md-2-5);
+  border: none;
+  outline: none;
+  font-size: var(--md-1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: .3rem;
+  padding: 1rem;
+  margin-top: .2rem;
+
+
+}
+.sign-in-form .lables{
+  /* font-size: 1.2rem; */
+}
+.sign-in-form .btn-div{
+  width: 30%;
+  margin: 0 auto;
+
+}
+.sign-in-form .sign-in-btn{
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  padding: .8rem 3rem;
+  font-size: var(--md-1);
+  font-weight: 600;
+  color: var(--white);
+  background: var(--dark-black);
+  border-radius: .3rem;
+}
+
+/* ************************ SIGN UP PAGE ************************************ */
+.form-container{
+  margin-left: var(--md-2);
+
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.left-form .lable,.right-form .lable{
+  display: block;
+}
+.sign-up-form .btn-div{
+  width: 90%;
   
-  .sign-in-container .left-sign-in .left-sign-img{
-    width: 500px;
-    margin-top: var(--md-1-5);
-    object-fit: cover;
-    object-position: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-  }
+  margin: 0 auto;
+  margin-left: var(--md-2);
   
-  /* right side */
-  .right-sign-in{
-    line-height: 3rem;
-    
-  }
-  .right-sign-in .right-heading{
-    color: var(--white);
-    color: var(--dark-red-1);
-    /* text-shadow: 0 0 10px var(--dark-black); */
-    font-size: var(--md-2-5);
-    margin-bottom: 2rem;
-  }
-  .right-sign-in .right-heading .right-span{
-    margin-top: 1rem;
-    display: block;
-    font-size: var(--md-3);
-  }
-  .sign-in-form .heding-inside{
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
+}
+.sign-up-form .sign-up-btn{
+  width: 100%;
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  padding: .8rem 3rem;
+  font-size: var(--md-1);
+  font-weight: 600;
+  color: var(--white);
+  background: var(--dark-black);
+  border-radius: .3rem;
+}
+
+.gender-container{
+  margin-left: var(--md-2);
   
-  .sign-in-tags{
-    display: block;
-  }
-  .input-sign{
-    border: none;
-    outline: none;
-    width: 100%;
-    height: 2.5rem;
-    font-size: 1rem;
-    border-radius: .3rem;
-    padding: 1rem;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-    /* border-bottom: 2px solid var(--dark-red-1); */
-    margin-bottom: .3rem;
-    background: var(--white);
-  }
-  .btn-div{
-    width: 40%;
-    margin: 0 auto;
+}
+.gender-lable{
   
-  }
-  
-  .sign-in-btn{
-    /* width: 100% ; */
-    margin-top: 1rem;
-    border: none;
-    outline: none;
-    padding: .8rem 3rem;
-    font-size: var(--md-1);
-    font-weight: 600;
-    color: var(--white);
-    background: var(--dark-black);
-    border-radius: .3rem;
-  }
-  
-  
+  margin-left: var(--md-3);
+}
+
+
+
+
