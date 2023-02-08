@@ -101,6 +101,7 @@
   color: var(--white);
   background: var(--dark-black);
   border-radius: .3rem;
+  cursor: pointer;
 }
 
 /* ************************ SIGN UP PAGE ************************************ */
@@ -131,11 +132,18 @@
   color: var(--white);
   background: var(--dark-black);
   border-radius: .3rem;
+  cursor: pointer;
+}
+.dob-cursor{
+  cursor: text;
 }
 
 .gender-container{
   margin-left: var(--md-2);
   
+}
+.radio-btn{
+  cursor: pointer;
 }
 .gender-lable{
   

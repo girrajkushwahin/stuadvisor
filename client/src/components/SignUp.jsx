@@ -26,7 +26,7 @@ const SignUp = () => {
                   <label className='sign-up-tags lable' htmlFor="">Phone Number</label>
                   <input className='sign-up-tags input-sign' placeholder='Please enter mobile' type="tel" required />
                   <label className='sign-up-tags lable' htmlFor="">DOB</label>
-                  <input className='sign-up-tags input-sign' placeholder='Please enter password again' type="date" required autoComplete='off'/>
+                  <input className='sign-up-tags input-sign dob-cursor' placeholder='Please enter password again' type="date" required autoComplete='off'/>
                   <label className='sign-up-tags lable' htmlFor="">Confirm password</label>
                   <input className='sign-up-tags input-sign' placeholder='Please enter password again' type="password" required autoComplete='off'/>
                 </div>
@@ -34,18 +34,17 @@ const SignUp = () => {
               <div className="gender-container">
                   <h1 className=''>Select your gender</h1>
 
-                  <label className='' htmlFor="">Male </label>
-                  <input className='' name="gender" type="radio" required />
-                  <label className='gender-lable' htmlFor="">Female </label>
-                  <input className='' name="gender" type="radio" required />
-                  <label className='gender-lable' htmlFor="">Others </label>
-                  <input className='' name="gender" type="radio" required />
+                  <label className='radio-btn' htmlFor="male">Male </label>
+                  <input className='radio-btn' name="gender" type="radio" id='male' required />
+                  <label className='gender-lable radio-btn' htmlFor="female">Female </label>
+                  <input className='radio-btn' name="gender" type="radio" id='female' required />
+                  <label className='gender-lable radio-btn' htmlFor="other">Others </label>
+                  <input className='radio-btn' name="gender" type="radio" id='other' required />
                   
               </div>
               <div className="btn-div">
                 <button className="sign-up-btn">Register</button>
               </div>
-              {/* <button className="sign-in-btn">Login</button> */}
             </form>
           </div>
         </div>
