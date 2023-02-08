@@ -176,6 +176,12 @@ p{
 .nav-bar .search-box .search-btn:hover i {
   color: var(--dark-red-1);
 }
+.humberger-icon-nav{
+  display: none;
+}
+/* @media screen and (max-width: 1100px){
+  .nav
+} */
 
 .footer-container {
   position: fixed;
@@ -206,7 +212,9 @@ p{
 .main-right{
   overflow: auto;
 }
-
+.hamburger-icon{
+  display: none;
+}
 /* **************************************** SideBar *************************************************** */
 .side-ul {
   margin-top: var(--md-1);

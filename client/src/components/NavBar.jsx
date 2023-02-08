@@ -14,9 +14,12 @@ const NavBar = () => {
                         {navitems.map((elem, ind) => <NavLink to={elem.path} className='li-item' key={ind}>{elem.key}</NavLink>)}
                     </ul>
                 </div>
-                <div className="search-box">
-                    <input type="text" placeholder='Search ' />
-                    <button className='search-btn'><i className="fa-solid fa-magnifying-glass"></i></button>
+                <div className="left-nav">
+                    <div className="search-box">
+                        <input type="text" placeholder='Search ' />
+                        <button className='search-btn'><i className="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div className="humberger-icon-nav"><i class="fa-solid fa-bars"></i></div>
                 </div>
             </div>
         </>

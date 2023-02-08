@@ -3,7 +3,7 @@ import React from 'react';
 const GetStarted = () => {
   return (
     <>
-        <h1>This is get started page</h1>
+      <h1>This is get started page</h1>
     </>
   )
 }
