@@ -2,12 +2,8 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
-const DB='mongodb://127.0.0.1:27017/stuadvisor';
-
-mongoose.set('strictQuery', true);
-mongoose.connect(DB).then(()=>{
-    console.log('connected to DB');
-}).catch((err)=>console.log(err));
+require('./db/connection');
+require('./routes/auth');
 
 const middleware = (req, res, next) => {
     console.log('this is middleware');

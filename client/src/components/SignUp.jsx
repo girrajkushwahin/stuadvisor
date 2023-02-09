@@ -25,8 +25,8 @@ const SignUp = () => {
                 <div className="right-form">
                   <label className='sign-up-tags lable' htmlFor="">Phone Number</label>
                   <input className='sign-up-tags input-sign' placeholder='Please enter mobile' type="tel" required />
-                  <label className='sign-up-tags lable' htmlFor="">DOB</label>
-                  <input className='sign-up-tags input-sign dob-cursor' placeholder='Please enter password again' type="date" required autoComplete='off'/>
+                  <label className='sign-up-tags lable' htmlFor="">Username</label>
+                  <input className='sign-up-tags input-sign dob-cursor' placeholder='Enter username' type="text" required autoComplete='off'/>
                   <label className='sign-up-tags lable' htmlFor="">Confirm password</label>
                   <input className='sign-up-tags input-sign' placeholder='Please enter password again' type="password" required autoComplete='off'/>
                 </div>
