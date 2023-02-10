@@ -2,8 +2,28 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../images/logo.png';
 
-const NavBar = () => {
+const getToggle = ()=>{
+    // /*============ MENU SHOW ===========*/
+   const toggle = document.getElementById("nav-toggle"),
+   nav = document.getElementById("nav-menu");
 
+   if(toggle && nav){
+       toggle.addEventListener('click',()=>{
+           nav.classList.toggle('show');
+       })
+   }
+  // /*============ REMOVE MOBILE MENU ===========*/
+   const navLink = document.querySelectorAll('.li-item');
+   function linkAction(){
+       const navMenu = document.getElementById('nav-menu');
+       navMenu.classList.remove('show');
+   }
+   navLink.forEach(n => n.addEventListener('click',linkAction));
+  }
+
+const NavBar = () => {
+   
+// =======================================================================================
     const navitems = [{ key: 'Home', path: '/' }, { key: 'Search College', path: 'searchcolleges' }, { key: 'Academics', path: 'academics' }, { key: 'Blogs', path: 'blogs' }];
 
     return (
@@ -21,7 +41,7 @@ const NavBar = () => {
                         <input type="text" placeholder='Search ' />
                         <button className='search-btn'><i className="fa-solid fa-magnifying-glass"></i></button>
                     </div>
-                    <div className="humberger-icon-nav"  id="nav-toggle"><i class="fa-solid fa-bars"></i></div>  
+                    <div className="humberger-icon-nav"  ><i class="fa-solid fa-bars" id="nav-toggle" onClick={getToggle}></i></div>  
                     {/* click here */}
                 </div>
             </div>
