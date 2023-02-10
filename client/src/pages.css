@@ -87,12 +87,12 @@
   /* font-size: 1.2rem; */
 }
 .sign-in-form .btn-div{
-  width: 30%;
+  width: 90%;
   margin: 0 auto;
 
 }
 .sign-in-form .sign-in-btn{
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   border: none;
   outline: none;
   padding: .8rem 3rem;
@@ -102,6 +102,7 @@
   background: var(--dark-black);
   border-radius: .3rem;
   cursor: pointer;
+  width: 100%;
 }
 
 /* ************************ SIGN UP PAGE ************************************ */
