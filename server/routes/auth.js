@@ -28,14 +28,30 @@ router.post('/register', async (req, res) => {
         const userExist = await Registration.findOne({ email: email });
         if (userExist) {
             return res.status(422).json({ error: 'email already exist' });
+        } else if (password != cpassword) return res.status(422).json({ error:'pass not matching' });
+        else {
+            const user = new Registration({ name, phone, email, username, password, cpassword, gender });
+            const userRegister = await user.save();
+            
+            if (userRegister) res.status(201).json({ message: 'user registered successfully' });
+            else res.status(500).json({ error: 'failed to register' });
         }
-        const user = new Registration({ name, phone, email, username, password, cpassword, gender });
-        const userRegister = await user.save();
-        if (userRegister) res.status(201).json({ message: 'user registered successfully' });
-        else res.status(500).json({ error: 'failed to register' });
     } catch (err) {
         console.log(err)
     };
+})
+router.post('/signin', async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        if (!email || !password) return res.status(400).json({ message: "pls fill the data" });
+
+        const userLogin = await Registration.findOne({ email: email });
+        console.log(userLogin);
+        if (!userLogin) res.status(400).json({ error: "user error" });
+        else res.status(201).json({ message: "user signin successfully" });
+    } catch (err) {
+        console.log(err);
+    }
 })
 
 module.exports = router;
