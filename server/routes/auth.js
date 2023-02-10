@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const bcrypt = require('bcryptjs');
 
 // require('../db/connection');
 const Registration = require('../model/userSchema');
@@ -28,11 +29,11 @@ router.post('/register', async (req, res) => {
         const userExist = await Registration.findOne({ email: email });
         if (userExist) {
             return res.status(422).json({ error: 'email already exist' });
-        } else if (password != cpassword) return res.status(422).json({ error:'pass not matching' });
+        } else if (password != cpassword) return res.status(422).json({ error: 'pass not matching' });
         else {
             const user = new Registration({ name, phone, email, username, password, cpassword, gender });
             const userRegister = await user.save();
-            
+
             if (userRegister) res.status(201).json({ message: 'user registered successfully' });
             else res.status(500).json({ error: 'failed to register' });
         }
@@ -46,9 +47,12 @@ router.post('/signin', async (req, res) => {
         if (!email || !password) return res.status(400).json({ message: "pls fill the data" });
 
         const userLogin = await Registration.findOne({ email: email });
-        console.log(userLogin);
-        if (!userLogin) res.status(400).json({ error: "user error" });
-        else res.status(201).json({ message: "user signin successfully" });
+        // console.log(userLogin);
+        if (userLogin) {
+            const isMatch = await bcrypt.compare(password, userLogin.password);
+            if (!isMatch) res.status(400).json({ error: "Invalid credentials" });
+            else res.status(201).json({ message: "user signin successfully" });
+        } else res.status(400).json({ error: "Invalid credentials" });
     } catch (err) {
         console.log(err);
     }

@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 // const mongoose = require('mongoose');
-PORT=8000;
+PORT=9000;
 
 require('./db/connection');
 app.use(express.json());
