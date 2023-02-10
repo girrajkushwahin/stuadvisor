@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
+PORT=8000;
 
 require('./db/connection');
-require('./routes/auth');
+app.use(express.json());
+app.use(require('./routes/auth'));
 
 const middleware = (req, res, next) => {
     console.log('this is middleware');
@@ -11,22 +13,6 @@ const middleware = (req, res, next) => {
 }
 // middleware();
 
-app.get('/', (req, res) => {
-    res.send('hello from home');
-})
-app.get('/searchcolleges', (req, res) => {
-    res.send('hello from searchcolleges');
-})
-app.get('/academics', (req, res) => {
-    res.send('hello from academics');
-})
-app.get('/blogs', (req, res) => {
-    res.send('hello from blogs');
-})
-app.get('*', (req, res) => {
-    res.send('hello, page not found on this server');
-})
-
-app.listen(8000, () => {
-    console.log('server is running at port 8000')
+app.listen(PORT, () => {
+    console.log(`server is running at port ${PORT}`)
 })
