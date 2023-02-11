@@ -171,6 +171,7 @@ p{
 .nav-bar .search-box .search-btn i {
   transition: all .3s ease-in;
   font-size: var(--md-1-5);
+  cursor: pointer;
 }
 
 .nav-bar .search-box .search-btn:hover i {
