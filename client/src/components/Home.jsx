@@ -16,7 +16,7 @@ const Home = () => {
     setState(id);
   }
 
-  const homeMenu = [{ text: 'Get Started', icon: <i class="i-tag fa-solid fa-person-walking"></i>, click: menuClick }, { text: 'Reviews', icon: <i class="i-tag fa-regular fa-comments"></i>, click: menuClick }, { text: 'News', icon: <i class="i-tag fa-solid fa-newspaper"></i>, click: menuClick }, { text: 'About Us', icon: <i class="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'Contact Us', icon: <i class="i-tag fa-solid fa-address-book"></i>, click: menuClick }, { text: 'Sign in', icon: <i class="i-tag fa-solid fa-door-open"></i>, click: menuClick }, { text: 'Sign up', icon: <i class="i-tag fa-solid fa-user-plus"></i>, click: menuClick }];
+  const homeMenu = [{ text: 'Get Started', icon: <i className="i-tag fa-solid fa-person-walking"></i>, click: menuClick }, { text: 'Reviews', icon: <i className="i-tag fa-regular fa-comments"></i>, click: menuClick }, { text: 'News', icon: <i className="i-tag fa-solid fa-newspaper"></i>, click: menuClick }, { text: 'About Us', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'Contact Us', icon: <i className="i-tag fa-solid fa-address-book"></i>, click: menuClick }, { text: 'Sign in', icon: <i className="i-tag fa-solid fa-door-open"></i>, click: menuClick }, { text: 'Sign up', icon: <i className="i-tag fa-solid fa-user-plus"></i>, click: menuClick }];
 
   useEffect(() => {
     key(homeMenu);

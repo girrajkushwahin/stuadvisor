@@ -33,7 +33,7 @@ const NavBar = () => {
                 <div className="mid-link" id='nav-menu'>
                     {/* Add class - show */}
                     <ul className="nav-items">
-                        {navitems.map((elem, ind) => <li className='nav-item'><NavLink to={elem.path} className='li-item' key={ind}>{elem.key}</NavLink></li>)}
+                        {navitems.map((elem, ind) => <li className='nav-item' key={ind}><NavLink to={elem.path} className='li-item'>{elem.key}</NavLink></li>)}
                     </ul>
                 </div>
                 <div className="left-nav">
@@ -41,7 +41,7 @@ const NavBar = () => {
                         <input type="text" placeholder='Search ' />
                         <button className='search-btn'><i className="fa-solid fa-magnifying-glass"></i></button>
                     </div>
-                    <div className="humberger-icon-nav"  ><i class="fa-solid fa-bars" id="nav-toggle" onClick={getToggle}></i></div>  
+                    <div className="humberger-icon-nav"  ><i className="fa-solid fa-bars" id="nav-toggle" onClick={getToggle}></i></div>  
                     {/* click here */}
                 </div>
             </div>

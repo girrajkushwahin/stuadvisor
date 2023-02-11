@@ -17,7 +17,7 @@ const Template = () => {
         <NavBar />
         <div className="main-content">
           <SideBar setData={sidebarData} />
-          <div className="hamburger-icon"><i class="fa-solid fa-bars"></i></div>
+          <div className="hamburger-icon"><i className="fa-solid fa-bars"></i></div>
           <Outlet context={{ key: getData }} />
         </div>
         <Footer />
