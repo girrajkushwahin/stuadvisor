@@ -75,18 +75,6 @@
   margin: 0 auto;
 
 }
-.sign-in-form .sign-in-btn{
-  border: none;
-  outline: none;
-  padding: .8rem 3rem;
-  font-size: var(--md-1);
-  font-weight: 600;
-  color: var(--white);
-  background: var(--dark-black);
-  border-radius: .3rem;
-  cursor: pointer;
-  width: 100%;
-}
 
 /* ************************ SIGN UP PAGE ************************************ */
 .form-container{
@@ -105,7 +93,7 @@
   margin-left: var(--md-2);
   
 }
-.sign-up-form .sign-up-btn{
+.sign-up-form .sign-up-btn,.sign-in-form .sign-up-btn{
   width: 100%;
   margin-top: 1rem;
   border: none;
@@ -114,9 +102,13 @@
   font-size: var(--md-1);
   font-weight: 600;
   color: var(--white);
-  background: var(--dark-black);
+  background: var(--btngreen);
   border-radius: .3rem;
   cursor: pointer;
+  transition: all .3s ease-in;
+}
+.sign-up-form .sign-up-btn:hover, .sign-in-form .sign-up-btn:hover{
+  background: var(--dark-black);
 }
 .dob-cursor{
   cursor: text;
@@ -165,7 +157,7 @@
   outline: none;
   padding: .8rem  3rem;
   border-radius: .4rem;
-  background: rgb(40, 167, 69);
+  background: var(--btngreen);
   color: var(--white);
   box-shadow: 0 0 10px rgba(40, 167, 69, 0.9);
   

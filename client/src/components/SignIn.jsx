@@ -17,7 +17,7 @@ const SignIn = () => {
               <label className='sign-in-tags lables' htmlFor="">Password</label>
               <input className='sign-in-tags input-sign' placeholder='Password' type="password" required autoComplete='off' />
               <div className="btn-div">
-                <button className="sign-in-btn">Login</button>
+                <button className="sign-up-btn">Login</button>
               </div>
             </form>
           </div>
