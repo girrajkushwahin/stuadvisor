@@ -1,6 +1,4 @@
 import React from 'react';
-import SearchBlog from './SearchBlog';
-
 import getStarted1 from '../images/getStarted1.jpg';
 import getStarted2 from '../images/getStarted2.jpg';
 import getStarted3 from '../images/getStarted3.jpg';
@@ -38,7 +36,6 @@ const GetStarted = () => {
         <div className="btn-div">
         </div>
       </div>
-      
     </>
   )
 }
