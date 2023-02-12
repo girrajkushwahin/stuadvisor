@@ -40,7 +40,7 @@ const SignUp = () => {
               <div className="form-container">
                 <div className="left-form">
                   <label className='sign-up-tags lable' htmlFor="">Full Name</label>
-                  <input className='sign-up-tags input-sign' placeholder='Enter full name' type="text" required autoFocus='true' />
+                  <input className='sign-up-tags input-sign' placeholder='Enter full name' type="text" required autoFocus />
                   <label className='sign-up-tags lable' htmlFor="">Email</label>
                   <input className='sign-up-tags input-sign' placeholder='Enter your email' type="email" required />
                   <label className='sign-up-tags lable' htmlFor="">Password</label>
@@ -62,7 +62,7 @@ const SignUp = () => {
                 <input className='radio-btn' name="gender" type="radio" id='male' required />
                 <label className='gender-lable radio-btn' htmlFor="female">Female </label>
                 <input className='radio-btn' name="gender" type="radio" id='female' required />
-                <label className='gender-lable radio-btn' htmlFor="other">Others </label>
+                <label className='gender-lable radio-btn' htmlFor="other">Other </label>
                 <input className='radio-btn' name="gender" type="radio" id='other' required />
 
               </div>
@@ -73,7 +73,6 @@ const SignUp = () => {
           </div>
         </div>
       </div>
-
     </>
   )
 }

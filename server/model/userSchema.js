@@ -28,19 +28,21 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        lowercase: true,
         trim: true,
-        minlength: 4
+        minlength: 3,
+        maxlength: 20
     },
     password: {
         type: String,
         required: true,
-        minlength: 6
+        minlength: 8,
+        maxlength: 20
     },
     cpassword: {
         type: String,
         required: true,
-        minlength: 3
+        minlength: 8,
+        maxlength: 20
     },
     gender: {
         type: String,
