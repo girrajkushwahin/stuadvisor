@@ -32,7 +32,6 @@ const SignUp = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(data);
     getData({
       name: '',
       email: '',
