@@ -1,15 +1,23 @@
 /* ***************** LESS THEN THE 1224PX WIDTH SIZE */
 @media screen and (max-width : 1224px) {
     .main-left{
+        position: fixed;
+        top: 7rem;
+        /* top: ; */
+        right:-1%;
+        width: 100%;
+        height: 50%;
+        padding: 2rem;
+        background-color: white;
+        transition: .5s;
+        border-radius: 0;
+        z-index: 10;
+    }
+    .show-second{
         display: none;
     }
     .main-right{
-        /* width: 589%; */
-        /* height: calc(100vh - 18vh); */
-        /* margin-top: 2.5rem; */
         height: calc(100vh - 27vh);
-        /* margin-bottom: 2rem; */
-        
     }
     .main-content{
         margin-top: 8vh;
@@ -17,16 +25,20 @@
         grid-template-columns: none;
         grid-template-rows: 1fr 12fr;
     }
+    .heading-hamburger{
+        display: inline-block;
+    }
     .hamburger-icon{
         display: flex;
         height: 3rem;
-        margin-top: .3rem;
+        margin-top: .5rem;
         margin-left: 10px;
         margin-right: 10px;
         background: var(--white);
         box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.5);
         border-radius: .3rem;
         align-items: center;
+        justify-content: space-between;
         padding-left: 1rem;
 
     }
@@ -34,9 +46,6 @@
 
 /* ***************** LESS THEN THE 1030PX WIDTH SIZE */
 @media screen and (max-width : 1030px) {
-    /* .nav-container .mid-link{
-        display: none;
-    } */
     .nav-bar{
         height: 3.1rem;
     }
