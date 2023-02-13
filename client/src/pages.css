@@ -1,6 +1,5 @@
 
 /* **************************************** SIGN IN PAGE ************************************************** */
-
 .sign-in-container{
 
   margin: 0;
@@ -111,12 +110,10 @@
 .sign-up-form .sign-up-btn:hover, .sign-in-form .sign-up-btn:hover{
   background: var(--dark-black);
 }
-.dob-cursor{
-  cursor: text;
-}
 
 .gender-container{
   margin-left: var(--md-2);
+  display: flex;
   
 }
 .radio-btn{
@@ -179,6 +176,3 @@
   align-items: center;
   justify-content: center;
 }
-
-
-
