@@ -1,18 +1,24 @@
 import React from 'react';
 
-const SideBar = ({ setData }) => {
+const SideBar = ({ setVal, val, setData }) => {
     return (
         <>
-            <div className="main-item main-left">
-                {/* add here */}
+            {val === false ? <div className='main-item show-second'>
                 <ul className='side-ul'>
                     {setData.map((elem, ind) => {
-                        if (ind === 5 || ind === 6) return <li className='side-li sign-btn' key={ind} onClick={() => { elem.click(ind) }}>{elem.icon}<span>{elem.text}</span></li>
-                        else return <li className='side-li' key={ind} onClick={() => { elem.click(ind) }}>{elem.icon}<span>{elem.text}</span></li>
+                        if (ind === 5 || ind === 6) return <div onClick={setVal} key={ind}> <li className='side-li sign-btn' onClick={() => { elem.click(ind) }}>{elem.icon}<span>{elem.text}</span></li></div>
+                        else return <div onClick={setVal} key={ind}> <li className='side-li' onClick={() => { elem.click(ind) }}>{elem.icon}<span>{elem.text}</span></li> </div>
                     })}
                 </ul>
-                
-            </div>
+            </div> : ''}
+            {val === true ? <div className='main-item main-left'>
+                <ul className='side-ul'>
+                    {setData.map((elem, ind) => {
+                        if (ind === 5 || ind === 6) return <div onClick={setVal} key={ind}> <li className='side-li sign-btn' onClick={() => { elem.click(ind) }}>{elem.icon}<span>{elem.text}</span></li> </div>
+                        else return <div onClick={setVal} key={ind}> <li className='side-li' onClick={() => { elem.click(ind) }}>{elem.icon}<span>{elem.text}</span></li> </div>
+                    })}
+                </ul>
+            </div> : ''}
         </>
     )
 }

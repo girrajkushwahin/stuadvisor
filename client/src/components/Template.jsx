@@ -2,13 +2,20 @@ import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import NavBar from './NavBar';
 import SideBar from './SideBar';
+import SideBar2 from './SideBar2';
 import Footer from './Footer';
 
 const Template = () => {
   const [sidebarData, setSidebarData] = useState([]);
+  const [value, setValue] = useState(false);
 
   const getData = data => {
     setSidebarData(data);
+  }
+
+  const setVal = () => {
+    if (value === false) setValue(true);
+    else setValue(false);
   }
 
   return (
@@ -16,13 +23,8 @@ const Template = () => {
       <div className="main-container">
         <NavBar />
         <div className="main-content">
-          <SideBar setData={sidebarData} />
-          <div className="hamburger-icon">
-            <i className="fa-solid fa-bars"></i> 
-            {/* onclick class ====>  .show-second*/}
-            <h1 className='heading-hamburger'>Home</h1>
-            <span></span>
-          </div>
+          <SideBar setData={sidebarData} val={value} setVal={setVal} />
+          <SideBar2 setData={setVal} />
           <Outlet context={{ key: getData }} />
         </div>
         <Footer />
