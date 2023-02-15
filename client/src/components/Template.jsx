@@ -24,7 +24,7 @@ const Template = () => {
         <NavBar />
         <div className="main-content">
           <SideBar setData={sidebarData} val={value} setVal={setVal} />
-          <SideBar2 setData={setVal} />
+          <SideBar2 setData={setVal} val={value} />
           <Outlet context={{ key: getData }} />
         </div>
         <Footer />
