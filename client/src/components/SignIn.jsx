@@ -26,7 +26,7 @@ const SignIn = () => {
   } else {
     imageStatus = night;
     greeting = 'Welcome';
-    spancss.color = 'black';
+    spancss.color = 'blue';
   }
 
   const handleSubmit = e => {
