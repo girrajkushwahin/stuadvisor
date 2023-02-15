@@ -4,7 +4,6 @@ import NavBar from './NavBar';
 import SideBar from './SideBar';
 import SideBar2 from './SideBar2';
 import Footer from './Footer';
-
 const Nav2Data = React.createContext();
 
 const Template = () => {
