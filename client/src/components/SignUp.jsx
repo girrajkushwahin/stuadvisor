@@ -8,9 +8,26 @@ import night from '../images/night.jpg';
 const SignUp = () => {
   const [data, getData] = useState({ name: '', email: '', password: '', number: '', username: '', cpassword: '', gender: '' });
 
-  let greeting = '';
-  let imageStatus = '';
-  const spancss = {}
+  const [validation, setValidation] = useState({
+    name: {}, email: {}, password: {}, number: {}, username: {}, cpassword: {}
+  })
+
+  const [styleVal] = useState({
+    successStyle: { border: '3px solid green' },
+    errStyle: { border: '3px solid red' }
+  });
+
+  const nameReg = /^[a-zA-Z][a-zA-Z ]{2,29}$/
+  // eslint-disable-next-line
+  const mailReg = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/
+  // eslint-disable-next-line
+  const passReg = /^[-a-zA-Z0-9\.\*\?\^\$ `~+/\\|=_)(&%#@!,<>:;'"\]\[}{]{8,25}$/
+  const numReg = /^[6789]([0-9]){9}$/
+  // eslint-disable-next-line
+  const usrnameReg = /^[a-z_0-9]([a-z0-9\._]){3,25}$/
+
+
+  let greeting = '', imageStatus = '', spancss = {}
   let hour = new Date().getHours();
   if (hour >= 0 && hour < 12) {
     imageStatus = morning;
@@ -30,21 +47,52 @@ const SignUp = () => {
     spancss.color = 'black';
   }
 
+  const formValidation = (name, value) => {
+    if (name === 'name') {
+      if (nameReg.test(value)) setValidation({ ...validation, [name]: { ...styleVal.successStyle } });
+      else setValidation({ ...validation, [name]: { ...styleVal.errStyle } });
+    } else if (name === 'email') {
+      if (mailReg.test(value)) setValidation({ ...validation, [name]: { ...styleVal.successStyle } });
+      else setValidation({ ...validation, [name]: { ...styleVal.errStyle } });
+    } else if (name === 'password') {
+      if (passReg.test(value)) setValidation({ ...validation, [name]: { ...styleVal.successStyle } });
+      else setValidation({ ...validation, [name]: { ...styleVal.errStyle } });
+    } else if (name === 'number') {
+      if (numReg.test(value)) setValidation({ ...validation, [name]: { ...styleVal.successStyle } });
+      else setValidation({ ...validation, [name]: { ...styleVal.errStyle } });
+    } else if (name === 'username') {
+      if (usrnameReg.test(value)) setValidation({ ...validation, [name]: { ...styleVal.successStyle } });
+      else setValidation({ ...validation, [name]: { ...styleVal.errStyle } });
+    } if (name === 'cpassword') {
+      if (data.password === value) setValidation({ ...validation, [name]: { ...styleVal.successStyle } });
+      else setValidation({ ...validation, [name]: { ...styleVal.errStyle } });
+    }
+  }
+
   const handleSubmit = e => {
     e.preventDefault();
-    getData({
-      name: '',
-      email: '',
-      password: '',
-      number: '',
-      username: '',
-      cpassword: '',
-      gender: ''
-    })
+    const { name, email, password, number, username } = validation;
+    const { errStyle } = styleVal;
+    if (data.password !== data.cpassword) alert('password not matching');
+    else if (name.border === errStyle.border || email.border === errStyle.border || password.border === errStyle.border || number.border === errStyle.border || username.border === errStyle.border) alert('Enter correct data');
+    else {
+      // console.log(data);
+      getData({
+        name: '',
+        email: '',
+        password: '',
+        number: '',
+        username: '',
+        cpassword: '',
+        gender: ''
+      })
+      setValidation('');
+    }
   }
 
   const handleInput = e => {
     const { name, value } = e.target;
+    formValidation(name, value);
     getData(preVal => {
       return {
         ...preVal,
@@ -53,7 +101,7 @@ const SignUp = () => {
     })
   }
 
-  const item = [{ data: 'Full Name', ph: 'Enter full name', typ: 'text', name: 'name', val: data.name, inputData: handleInput }, { data: 'Email', ph: 'Enter your email', typ: 'email', name: 'email', val: data.email, inputData: handleInput }, { data: 'Password', ph: 'Enter password', typ: 'password', name: 'password', val: data.password, inputData: handleInput }, { data: 'Phone Number', ph: 'Enter phone number', typ: 'tel', name: 'number', val: data.number, inputData: handleInput }, { data: 'Username', ph: 'Enter username', typ: 'text', name: 'username', val: data.username, inputData: handleInput }, { data: 'Confirm password', ph: 'Confirm password', typ: 'password', name: 'cpassword', val: data.cpassword, inputData: handleInput }];
+  const item = [{ data: 'Full Name', ph: 'Enter full name', typ: 'text', name: 'name', val: data.name, inputData: handleInput, validation: validation.name }, { data: 'Email', ph: 'Enter your email', typ: 'email', name: 'email', val: data.email, inputData: handleInput, validation: validation.email }, { data: 'Password', ph: 'Enter password', typ: 'password', name: 'password', val: data.password, inputData: handleInput, validation: validation.password }, { data: 'Phone Number', ph: 'Enter phone number', typ: 'tel', name: 'number', val: data.number, inputData: handleInput, validation: validation.number }, { data: 'Username', ph: 'Enter username', typ: 'text', name: 'username', val: data.username, inputData: handleInput, validation: validation.username }, { data: 'Confirm password', ph: 'Confirm password', typ: 'password', name: 'cpassword', val: data.cpassword, inputData: handleInput, validation: validation.cpassword }];
 
   const item2 = [{ for: 'male', data: 'Male', id: 'male', val: 'male', check: data.gender === 'male', inputData: handleInput }, { for: 'female', data: 'Female', id: 'female', val: 'female', check: data.gender === 'female', inputData: handleInput }, { for: 'other', data: 'Other', id: 'other', val: 'other', check: data.gender === 'other', inputData: handleInput }]
 
