@@ -19,13 +19,13 @@ const SignIn = () => {
     imageStatus = afternoon;
     greeting = 'Good Afternoon';
     spancss.color = 'red';
-  } else if (hour >= 16 && hour < 19) {
+  } else if (hour >= 16 && hour < 20) {
     imageStatus = evening;
     greeting = 'Good Evening';
     spancss.color = 'orange';
   } else {
     imageStatus = night;
-    greeting = 'Good Night';
+    greeting = 'Welcome';
     spancss.color = 'black';
   }
 
