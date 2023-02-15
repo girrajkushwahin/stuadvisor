@@ -12,7 +12,7 @@ const GetStarted = () => {
         <div className="btn-div">
           <button className='get-started-btn'>Check</button>
         </div>
-      
+      </div>
       <div className="get-started-container">
         <img src={getStarted2} alt="Search for your dream college" className='get-started-image'/>
         <h1 className='get-started-heading'>Search for your dream college</h1>
@@ -36,7 +36,7 @@ const GetStarted = () => {
         <div className="btn-div">
         </div>
       </div>
-      </div>
+      
     </>
   )
 }
