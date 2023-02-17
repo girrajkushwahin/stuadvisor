@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import Signin2 from './Signin2';
 import morning from '../images/morning.jpg';
 import afternoon from '../images/afternoon.jpg';
 import evening from '../images/evening.jpg';
 import night from '../images/night.jpg';
+const API = 'http://127.0.0.1:9000';
+
 const SignIn = () => {
   const [data, getData] = useState({ username: '', password: '' });
 
@@ -29,8 +32,18 @@ const SignIn = () => {
     spancss.color = 'blue';
   }
 
+  const loginUser = async url => {
+    try {
+      const res = await axios.post(url, data);
+      if (res) alert('Success');
+    } catch (err) {
+      alert('Invalid Credentials');
+    }
+  }
+
   const handleSubmit = e => {
     e.preventDefault();
+    loginUser(`${API}/login`);
     getData({
       username: '',
       password: ''
@@ -47,7 +60,7 @@ const SignIn = () => {
     })
   }
 
-  const item=[{data:'Username',ph:'Username',typ:'text',name:'username',val:data.username,inputData:handleInput},{data:'Password',ph:'Password',typ:'password',name:'password',val:data.password,inputData:handleInput}];
+  const item = [{ data: 'Username', ph: 'Username', typ: 'text', name: 'username', val: data.username, inputData: handleInput }, { data: 'Password', ph: 'Password', typ: 'password', name: 'password', val: data.password, inputData: handleInput }];
 
   return (
     <>
@@ -60,8 +73,8 @@ const SignIn = () => {
             <h1 className='right-heading'>Hello! <span className='right-span' style={spancss}>{greeting}</span></h1>
             <h1 className='heding-inside heading'>Login to your Account</h1>
             <form className="sign-in-form" onSubmit={handleSubmit}>
-              <Signin2 {...{...item[0]}} />
-              <Signin2 {...{...item[1]}} />
+              <Signin2 {...{ ...item[0] }} />
+              <Signin2 {...{ ...item[1] }} />
               <div className="btn-div">
                 <button className="sign-up-btn">Login</button>
               </div>

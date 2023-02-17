@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import Signup2 from './Signup2';
 import morning from '../images/morning.jpg';
 import afternoon from '../images/afternoon.jpg';
 import evening from '../images/evening.jpg';
 import night from '../images/night.jpg';
+const API = 'http://127.0.0.1:9000';
 
 const SignUp = () => {
   const [data, getData] = useState({ name: '', email: '', password: '', number: '', username: '', cpassword: '', gender: '' });
@@ -69,14 +71,24 @@ const SignUp = () => {
     }
   }
 
+  const registerUser = async url => {
+    const { name, email, password, number, username, cpassword, gender } = data;
+    try {
+      const res = await axios.post(url, { name, email, password, number, username, cpassword, gender });
+      if (res) alert(res.data.message);
+    } catch (err) {
+      alert(err.response.data.message);
+    }
+  }
+
   const handleSubmit = e => {
     e.preventDefault();
     const { name, email, password, number, username } = validation;
     const { errStyle } = styleVal;
     if (data.password !== data.cpassword) alert('password not matching');
-    else if (name.border === errStyle.border || email.border === errStyle.border || password.border === errStyle.border || number.border === errStyle.border || username.border === errStyle.border) alert('Enter correct data');
+    else if (name.border === errStyle.border || email.border === errStyle.border || password.border === errStyle.border || number.border === errStyle.border || username.border === errStyle.border) alert('Enter valid data');
     else {
-      // console.log(data);
+      registerUser(`${API}/register`);
       getData({
         name: '',
         email: '',

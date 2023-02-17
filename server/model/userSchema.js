@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
         minlength: 3,
         maxlength: 30
     },
-    phone: {
+    number: {
         type: Number,
         required: true,
         unique: true,
@@ -29,25 +29,26 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique: true,
         trim: true,
-        minlength: 3,
-        maxlength: 20
+        minlength: 4,
+        maxlength: 26
     },
     password: {
         type: String,
         required: true,
         minlength: 8,
-        maxlength: 20
+        // maxlength: 25
     },
     cpassword: {
         type: String,
         required: true,
         minlength: 8,
-        maxlength: 20
+        // maxlength: 25
     },
     gender: {
         type: String,
         required: true,
-        lowercase: true
+        lowercase: true,
+        enum:['male','female','other']
     },
     tokens: [
         {
@@ -60,7 +61,6 @@ const userSchema = new mongoose.Schema({
 })
 
 userSchema.pre('save', async function (next) {
-    // console.log('code runned')
     if (this.isModified('password')) {
         this.password = await bcrypt.hash(this.password, 12);
         this.cpassword = await bcrypt.hash(this.cpassword, 12);
@@ -70,7 +70,7 @@ userSchema.pre('save', async function (next) {
 
 userSchema.methods.generateAuthToken = async function () {
     try {
-        let token = jwt.sign({ _id: this._id }, 'mynameisgirrajkushwahakarootkaalsec');
+        let token = jwt.sign({ _id: this._id }, 'mynameisgirrajtechnicalakarootkaalsec');
         this.tokens = this.tokens.concat({ token: token });
         await this.save();
         return token;
