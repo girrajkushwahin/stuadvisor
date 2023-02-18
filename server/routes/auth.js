@@ -54,9 +54,9 @@ router.post('/register', async (req, res) => {
         return res.status(422).json({ message: 'Please fill the form properly' });
     }
     try {
-        const mailExist = await Registration.findOne({ email: email });
-        const numExist = await Registration.findOne({ number: number });
-        const usrnameExist = await Registration.findOne({ username: username });
+        const mailExist = await Registration.findOne({ email });
+        const numExist = await Registration.findOne({ number });
+        const usrnameExist = await Registration.findOne({ username });
 
         if (mailExist) res.status(422).json({ message: 'Email already exists' });
         else if (numExist) res.status(422).json({ message: 'Number already exists' });
