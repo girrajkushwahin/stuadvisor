@@ -72,7 +72,7 @@ const SignIn = () => {
           <div className="right-sign-in">
             <h1 className='right-heading'>Hello! <span className='right-span' style={spancss}>{greeting}</span></h1>
             <h1 className='heding-inside heading'>Login to your Account</h1>
-            <form className="sign-in-form" onSubmit={handleSubmit}>
+            <form method='POST' className="sign-in-form" onSubmit={handleSubmit}>
               <Signin2 {...{ ...item[0] }} />
               <Signin2 {...{ ...item[1] }} />
               <div className="btn-div">

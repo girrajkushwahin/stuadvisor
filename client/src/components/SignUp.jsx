@@ -127,7 +127,7 @@ const SignUp = () => {
           <div className="right-sign-in">
             <h1 className='right-heading'>Hello! <span className='right-span' style={spancss}>{greeting}</span></h1>
             <h1 className='heding-inside'>Create your Account</h1>
-            <form onSubmit={handleSubmit} className="sign-up-form">
+            <form method='POST' onSubmit={handleSubmit} className="sign-up-form">
               <div className="form-container">
                 <div className="left-form">
                   <Signup2 {...{ ...item[0] }} />
