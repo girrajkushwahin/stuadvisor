@@ -84,7 +84,7 @@ const ContactUs = () => {
           </div>
           {/* ************************************************************* */}
           <div className="contact-slider">
-            <div class="site">
+            <div className="site">
             </div>
               <div className="top">
               <i className="fa-solid fa-angles-left arrow left"></i>
@@ -103,7 +103,7 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="message-contact-form">
-            <h1  className='get-in-touch'><span>Lets</span> Talk Something</h1>
+            <h1  className='get-in-touch'><span>Send</span> us Message</h1>
             <div className="send-message">
               <div className="contact-form">
                 <span><h1>Phone</h1><input type="text" placeholder='Enter Phone'/></span>
@@ -116,7 +116,7 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="contact-form-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14662.500615116098!2d77.4531487770454!3d23.25672375735795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c4206867f624f%3A0xe7a20a45699fb32c!2sIndrapuri%2C%20Bhopal%2C%20Madhya%20Pradesh%20462022!5e0!3m2!1sen!2sin!4v1676395806094!5m2!1sen!2sin" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14662.500615116098!2d77.4531487770454!3d23.25672375735795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c4206867f624f%3A0xe7a20a45699fb32c!2sIndrapuri%2C%20Bhopal%2C%20Madhya%20Pradesh%20462022!5e0!3m2!1sen!2sin!4v1676395806094!5m2!1sen!2sin" allowFullScreen title='stuadvisor location' loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
     </>
