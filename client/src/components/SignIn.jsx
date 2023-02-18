@@ -5,6 +5,8 @@ import morning from '../images/morning.jpg';
 import afternoon from '../images/afternoon.jpg';
 import evening from '../images/evening.jpg';
 import night from '../images/night.jpg';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const API = 'http://127.0.0.1:9000';
 
 const SignIn = () => {
@@ -35,9 +37,27 @@ const SignIn = () => {
   const loginUser = async url => {
     try {
       const res = await axios.post(url, data);
-      if (res) alert('Success');
+      if (res) toast.success('Success', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     } catch (err) {
-      alert('Invalid Credentials');
+      toast.error('Invalid Credentials', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   }
 
@@ -82,6 +102,18 @@ const SignIn = () => {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </>
   )
 }

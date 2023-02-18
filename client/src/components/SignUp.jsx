@@ -5,6 +5,8 @@ import morning from '../images/morning.jpg';
 import afternoon from '../images/afternoon.jpg';
 import evening from '../images/evening.jpg';
 import night from '../images/night.jpg';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const API = 'http://127.0.0.1:9000';
 
 const SignUp = () => {
@@ -75,9 +77,29 @@ const SignUp = () => {
     const { name, email, password, number, username, cpassword, gender } = data;
     try {
       const res = await axios.post(url, { name, email, password, number, username, cpassword, gender });
-      if (res) alert(res.data.message);
+      if (res) {
+        toast.success(res.data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
     } catch (err) {
-      alert(err.response.data.message);
+      toast.error(err.response.data.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   }
 
@@ -85,8 +107,26 @@ const SignUp = () => {
     e.preventDefault();
     const { name, email, password, number, username } = validation;
     const { errStyle } = styleVal;
-    if (data.password !== data.cpassword) alert('password not matching');
-    else if (name.border === errStyle.border || email.border === errStyle.border || password.border === errStyle.border || number.border === errStyle.border || username.border === errStyle.border) alert('Enter valid data');
+    if (data.password !== data.cpassword) toast.error('password not matching', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    else if (name.border === errStyle.border || email.border === errStyle.border || password.border === errStyle.border || number.border === errStyle.border || username.border === errStyle.border) toast.error('Enter valid data', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
     else {
       registerUser(`${API}/register`);
       getData({
@@ -156,6 +196,18 @@ const SignUp = () => {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </>
   )
 }
