@@ -26,7 +26,6 @@ router.get('*', (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
-        let token;
         const { username, password } = req.body;
         if (!username || !password) return res.status(400).json({ message: "pls fill the data" });
 
@@ -35,12 +34,15 @@ router.post('/login', async (req, res) => {
             const isMatch = await bcrypt.compare(password, userLogin.password);
             if (!isMatch) res.status(400).json({ message: "Invalid Credentials" });
             else {
-                token = await userLogin.generateAuthToken();
-                res.cookie("jwtoken", token, {
-                    expires: new Date(Date.now() + 2592000000),
-                    httpOnly: true
-                });
-                res.status(201).json({ message: "signin successfully" });
+                let token = await userLogin.generateAuthToken();
+                // res.cookie("jwtoken", token, {
+                //     expires: new Date(Date.now() + 2592000000),
+                //     httpOnly: true,
+                //     // secure:true
+                // });
+                res.status(201).json({ jwtoken: token, message: "signin successfully" });
+                // res.json({ jwtoken: token });
+                // res.status(201).json({ message: "signin successfully" });
             }
         } else res.status(400).json({ message: "Invalid Credentials" });
     } catch (err) {

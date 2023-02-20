@@ -7,7 +7,7 @@ import evening from '../images/evening.jpg';
 import night from '../images/night.jpg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const API = 'http://127.0.0.1:9000';
+const API = 'http://127.0.0.1:8000';
 
 const SignIn = () => {
   const [data, getData] = useState({ username: '', password: '' });
@@ -47,6 +47,7 @@ const SignIn = () => {
         progress: undefined,
         theme: "light",
       });
+      localStorage.setItem('jwtoken',res.data.jwtoken);
     } catch (err) {
       toast.error('Invalid Credentials', {
         position: "top-center",
