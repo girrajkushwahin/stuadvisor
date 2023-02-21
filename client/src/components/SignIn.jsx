@@ -47,6 +47,7 @@ const SignIn = () => {
         progress: undefined,
         theme: "light",
       });
+      localStorage.setItem('jwtoken',res.data.jwtoken);
     } catch (err) {
       toast.error('Invalid Credentials', {
         position: "top-center",
