@@ -224,14 +224,16 @@
 }
 
 .company-contact {
-  box-shadow: 0 2px 10px #0003;
+  /* box-shadow: 0 2px 10px #0003; */
   padding: 1rem;
 }
 
 .get-in-touch {
   font-size: 2.3rem;
 }
-
+.hr{
+  margin-bottom: 3rem;
+}
 .get-in-touch span {
   font-size: 3rem;
   color: var(--dark-red-1);
@@ -244,7 +246,7 @@
 }
 
 .company-details span {
-  box-shadow: 0 2px 10px #0003;
+  /* box-shadow: 0 2px 10px #0003; */
   margin: 1rem;
   padding: .5rem;
   border-radius: 4px;
@@ -262,7 +264,7 @@
 
 .contact-slider {
   margin: 2rem 0;
-  box-shadow: 0 2px 10px #0003;
+  /* box-shadow: 0 2px 10px #0003; */
   padding: 1rem;
   flex-direction: column;
   gap: 25px;
@@ -329,7 +331,7 @@
 }
 
 .message-contact-form {
-  box-shadow: 0 2px 10px #0003;
+  /* box-shadow: 0 2px 10px #0003; */
   padding: 1rem;
   align-items: center;
 
