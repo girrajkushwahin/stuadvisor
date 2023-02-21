@@ -1,0 +1,53 @@
+.news-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.accordion {
+  max-width: 95%;
+}
+
+.accordion .contentBox {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.accordion .contentBox .label {
+  position: relative;
+  padding: 20px;
+  background: #26943f;
+  color: #fff;
+}
+
+.accordion .contentBox .label::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.accordion .contentBox.active1 .label::before {
+  content: "-";
+  font-size: 3rem;
+}
+
+.accordion .contentBox .content {
+  position: relative;
+  /* padding: 10px; */
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: .5s;
+  overflow-y: auto;
+}
+
+
+.accordion .contentBox.active1 .content {
+  height: 150px;
+  padding: 10px;
+}
