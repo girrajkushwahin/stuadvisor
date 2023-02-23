@@ -20,7 +20,7 @@ const ContactUs = () => {
     try {
       const res = await axios.post(url, sendMsg);
       if (res) {
-        setSendMsg({ name: '', email: '', message: '' });
+        setSendMsg({ ...sendMsg, message: '' });
         toast.success(res.data.message, {
           position: "top-center",
           autoClose: 5000,
