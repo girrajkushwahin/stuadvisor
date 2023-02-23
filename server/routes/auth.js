@@ -83,11 +83,19 @@ router.post('/getmessage', async (req, res) => {
     const { name, email, message } = req.body;
     if (!name || !email || !message) return res.status(422).json({ message: 'Please fill the form properly' });
     try {
-        const userMessage = new contactMessage({ name, email, message });
-        const messageSave = await userMessage.save();
+        const userContact = await Registration.findOne({ email });
+        if (userContact) {
+            await userContact.addMessage(name, email, message);
+            const saveStatus = await userContact.save();
+            if (saveStatus) res.status(201).json({ message: 'Message Sent' });
+            else res.status(500).json({ message: 'Internal error' });
+        } else {
+            const userMessage = new contactMessage({ name, email, message });
+            const messageSave = await userMessage.save();
 
-        if (messageSave) res.status(201).json({ message: 'Message Sent' });
-        else res.status(500).json({ message: 'Internal error' });
+            if (messageSave) res.status(201).json({ message: 'Message Sent' });
+            else res.status(500).json({ message: 'Internal error' });
+        }
     } catch (err) {
         console.log(err);
     }

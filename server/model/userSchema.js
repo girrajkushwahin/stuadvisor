@@ -50,6 +50,31 @@ const userSchema = new mongoose.Schema({
         lowercase: true,
         enum: ['male', 'female', 'other']
     },
+    date: {
+        type: Date,
+        default: Date.now
+    },
+    messages: [
+        {
+            name: {
+                type: String,
+                required: true,
+                trim: true,
+                minlength: 3,
+                maxlength: 30
+            },
+            email: {
+                type: String,
+                required: true,
+                trim: true
+            },
+            message: {
+                type: String,
+                required: true,
+                trim: true,
+            }
+        }
+    ],
     tokens: [
         {
             token: {
@@ -74,6 +99,16 @@ userSchema.methods.generateAuthToken = async function () {
         this.tokens = this.tokens.concat({ token });
         await this.save();
         return token;
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+userSchema.methods.addMessage = async function (name, email, message) {
+    try {
+        this.messages = this.messages.concat({ name, email, message });
+        await this.save();
+        return this.messages;
     } catch (err) {
         console.log(err);
     }
