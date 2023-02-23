@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Signin2 from './Signin2';
 import morning from '../images/morning.jpg';
@@ -11,6 +12,7 @@ const API = 'http://127.0.0.1:8000';
 
 const SignIn = () => {
   const [data, getData] = useState({ username: '', password: '' });
+  const navigate = useNavigate();
 
   let greeting = '';
   let imageStatus = '';
@@ -37,17 +39,21 @@ const SignIn = () => {
   const loginUser = async url => {
     try {
       const res = await axios.post(url, data);
-      if (res) toast.success('Success', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-      localStorage.setItem('jwtoken',res.data.jwtoken);
+      if (res) {
+        localStorage.setItem('jwtoken', res.data.jwtoken);
+        navigate('/myaccount');
+        // to home and add a link in navbar for myaccount
+        // toast.success('Success', {
+        //   position: "top-center",
+        //   autoClose: 5000,
+        //   hideProgressBar: false,
+        //   closeOnClick: true,
+        //   pauseOnHover: true,
+        //   draggable: true,
+        //   progress: undefined,
+        //   theme: "light",
+        // });
+      }
     } catch (err) {
       toast.error('Invalid Credentials', {
         position: "top-center",

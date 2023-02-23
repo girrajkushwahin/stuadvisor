@@ -1,126 +1,140 @@
-import React from 'react';
-import comImg1 from '../images/companyImg1.jpg';
-import comImg2 from '../images/companyImg2.jpg';
-import comImg3 from '../images/companyImg3.png';
-import comImg4 from '../images/companyImg4.jpg';
-import comImg5 from '../images/companyImg5.jpg';
-
-// const left = document.querySelector(".left")
-// const right = document.querySelector(".right")
-// const slider = document.querySelector(".slider")
-// const images = document.querySelectorAll(".image")
-// const bottom = document.querySelector(".bottom")
-
-// let slideNumber = 1;
-// const length = images.length;
-
-// for(let i = 0;i<length;i++){
-//     const div = document.createElement("div")
-//     div.className = "button";
-//     bottom.appendChild(div);
-// }
-
-// const buttons = document.querySelectorAll(".button")
-// // buttons[0].style.backgroundColor = "white"
-
-// const resetBg = ()=>{
-//     buttons.forEach(button=>{
-//         button.style = {backgroundColor : "transparent"};
-//     })
-// }
-
-// buttons.forEach((button,i)=>{
-//     button.addEventListener("click",()=>{
-//         resetBg();
-//         slider.style ={transform : `translateX(-${i*800}px)`};
-//         buttons[i].style.backgroundColor = "white"
-//       });
-//     });
-
-// const nextSlide = ()=>{
-//     slider.style ={transform : `translateX(-${slideNumber * 800}px)`};
-//     slideNumber++
-//   }
-//   const prevSlide = ()=>{
-//     slider.style ={transform : `translateX(-${(slideNumber-2) * 800}px)`};
-//     slideNumber--
-//   }
-
-//   const getFirstSlide = ()=>{
-//     slider.style ={transform : `translateX(-0px)`};
-//     slideNumber = 1;
-//   }
-//   const getLastSlide = ()=>{
-//     slider.style ={transform : `translateX(-${(length-1)*800}px)`};
-//     slideNumber = length;
-// }
-// const changeColor = ()=>{
-//     resetBg();
-//     buttons[slideNumber-1].style={backgroundColor : "white"}
-// }
-// right.addEventListener("click", ()=>{
-//     slideNumber<length ? nextSlide() : getFirstSlide();
-//   changeColor();
-// });
-
-
-// left.addEventListener("click", ()=>{
-//     slideNumber > 1 ? prevSlide() : getLastSlide();
-//     changeColor();
-
-// });
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Carousel } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import slider1 from '../images/contact1.jpg';
+import slider2 from '../images/contact2.jpg';
+import slider3 from '../images/contact3.jpg';
+const API = 'http://127.0.0.1:8000';
 
 const ContactUs = () => {
+  const [sendMsg, setSendMsg] = useState({ name: '', email: '', message: '' });
+
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setSendMsg({ ...sendMsg, [name]: value });
+  }
+
+  const sendMessage = async url => {
+    try {
+      const res = await axios.post(url, sendMsg);
+      if (res) {
+        setSendMsg({ name: '', email: '', message: '' });
+        toast.success(res.data.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
+    } catch (err) {
+      toast.error(err.response.data.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  }
+
+  const handleData = () => {
+    const { name, email, message } = sendMsg;
+    if (!name || !email || !message) toast.error('Fill properly', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    else {
+      sendMessage(`${API}/getmessage`);
+    }
+  }
+
+  const userContact = async url => {
+    const token = localStorage.getItem('jwtoken');
+    try {
+      const res = await axios.post(url, { token });
+      const { name, email } = res.data;
+      setSendMsg({ name, email });
+    } catch (err) { }
+  }
+
+  useEffect(() => {
+    userContact(`${API}/getcontact`);
+  }, []);
+
   return (
     <>
       <div className="contact-container">
         <div className="company-contact contact-margin">
-          <h1 className='get-in-touch'> <span>Get</span> in touch</h1><hr className='hr'/>
+          <h1 className='get-in-touch'> <span>Get</span> in touch</h1><hr className='hr' />
           <div className="company-details">
             <span><h2>Email</h2><p>contact@stuadvisor.com</p></span>
-            <span><h2>Phone</h2><p>9876543210</p></span>
-            <span><h2>Address</h2><p>Indrapuri, Bhopal (MP) </p></span>
+            <span><h2>Phone</h2><p>+91 9876543210</p></span>
+            <span><h2>Address</h2><p>Indrapuri, Bhopal (M.P.) </p></span>
           </div>
           <div className="social-icons-contact">
-            <a href="https://www.instagram.com/" rel="noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://facebook.com/" rel="noreferrer" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com" rel="noreferrer" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://github.com/" rel="noreferrer" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/" rel="noreferrer" target="_blank"><i className="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/" rel="noreferrer" target="_blank"><i className="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com" rel="noreferrer" target="_blank"><i className="fa-brands fa-twitter"></i></a>
+            <a href="https://github.com/" rel="noreferrer" target="_blank"><i className="fa-brands fa-github"></i></a>
           </div>
         </div>
         <hr />
-        {/* ************************************************************* */}
         <div className="contact-slider contact-margin">
-          <div className="site">
-          </div>
           <div className="top">
-            <i className="fa-solid fa-angles-left arrow left"></i>
-            <div className="frame">
-              <div className="slider">
-                <img className='image' src={comImg1} alt="" />
-                <img className='image' src={comImg2} alt="" />
-                <img className='image' src={comImg3} alt="" />
-                <img className='image' src={comImg4} alt="" />
-                <img className='image' src={comImg5} alt="" />
-              </div>
-            </div>
-            <i className="fa-solid fa-angles-right arrow left"></i>
-          </div>
-          <div className="bottom">
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={slider1}
+                  alt="First slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={slider2}
+                  alt="Second slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={slider3}
+                  alt="Third slide"
+                />
+              </Carousel.Item>
+            </Carousel>
           </div>
         </div>
         <hr />
         <div className="message-contact-form contact-margin">
           <h1 className='get-in-touch'><span>Send</span> us Message</h1>
           <div className="send-message">
-            <div className="contact-form">
-              <span><h1>Phone</h1><input type="text" placeholder='Enter Phone' /></span>
-              <span><h1>Email</h1><input type="text" placeholder='Enter Email' /></span>
-            </div>
-            <textarea name="" cols="116" className="contact-textarea" placeholder='Enter message here.....'></textarea>
+            <form>
+              <div className="contact-form">
+                <span><h1>Name</h1><input type="text" name='name' value={sendMsg.name} placeholder='Enter name' onChange={handleChange} /></span>
+                <span><h1>Email</h1><input type="email" name='email' value={sendMsg.email} placeholder='Enter email' onChange={handleChange} /></span>
+              </div>
+              <textarea name="message" value={sendMsg.message} cols="116" onChange={handleChange} className="contact-textarea" placeholder='Enter message here...' ></textarea>
+            </form>
           </div>
           <div className="send-btn-div">
-            <button type='button' className='send-btn'>Send Message</button>
+            <button type='button' className='send-btn' onClick={handleData}>Send Message</button>
           </div>
         </div>
         <hr />
@@ -128,6 +142,18 @@ const ContactUs = () => {
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14662.500615116098!2d77.4531487770454!3d23.25672375735795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c4206867f624f%3A0xe7a20a45699fb32c!2sIndrapuri%2C%20Bhopal%2C%20Madhya%20Pradesh%20462022!5e0!3m2!1sen!2sin!4v1676395806094!5m2!1sen!2sin" allowFullScreen title='stuadvisor location' loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </>
   )
 }

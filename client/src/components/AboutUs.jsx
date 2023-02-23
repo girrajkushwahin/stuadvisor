@@ -1,6 +1,6 @@
 import React from 'react';
 import animation1 from "../images/animation1.mp4"
-import animation4 from "../images/animation4.mp4"
+import animation2 from "../images/animation2.mp4"
 import RangeImage from "../images/RangeImage.png"
 const AboutUs = () => {
   return (
@@ -12,7 +12,7 @@ const AboutUs = () => {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quae sed qui molestias fugiat quo provident totam cumque temporibus, aliquid necessitatibus ex vel fuga impedit natus optio rem recusandae quis! Quasi, distinctio? Non, in ullam odio assumenda repellat voluptatibus libero nostrum esse dicta cumque? Dolore necessitatibus ipsum fuga dolores cum!</p>
           </div>
           <div className="about-header-right">
-            <a href='' target="_blank"><video loop="true" autoplay="true"><source src={animation1} type="video/mp4" /></video></a>
+            <video loop={true} autoPlay={true}><source src={animation1} type="video/mp4" /></video>
           </div>
         </div>
         <hr />
@@ -21,32 +21,32 @@ const AboutUs = () => {
           <h1>Why Choose Us</h1>
           <div className="why-us">
             <div className="why-us-content">
-              <a href=""><i class="fa-solid fa-house-chimney"></i></a>
+              <i className="fa-solid fa-house-chimney"></i>
               <h2>Learn At Home</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, numquam? Facere est hic velit! Recusandae quaerat eum quos quod autem.</p>
             </div>
             <div className="why-us-content">
-              <a href=""><i class="fa-solid fa-book"></i></a>
+              <i className="fa-solid fa-book"></i>
               <h2>Learn At Home</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, numquam? Facere est hic velit! Recusandae quaerat eum quos quod autem.</p>
             </div>
             <div className="why-us-content">
-              <a href=""><i class="fa-regular fa-comment"></i></a>
+              <i className="fa-regular fa-comment"></i>
               <h2>Learn At Home</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, numquam? Facere est hic velit! Recusandae quaerat eum quos quod autem.</p>
             </div>
             <div className="why-us-content">
-              <a href=""><i class="fa-duotone fa-users"></i></a>
+              <i className="fa-solid fa-house-chimney"></i>
               <h2>Learn At Home</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, numquam? Facere est hic velit! Recusandae quaerat eum quos quod autem.</p>
             </div>
             <div className="why-us-content">
-              <a href=""><i class="fa-regular fa-star"></i></a>
+              <i className="fa-regular fa-star"></i>
               <h2>Learn At Home</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, numquam? Facere est hic velit! Recusandae quaerat eum quos quod autem.</p>
             </div>
             <div className="why-us-content">
-              <a href=""><i class="fa-solid fa-comment"></i></a>
+              <i className="fa-solid fa-comment"></i>
               <h2>Learn At Home</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, numquam? Facere est hic velit! Recusandae quaerat eum quos quod autem.</p>
             </div>
@@ -60,7 +60,7 @@ const AboutUs = () => {
           <div className="our-focus-left our-focus">
             <h1>Our Focus</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, doloribus labore commodi natus omnis ipsam numquam itaque excepturi sint officia!</p>
-            <a href=""><video loop="true" autoPlay="true"><source src={animation4} type="video/mp4" /></video></a>
+            <video loop={true} autoPlay={true}><source src={animation2} type="video/mp4" /></video>
           </div>
           <div className="our-focus-right our-focus">
             <img src={RangeImage} alt="" />

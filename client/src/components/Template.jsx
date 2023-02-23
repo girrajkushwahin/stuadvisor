@@ -15,6 +15,7 @@ const Template = () => {
     else if (pathname === '/searchcolleges') return 'Search College'
     else if (pathname === '/academics') return pathname.charAt(1).toUpperCase() + pathname.slice(2);
     else if (pathname === '/blogs') return pathname.charAt(1).toUpperCase() + pathname.slice(2);
+    else if (pathname === '/myaccount') return 'My Account';
   });
 
   const getData = data => {

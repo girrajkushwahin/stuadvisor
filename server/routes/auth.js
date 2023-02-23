@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
+const authenticate = require('../middleware/authenticate');
 
 const Registration = require('../model/userSchema');
+const contactMessage = require('../model/messageSchema');
 
 router.get('/', (req, res) => {
     res.send('hello world1');
@@ -35,14 +37,7 @@ router.post('/login', async (req, res) => {
             if (!isMatch) res.status(400).json({ message: "Invalid Credentials" });
             else {
                 let token = await userLogin.generateAuthToken();
-                // res.cookie("jwtoken", token, {
-                //     expires: new Date(Date.now() + 2592000000),
-                //     httpOnly: true,
-                //     // secure:true
-                // });
                 res.status(201).json({ jwtoken: token, message: "signin successfully" });
-                // res.json({ jwtoken: token });
-                // res.status(201).json({ message: "signin successfully" });
             }
         } else res.status(400).json({ message: "Invalid Credentials" });
     } catch (err) {
@@ -74,6 +69,28 @@ router.post('/register', async (req, res) => {
     } catch (err) {
         console.log(err);
     };
+})
+
+router.post('/confidential', authenticate, (req, res) => {
+    res.send("Authentication successful");
+})
+
+router.post('/getcontact', authenticate, (req, res) => {
+    res.send(req.rootUser);
+})
+
+router.post('/getmessage', async (req, res) => {
+    const { name, email, message } = req.body;
+    if (!name || !email || !message) return res.status(422).json({ message: 'Please fill the form properly' });
+    try {
+        const userMessage = new contactMessage({ name, email, message });
+        const messageSave = await userMessage.save();
+
+        if (messageSave) res.status(201).json({ message: 'Message Sent' });
+        else res.status(500).json({ message: 'Internal error' });
+    } catch (err) {
+        console.log(err);
+    }
 })
 
 module.exports = router;
