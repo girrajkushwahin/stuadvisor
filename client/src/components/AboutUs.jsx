@@ -1,4 +1,5 @@
 import React from 'react';
+import { aboutData, aboutData2 } from './Data';
 import animation1 from "../images/animation1.mp4"
 import animation2 from "../images/animation2.mp4"
 import RangeImage from "../images/RangeImage.png"
@@ -16,74 +17,34 @@ const AboutUs = () => {
           </div>
         </div>
         <hr />
-        {/* ************************************* */}
         <div className="why-choose-us-about">
           <h1>Why Choose Us</h1>
           <div className="why-us">
-            <div className="why-us-content">
-              <i className="fa-solid fa-house-chimney"></i>
-              <h2>Learn At Home</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, numquam? Facere est hic velit! Recusandae quaerat eum quos quod autem.</p>
-            </div>
-            <div className="why-us-content">
-              <i className="fa-solid fa-book"></i>
-              <h2>Learn At Home</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, numquam? Facere est hic velit! Recusandae quaerat eum quos quod autem.</p>
-            </div>
-            <div className="why-us-content">
-              <i className="fa-regular fa-comment"></i>
-              <h2>Learn At Home</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, numquam? Facere est hic velit! Recusandae quaerat eum quos quod autem.</p>
-            </div>
-            <div className="why-us-content">
-              <i className="fa-solid fa-house-chimney"></i>
-              <h2>Learn At Home</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, numquam? Facere est hic velit! Recusandae quaerat eum quos quod autem.</p>
-            </div>
-            <div className="why-us-content">
-              <i className="fa-regular fa-star"></i>
-              <h2>Learn At Home</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, numquam? Facere est hic velit! Recusandae quaerat eum quos quod autem.</p>
-            </div>
-            <div className="why-us-content">
-              <i className="fa-solid fa-comment"></i>
-              <h2>Learn At Home</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, numquam? Facere est hic velit! Recusandae quaerat eum quos quod autem.</p>
-            </div>
+            {aboutData.map((val, ind) => <div className="why-us-content" key={ind}>
+              {val.icon}
+              <h2>{val.heading}</h2>
+              <p>{val.content}</p>
+            </div>)}
           </div>
         </div>
         <hr />
-        {/* ******************************************** */}
         <h1 className='our-focus-heading'>Our Focus</h1>
         <div className="our-focus-container">
-
           <div className="our-focus-left our-focus">
             <h1>Our Focus</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, doloribus labore commodi natus omnis ipsam numquam itaque excepturi sint officia!</p>
             <video loop={true} autoPlay={true}><source src={animation2} type="video/mp4" /></video>
           </div>
           <div className="our-focus-right our-focus">
-            <img src={RangeImage} alt="" />
+            <img src={RangeImage} alt="stuadvisor range" />
           </div>
         </div>
         <hr />
         <div className="user-about-count">
-          <div className='user-count'>
-            <h1>20+</h1>
-            <p>Supporting Since</p>
-          </div>
-          <div className='user-count'>
-            <h1>5000+</h1>
-            <p>Universities Data</p>
-          </div>
-          <div className='user-count'>
-            <h1>25000+</h1>
-            <p>Colleges Data</p>
-          </div>
-          <div className='user-count'>
-            <h1>300+</h1>
-            <p>Notes Available</p>
-          </div>
+          {aboutData2.map((val, ind) => <div className='user-count' key={ind}>
+            <h1>{val.count}</h1>
+            <p>{val.data}</p>
+          </div>)}
         </div>
       </div>
     </>

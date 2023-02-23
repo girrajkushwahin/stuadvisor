@@ -5,12 +5,12 @@ const Reviews = () => {
     <>
       <div className="review-main-container">
         <div className="heading-review-container">
-          <h1>What students say about us</h1>
-          <p>Your <span>Reviews</span> are important to develope our community more strong . reviews help people to know more and learn more</p>
+          <h1>What people say about us</h1>
+          <p>Your <span>Reviews</span> are important to develop our community more strong . Reviews help people to know more about StuAdvisor</p>
         </div>
         <hr />
         <div className="top-reviews">
-          <h1><span>T</span>op <span>R</span>views</h1>
+          <h1><span>T</span>op <span>R</span>eviews</h1>
         </div>
         <div className="reviews-container">
           <div className="reviews">
@@ -78,7 +78,7 @@ const Reviews = () => {
         </div>
         <hr />
         <div className="top-reviews">
-          <h1><span>M</span>ore <span>R</span>views</h1>
+          <h1><span>M</span>ore <span>R</span>eviews</h1>
         </div>
         <div className="reviews-container">
           <div className="reviews">
