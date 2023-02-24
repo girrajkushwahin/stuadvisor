@@ -16,7 +16,7 @@ const SearchCollege = () => {
     setState(id);
   }
 
-  const searchCollegeMenu = [{ text: 'Search', icon: <i className="i-tag fa-solid fa-house"></i>, click: menuClick }, { text: 'btech', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'mtech', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i>, click: menuClick }, { text: 'b pharma', icon: <i className="i-tag fa-brands fa-blogger-b"></i>, click: menuClick }, { text: 'phd', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i>, click: menuClick },{ text: 'Sign in', icon: <i className="i-tag fa-solid fa-door-open"></i>, click: menuClick }, { text: 'Sign up', icon: <i className="i-tag fa-solid fa-user-plus"></i>, click: menuClick }];
+  const searchCollegeMenu = [{ text: 'Search', icon: <i className="i-tag fa-solid fa-house"></i>, click: menuClick }, { text: 'btech', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'mtech', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i>, click: menuClick }, { text: 'b pharma', icon: <i className="i-tag fa-brands fa-blogger-b"></i>, click: menuClick }, { text: 'phd', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i>, click: menuClick }, { text: 'Sign in', icon: <i className="i-tag fa-solid fa-door-open"></i>, click: menuClick }, { text: 'Sign up', icon: <i className="i-tag fa-solid fa-user-plus"></i>, click: menuClick }];
 
   useEffect(() => {
     key(searchCollegeMenu);

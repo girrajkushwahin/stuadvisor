@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { initialState, reducer } from './reducer/Reducer';
 import Template from './components/Template';
 import Home from './components/Home';
 import SearchCollege from './components/SearchCollege';
@@ -7,20 +8,30 @@ import Academics from './components/Academics';
 import Blogs from './components/Blogs';
 import UserAccount from './components/UserAccount';
 import Error from './components/Error';
+export const SiteContext = React.createContext();
+
+const Routing = () => {
+  return (
+    <Routes>
+      <Route path='/' element={<Template />}>
+        <Route index element={<Home />} />
+        <Route path='searchcolleges' element={<SearchCollege />} />
+        <Route path='academics' element={<Academics />} />
+        <Route path='blogs' element={<Blogs />} />
+        <Route path='myaccount' element={<UserAccount />} />
+      </Route>
+      <Route path='*' element={<Error />} />
+    </Routes>
+  )
+}
 
 const App = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <>
-      <Routes>
-        <Route path='/' element={<Template />}>
-          <Route index element={<Home />} />
-          <Route path='searchcolleges' element={<SearchCollege />} />
-          <Route path='academics' element={<Academics />} />
-          <Route path='blogs' element={<Blogs />} />
-          <Route path='myaccount' element={<UserAccount />} />
-        </Route>
-        <Route path='*' element={<Error />} />
-      </Routes>
+      <SiteContext.Provider value={{ state, dispatch }}>
+        <Routing />
+      </SiteContext.Provider>
     </>
   )
 }

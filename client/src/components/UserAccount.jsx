@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useOutletContext, useNavigate } from 'react-router-dom';
+import { SiteContext } from '../App';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,6 +12,7 @@ import Account5 from './Account5';
 const API = 'http://127.0.0.1:8000';
 
 const UserAccount = () => {
+  const { dispatch } = useContext(SiteContext);
   const [data, setData] = useState(0);
   let { key } = useOutletContext();
   const navigate = useNavigate();
@@ -21,6 +23,7 @@ const UserAccount = () => {
 
   const handleSignOut = () => {
     localStorage.removeItem('jwtoken');
+    dispatch({ type: 'SWITCH', payload: false });
     navigate('/', { replace: true });
   }
 
