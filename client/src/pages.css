@@ -549,6 +549,7 @@
 /* ********************************** REVIEWS PAGE ******************************** */
 .review-main-container {
   margin: 1rem;
+
 }
 
 .heading-review-container {
@@ -580,7 +581,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
 }
 
 .inner-slider {
@@ -599,7 +601,6 @@
 }
 
 .reviews-container .reviews {
-  /* border: 2px solid rgba(0, 0, 0, 0.322); */
   margin: 1rem;
   padding: 1rem;
   height: 40vh;
@@ -642,4 +643,20 @@
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   margin-bottom: 1rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 30px;
+  width: 30px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(255, 0, 0);
 }
