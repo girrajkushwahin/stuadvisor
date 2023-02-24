@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import { reviewSlider } from './Data';
-
+import img1 from "../images/logofooter.png";
 const Reviews = () => {
   return (
     <>
@@ -18,6 +18,7 @@ const Reviews = () => {
           <Carousel>
             {reviewSlider.map((elem, ind) => <Carousel.Item key={ind}>
               <div className="inner-slider">
+                <img className='reveiw-profile' src={img1} alt="" />
                 <p>Review by</p>
                 <h1>{elem.text}</h1>
                 <p>⭐⭐⭐⭐⭐</p>

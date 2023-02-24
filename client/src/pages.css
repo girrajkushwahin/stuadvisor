@@ -633,3 +633,13 @@
   padding: 0;
   border-bottom: 2px solid #591a8b;
 }
+
+.reveiw-profile {
+  background-position: center;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+}
