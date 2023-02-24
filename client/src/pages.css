@@ -576,6 +576,23 @@
   color: #591a8b;
 }
 
+.reviews-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.inner-slider {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
 .reviews-container {
   display: grid;
   grid-template-columns: auto auto auto auto;

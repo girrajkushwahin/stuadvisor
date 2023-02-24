@@ -14,15 +14,15 @@ const Reviews = () => {
         <div className="top-reviews">
           <h1><span>T</span>op <span>R</span>eviews</h1>
         </div>
-        <div className="reviews-container">
+        <div className="reviews-slider">
           <Carousel>
             {reviewSlider.map((elem, ind) => <Carousel.Item key={ind}>
-              <div className="reviews">
+              <div className="inner-slider">
                 <p>Review by</p>
                 <h1>{elem.text}</h1>
                 <p>⭐⭐⭐⭐⭐</p>
                 <hr />
-                <div className='review-content'><p>{elem.review}</p></div>
+                <div className='slider-content'><p>{elem.review}</p></div>
               </div>
             </Carousel.Item>)}
           </Carousel>
