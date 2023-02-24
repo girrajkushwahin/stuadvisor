@@ -5,7 +5,7 @@ import { Nav2Data } from './Template';
 const NavToggle = ({ toggle, data }) => {
     const navData = useContext(Nav2Data);
 
-    const navitems = [{ key: 'Home', path: '/' }, { key: 'Search College', path: 'searchcolleges' }, { key: 'Academics', path: 'academics' }, { key: 'Blogs', path: 'blogs' }];
+    const navitems = [{ key: 'Home', path: '/' }, { key: 'Search College', path: 'searchcolleges' }, { key: 'Academics', path: 'academics' }, { key: 'Blogs', path: 'blogs' }, { key: 'My Account', path: 'myaccount' }];
 
     return (
         <>

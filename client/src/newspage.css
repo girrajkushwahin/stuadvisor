@@ -21,7 +21,7 @@
   color: #fff;
 }
 
-.accordion .contentBox .label::before {
+/* .accordion .contentBox .label::before {
   content: "+";
   position: absolute;
   top: 50%;
@@ -29,12 +29,12 @@
   transform: translateY(-50%);
   font-size: 2rem;
   cursor: pointer;
-}
-
+} */
+/* 
 .accordion .contentBox.active1 .label::before {
   content: "-";
   font-size: 3rem;
-}
+} */
 
 .accordion .contentBox .content {
   position: relative;

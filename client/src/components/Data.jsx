@@ -3,6 +3,9 @@ import getStarted1 from '../images/home1.jpg';
 import getStarted2 from '../images/home2.jpg';
 import getStarted3 from '../images/home3.jpg';
 import getStarted4 from '../images/home4.jpg';
+import slider1 from '../images/contact1.jpg';
+import slider2 from '../images/contact2.jpg';
+import slider3 from '../images/contact3.jpg';
 
 const getStartedData = [{ img: getStarted1, heading: 'Search for your dream College', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit culpa provident tenetur odit aliquam ratione quae commodi quas unde? Autem quod expedita laudantium eum nihil temporibus ipsam, neque itaque at id ex maxime iusto, quasi optio voluptas fuga ullam dolores quis minus libero accusamus dicta dignissimos a? Veniam voluptas doloremque expedita !', button: <Link to='/searchcolleges'><button className='get-started-btn'>Let's Start</button></Link> }, { img: getStarted2, heading: 'Want to get help in Academics', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit culpa provident tenetur odit aliquam ratione quae commodi quas unde? Autem quod expedita laudantium eum nihil temporibus ipsam, neque itaque at id ex maxime iusto, quasi optio voluptas fuga ullam dolores quis minus libero accusamus dicta dignissimos a? Veniam voluptas doloremque expedita !', button: <Link to='/academics'><button className='get-started-btn'>Let's Start</button></Link> }, { img: getStarted3, heading: 'Read blogs about your Queries', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit culpa provident tenetur odit aliquam ratione quae commodi quas unde? Autem quod expedita laudantium eum nihil temporibus ipsam, neque itaque at id ex maxime iusto, quasi optio voluptas fuga ullam dolores quis minus libero accusamus dicta dignissimos a? Veniam voluptas doloremque expedita !', button: <Link to='/blogs'><button className='get-started-btn'>Let's Start</button></Link> }, { img: getStarted4, heading: 'And many more stuff for you...', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit culpa provident tenetur odit aliquam ratione quae commodi quas unde? Autem quod expedita laudantium eum nihil temporibus ipsam, neque itaque at id ex maxime iusto, quasi optio voluptas fuga ullam dolores quis minus libero accusamus dicta dignissimos a? Veniam voluptas doloremque expedita !', button: '' }]
 
@@ -10,5 +13,9 @@ const aboutData = [{ icon: <i className="fa-solid fa-house-chimney"></i>, headin
 
 const aboutData2 = [{ count: '5000+', data: 'Colleges Data' }, { count: '10,000+', data: 'Educational Blogs' }, { count: '8000+', data: 'Study Material' }, { count: 2023, data: 'Supporting Since' }]
 
+const contactSlider = [{ src: slider1, text: 'First slide' }, { src: slider2, text: 'Second slide' }, { src: slider3, text: 'Third slide' }];
+
+const reviewSlider = [{ text: 'Susheel Gupta', review: 'luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit', face: '' }, { text: 'Girraj Kushwah', review: 'luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit', face: '' }, { text: 'Gopal Kushwah', review: 'luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit', face: '' }, { text: 'Urmila Mahor', review: 'luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit', face: '' }];
+
 export default getStartedData;
-export { aboutData, aboutData2 };
+export { aboutData, aboutData2, contactSlider, reviewSlider };

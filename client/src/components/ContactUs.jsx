@@ -3,9 +3,7 @@ import axios from 'axios';
 import { Carousel } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import slider1 from '../images/contact1.jpg';
-import slider2 from '../images/contact2.jpg';
-import slider3 from '../images/contact3.jpg';
+import { contactSlider } from './Data';
 const API = 'http://127.0.0.1:8000';
 
 const ContactUs = () => {
@@ -97,27 +95,13 @@ const ContactUs = () => {
         <div className="contact-slider contact-margin">
           <div className="top">
             <Carousel>
-              <Carousel.Item>
+              {contactSlider.map((val, ind) => <Carousel.Item key={ind}>
                 <img
                   className="d-block w-100"
-                  src={slider1}
-                  alt="First slide"
+                  src={val.src}
+                  alt={val.text}
                 />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={slider2}
-                  alt="Second slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={slider3}
-                  alt="Third slide"
-                />
-              </Carousel.Item>
+              </Carousel.Item>)}
             </Carousel>
           </div>
         </div>
