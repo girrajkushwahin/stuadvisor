@@ -80,7 +80,7 @@ const SignUp = () => {
       if (res) {
         toast.success(res.data.message, {
           position: "top-center",
-          autoClose: 5000,
+          autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -92,7 +92,7 @@ const SignUp = () => {
     } catch (err) {
       toast.error(err.response.data.message, {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -109,7 +109,7 @@ const SignUp = () => {
     const { errStyle } = styleVal;
     if (data.password !== data.cpassword) toast.error('password not matching', {
       position: "top-center",
-      autoClose: 5000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -119,7 +119,7 @@ const SignUp = () => {
     });
     else if (name.border === errStyle.border || email.border === errStyle.border || password.border === errStyle.border || number.border === errStyle.border || username.border === errStyle.border) toast.error('Enter valid data', {
       position: "top-center",
-      autoClose: 5000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -198,7 +198,7 @@ const SignUp = () => {
       </div>
       <ToastContainer
         position="top-center"
-        autoClose={5000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

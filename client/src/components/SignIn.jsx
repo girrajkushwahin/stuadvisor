@@ -45,25 +45,26 @@ const SignIn = () => {
       const res = await axios.post(url, data);
       if (res) {
         localStorage.setItem('jwtoken', res.data.jwtoken);
-        dispatch({ type: 'SWITCH', payload: true });
-        navigate('/myaccount');
-        navData('My Account');
-        // to home and add a link in navbar for myaccount
-        // toast.success('Success', {
-        //   position: "top-center",
-        //   autoClose: 5000,
-        //   hideProgressBar: false,
-        //   closeOnClick: true,
-        //   pauseOnHover: true,
-        //   draggable: true,
-        //   progress: undefined,
-        //   theme: "light",
-        // });
+        setTimeout(() => {
+          dispatch({ type: 'SWITCH', payload: true });
+          navigate('/myaccount');
+          navData('My Account');
+        }, 2000);
+        toast.success('Signed in', {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
       }
     } catch (err) {
       toast.error('Invalid Credentials', {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -117,7 +118,7 @@ const SignIn = () => {
       </div>
       <ToastContainer
         position="top-center"
-        autoClose={5000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

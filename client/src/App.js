@@ -2,6 +2,8 @@ import React, { useReducer, useEffect } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { reducer, initialState } from './reducer/Reducer';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Template from './components/Template';
 import Home from './components/Home';
 import SearchCollege from './components/SearchCollege';
@@ -40,15 +42,27 @@ const App = () => {
 
   const handleSignOut = () => {
     localStorage.removeItem('jwtoken');
-    dispatch({ type: 'SWITCH', payload: false });
-    if (pathname === '/') {
-      navigate('/searchcolleges', { replace: true });
-      path('Search College');
-    }
-    else {
-      navigate('/', { replace: true });
-      path('Home');
-    }
+    setTimeout(() => {
+      dispatch({ type: 'SWITCH', payload: false });
+      if (pathname === '/') {
+        navigate('/searchcolleges', { replace: true });
+        path('Search College');
+      }
+      else {
+        navigate('/', { replace: true });
+        path('Home');
+      }
+    })
+    toast.success('Signed out', {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   }
 
   const isAuthenticate = async url => {
@@ -74,6 +88,18 @@ const App = () => {
           <Routing />
         </SignOut.Provider>
       </SiteContext.Provider>
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </>
   )
 }
