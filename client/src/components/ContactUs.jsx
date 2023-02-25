@@ -80,9 +80,9 @@ const ContactUs = () => {
         <div className="company-contact contact-margin">
           <h1 className='get-in-touch'> <span>Get</span> in touch</h1><hr className='hr' />
           <div className="company-details">
-            <span><h2>Email</h2><p>contact@stuadvisor.com</p></span>
-            <span><h2>Phone</h2><p>+91 9876543210</p></span>
-            <span><h2>Address</h2><p>Indrapuri, Bhopal (M.P.) </p></span>
+            <span><i className="fa-regular fa-envelope"></i><h2>Email</h2><p>contact@stuadvisor.com</p></span>
+            <span><i className="fa-solid fa-phone"></i><h2>Phone</h2><p>+91 9876543210</p></span>
+            <span><i className="fa-solid fa-location-dot"></i><h2>Address</h2><p>Indrapuri, Bhopal (M.P.) </p></span>
           </div>
           <div className="social-icons-contact">
             <a href="https://www.instagram.com/" rel="noreferrer" target="_blank"><i className="fa-brands fa-instagram"></i></a>

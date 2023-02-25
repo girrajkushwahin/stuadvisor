@@ -1,7 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import { reviewSlider } from './Data';
-import img1 from "../images/logofooter.png";
 const Reviews = () => {
   return (
     <>
@@ -18,7 +17,7 @@ const Reviews = () => {
           <Carousel>
             {reviewSlider.map((elem, ind) => <Carousel.Item key={ind}>
               <div className="inner-slider">
-                <img className='reveiw-profile' src={img1} alt="" />
+                <img className='reveiw-profile' src={elem.face} alt="sliderpic" />
                 <p>Review by</p>
                 <h1>{elem.text}</h1>
                 <p>⭐⭐⭐⭐⭐</p>
@@ -42,7 +41,7 @@ const Reviews = () => {
           </div>
           <div className="reviews">
             <p>Review by</p>
-            <h1>Gopal kushwah</h1>
+            <h1>Girraj kushwah</h1>
             <p>⭐⭐⭐⭐⭐</p>
             <hr />
             <div className='review-content'><p>luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit?</p></div>
@@ -50,7 +49,7 @@ const Reviews = () => {
           </div>
           <div className="reviews">
             <p>Review by</p>
-            <h1>Gopal kushwah</h1>
+            <h1>Susheel Gupta</h1>
             <p>⭐⭐⭐⭐⭐</p>
             <hr />
             <div className='review-content'><p>luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit?</p></div>
@@ -58,7 +57,7 @@ const Reviews = () => {
           </div>
           <div className="reviews">
             <p>Review by</p>
-            <h1>Gopal kushwah</h1>
+            <h1>Urmila Mahor</h1>
             <p>⭐⭐⭐⭐⭐</p>
             <hr />
             <div className='review-content'><p>luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit?</p></div>
@@ -66,22 +65,14 @@ const Reviews = () => {
           </div>
           <div className="reviews">
             <p>Review by</p>
-            <h1>Gopal kushwah</h1>
+            <h1>Wasif khan</h1>
             <p>⭐⭐⭐⭐⭐</p>
             <hr />
             <div className='review-content'><p>luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit?</p></div>
           </div>
           <div className="reviews">
             <p>Review by</p>
-            <h1>Gopal kushwah</h1>
-            <p>⭐⭐⭐⭐⭐</p>
-            <hr />
-            <div className='review-content'><p>luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit?</p></div>
-
-          </div>
-          <div className="reviews">
-            <p>Review by</p>
-            <h1>Gopal kushwah</h1>
+            <h1>Abhilasha Saxena</h1>
             <p>⭐⭐⭐⭐⭐</p>
             <hr />
             <div className='review-content'><p>luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit?</p></div>
@@ -89,39 +80,7 @@ const Reviews = () => {
           </div>
           <div className="reviews">
             <p>Review by</p>
-            <h1>Gopal kushwah</h1>
-            <p>⭐⭐⭐⭐⭐</p>
-            <hr />
-            <div className='review-content'><p>luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit?</p></div>
-
-          </div>
-          <div className="reviews">
-            <p>Review by</p>
-            <h1>Gopal kushwah</h1>
-            <p>⭐⭐⭐⭐⭐</p>
-            <hr />
-            <div className='review-content'><p>luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit?</p></div>
-
-          </div>
-          <div className="reviews">
-            <p>Review by</p>
-            <h1>Gopal kushwah</h1>
-            <p>⭐⭐⭐⭐⭐</p>
-            <hr />
-            <div className='review-content'><p>luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit?</p></div>
-
-          </div>
-          <div className="reviews">
-            <p>Review by</p>
-            <h1>Gopal kushwah</h1>
-            <p>⭐⭐⭐⭐⭐</p>
-            <hr />
-            <div className='review-content'><p>luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit?</p></div>
-
-          </div>
-          <div className="reviews">
-            <p>Review by</p>
-            <h1>Gopal kushwah</h1>
+            <h1>Vipin</h1>
             <p>⭐⭐⭐⭐⭐</p>
             <hr />
             <div className='review-content'><p>luptatibus, reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit?</p></div>
