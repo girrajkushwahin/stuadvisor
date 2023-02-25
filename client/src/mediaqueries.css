@@ -1,9 +1,9 @@
 /* ***************** LESS THEN THE 1224PX WIDTH SIZE */
 @media screen and (max-width : 1224px) {
-    .main-left{
+    .main-left {
         position: fixed;
         top: 7rem;
-        right:-1%;
+        right: -1%;
         width: 100%;
         height: 50%;
         padding: 2rem;
@@ -12,22 +12,27 @@
         border-radius: 0;
         z-index: 10;
     }
-    .show-second{
+
+    .show-second {
         display: none;
     }
-    .main-right{
+
+    .main-right {
         height: calc(100vh - 27vh);
     }
-    .main-content{
+
+    .main-content {
         margin-top: 8vh;
 
         grid-template-columns: none;
         grid-template-rows: 1fr 12fr;
     }
-    .heading-hamburger{
+
+    .heading-hamburger {
         display: inline-block;
     }
-    .hamburger-icon{
+
+    .hamburger-icon {
         display: flex;
         height: 3rem;
         margin-top: .5rem;
@@ -41,52 +46,85 @@
         padding-left: 1rem;
 
     }
+
+    .nav-bar .search-box {
+        margin-right: var(--md-0-5);
+        height: var(--md-2);
+        /* padding-right: .5rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-left: .5rem; */
+        width: 15rem;
+    }
+
+    .nav-bar .search-box .nav-search-input {
+        width: 11rem;
+    }
+
+    .sec-logo {
+        width: 3rem;
+        height: 3rem;
+        margin-top: .5rem;
+        margin-right: 1rem;
+    }
+
+    .mid-link {
+        display: flex;
+        align-items: center;
+    }
 }
 
 /* ***************** LESS THEN THE 1030PX WIDTH SIZE */
-@media screen and (max-width : 1030px) {
-    .nav-bar{
+@media screen and (max-width : 1080px) {
+    .nav-bar {
         height: 3.1rem;
     }
-    .humberger-icon-nav{
+
+    .humberger-icon-nav {
         display: inline-block;
         color: var(--white);
         margin-right: 1rem;
         font-size: 1.5rem;
         cursor: pointer;
     }
-    .nav-bar .logo{
+
+    .nav-bar .logo {
         width: 150px;
         height: 30px;
     }
-    .nav-bar .search-box{
+
+    .nav-bar .search-box {
         margin-right: var(--md-2);
-        height: 1.9rem;;
+        height: 1.9rem;
+        ;
         padding-right: var(--md-1);
         padding-left: var(--md-1);
-  
-  
+
+
     }
-    
+
     .nav-bar .search-box .search-btn i {
-    transition: all .3s ease-in;
-    font-size: var(--md-1);
-  }
-  
-    .left-nav{
+        transition: all .3s ease-in;
+        font-size: var(--md-1);
+    }
+
+    .left-nav {
         height: 1rem;
         display: flex;
         align-items: center;
     }
-    .mid-link  .nav-items{
+
+    .mid-link .nav-items {
         display: block;
         height: 100%;
     }
-    .mid-link  .nav-items .nav-item{
+
+    .mid-link .nav-items .nav-item {
         margin-bottom: 2rem;
 
     }
-    .mid-link{
+
+    .mid-link {
         position: fixed;
         top: 3.2rem;
         right: -100%;
@@ -98,14 +136,597 @@
         backdrop-filter: blur(10px);
         /* z-index: 1000; */
     }
-    .nav-item{
+
+    .nav-item {
         margin-bottom: 10rem;
     }
+
     .nav-item .li-item {
         /* position: relative; */
-        color: var( --dark-black);
+        color: var(--dark-black);
     }
-    .show{
+
+    .show {
         right: 0;
     }
+
+
+    /* ********************************** REVIEWS PAGE ******************************** */
+    .review-main-container {
+        margin: .4rem;
+    }
+
+    .heading-review-container h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: .7rem;
+        border-bottom: 3px solid #591a8b;
+    }
+
+    .heading-review-container p {
+        font-size: .9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .heading-review-container p span {
+        font-size: 1.1rem;
+    }
+
+    .reviews-slider {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .inner-slider {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .reviews-container {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .reviews-container .reviews {
+        margin: .8rem;
+        padding: .8rem;
+        height: 40vh;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .reviews-container .reviews p {
+        font-size: .9rem;
+    }
+
+    .reviews-container .reviews h1 {
+        font-size: 1.1rem;
+    }
+
+    .reviews-container .reviews .review-content {
+        height: 22vh;
+        padding: .5rem;
+    }
+
+    .top-reviews {
+        margin-top: 1.1rem;
+        margin-bottom: 1.1rem;
+
+    }
+
+    .top-reviews h1 {
+        font-size: 1.5rem;
+    }
+
+    .top-reviews h1 span {
+        font-size: 1.8rem;
+    }
+
+    .reveiw-profile {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: .7rem;
+    }
 }
+
+
+
+
+
+/* ***************** LESS THEN THE 900PX WIDTH SIZE */
+@media screen and (max-width : 900px) {
+
+    /* ****************************************   ABOUT PAGE **************************************************** */
+    .about-container {
+        margin: .5rem;
+    }
+
+    .about-header div {
+        padding: .8rem;
+    }
+
+    .about-header-left h1 {
+        font-size: 2rem;
+    }
+
+    .about-header-left h1 span {
+        font-size: 3rem;
+    }
+
+    /********************* Why us in about us  ************************ */
+    .why-choose-us-about {
+        margin-top: 1.5rem;
+    }
+
+    .why-choose-us-about h1 {
+        font-size: 2rem;
+    }
+
+    .why-us {
+        grid-template-columns: auto auto;
+
+    }
+
+    .why-us-content {
+        padding: 1rem;
+        margin: .7rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .why-us-content i {
+        padding: 1rem;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .why-us-content i {
+        font-size: 1.2rem;
+    }
+
+    .why-us-content h2 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    }
+
+    .why-us-content p {
+        font-size: 1rem;
+    }
+
+    .our-focus {
+        padding: .8rem;
+
+    }
+
+    .our-focus-left video {
+        margin-top: .8rem;
+    }
+
+    .our-focus-left h1 {
+        font-size: 1.5rem;
+        color: #591a8b;
+        margin-bottom: 1rem;
+    }
+
+
+    .our-focus-right img {
+        margin-top: 5rem;
+        width: 350px;
+    }
+
+    .our-focus-heading {
+        font-size: 2rem;
+    }
+
+    .user-about-count {
+        margin-top: 1.5rem;
+    }
+
+    .user-count {
+        margin: .5rem;
+        padding: 1.5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .user-count h1 {
+        font-size: 1.5rem;
+    }
+
+    .our-focus-container,
+    .user-about-count {
+        padding: .8rem;
+    }
+
+    /* **************************************** CONTACT PAGE **************************************************** */
+    .contact-container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    .get-in-touch {
+        font-size: 1.5rem;
+    }
+
+    .hr {
+        margin-bottom: 2rem;
+    }
+
+    .get-in-touch span {
+        font-size: 2.2rem;
+    }
+
+    .company-details {
+        margin-top: .6rem;
+    }
+
+    .company-details span {
+        margin: .6rem;
+
+    }
+
+    .company-details h2 {
+        font-size: 1.2rem;
+    }
+
+    .company-details p {
+        font-size: .9rem;
+    }
+
+    .top {
+        width: 100%;
+        margin-top: 2.5rem;
+    }
+
+    .contact-form span h1 {
+        font-size: 1.2rem;
+    }
+
+    .contact-form span input {
+        margin-top: .8rem;
+        padding: .3rem 1rem;
+        margin-left: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .contact-textarea {
+        font-size: 1rem;
+        width: 95%;
+    }
+
+    .send-btn {
+        width: 50%;
+        padding: .8rem 0rem;
+    }
+
+    .contact-form-map {
+        margin-top: 1.5rem;
+        padding: .5rem;
+    }
+
+    .contact-margin {
+        margin-bottom: 1rem;
+    }
+
+    .social-icons-contact {
+        margin-top: 1rem;
+    }
+
+    .social-icons-contact a {
+        margin: 1rem;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.295);
+        border-radius: 50%;
+        padding: .8rem 1rem;
+    }
+
+    .social-icons-contact a i {
+        font-size: 1.3rem;
+    }
+
+}
+
+
+/* ***************** LESS THEN THE 900PX WIDTH SIZE */
+@media screen and (max-width : 768px) {
+
+    /* **************************  GET STARTED ************************************************************************* */
+    .get-started-container {
+        margin: 1rem 0rem;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        padding: 1rem;
+    }
+
+    .get-started-container .get-started-image {
+        height: 200px;
+    }
+
+    .get-started-heading {
+        margin: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .get-started-pera {
+        text-align: justify;
+        font-size: .8rem;
+    }
+
+    .get-started-btn {
+        margin-top: 1.2rem;
+        padding: .5rem 2rem;
+    }
+
+    .btn-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .reviews-container {
+        grid-template-columns: auto;
+    }
+
+    /* ********************************** NEWS PAGE ******************************** */
+    .accordion {
+        width: 95%;
+    }
+
+    .contentBox {
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.329);
+        border-radius: .8rem;
+    }
+
+    .toggle-icons-news p {
+        font-size: 1.5rem;
+    }
+
+    .contentBox .full-content {
+        padding: .8rem;
+        height: 30vh;
+        font-size: 1rem;
+    }
+
+    /* ****************************************   ABOUT PAGE **************************************************** */
+    .about-header div {
+        padding: .7rem;
+    }
+
+    .about-header-left h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-header-left h1 span {
+        font-size: 2.5rem;
+    }
+
+    /********************* Why us in about us  ************************ */
+    .why-choose-us-about h1 {
+        font-size: 1.7rem;
+    }
+
+    .why-us-content h2 {
+        font-size: 1.2rem;
+        margin-top: 1.2rem;
+    }
+
+    .why-us-content p {
+        font-size: .9rem;
+    }
+
+    .our-focus {
+        padding: .8rem;
+
+    }
+
+    .our-focus-left video {
+        margin-top: .8rem;
+    }
+
+    .our-focus-left h1 {
+        font-size: 1.4rem;
+        margin-bottom: .8rem;
+    }
+
+
+    .our-focus-right img {
+        margin-top: 11rem;
+        width: 300px;
+    }
+
+    .our-focus-heading {
+        font-size: 1.7rem;
+    }
+
+    .user-count h1 {
+        font-size: 1.3rem;
+    }
+
+    .our-focus-container,
+    .user-about-count {
+        padding: .8rem;
+    }
+
+    .user-about-count p {
+        font-size: 1rem;
+
+    }
+
+
+    /* **************************************** CONTACT PAGE **************************************************** */
+
+
+    .get-in-touch {
+        font-size: 1.5rem;
+    }
+
+    .hr {
+        margin-bottom: 1.5rem;
+    }
+
+    .get-in-touch span {
+        font-size: 2.2rem;
+    }
+
+    .company-details {
+        display: grid;
+        grid-template-columns: auto;
+        margin-top: 0;
+    }
+
+    .company-details span {
+        margin: -0.5rem;
+
+    }
+
+    .company-details h2 {
+        font-size: 1.1rem;
+    }
+
+    .company-details p {
+        margin-top: 0rem;
+        font-size: .9rem;
+    }
+
+    .social-icons-contact {
+        margin-top: .5rem;
+    }
+
+    .social-icons-contact a {
+        margin: .8rem;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.295);
+        border-radius: 50%;
+        padding: .6rem .8rem;
+    }
+
+    .social-icons-contact a i {
+        font-size: 1.1rem;
+    }
+
+    .top {
+        margin-top: 2rem;
+    }
+
+    .contact-form span h1 {
+        font-size: 1.2rem;
+    }
+
+    .contact-form span input {
+        margin-top: .8rem;
+        padding: .3rem 1rem;
+        margin-left: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .contact-textarea {
+        font-size: 1rem;
+        width: 95%;
+    }
+
+    .send-btn {
+        width: 50%;
+        padding: .8rem 0rem;
+    }
+
+    .contact-form-map {
+        margin-top: 1.5rem;
+        padding: .5rem;
+    }
+
+    .contact-margin {
+        margin-bottom: 1rem;
+    }
+
+}
+
+
+/* ***************** LESS THEN THE 900PX WIDTH SIZE */
+@media screen and (max-width : 600px) {
+    /* ********************************** REVIEWS PAGE ******************************** */
+
+    .heading-review-container h1 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        padding-bottom: .7rem;
+        border-bottom: 3px solid #591a8b;
+    }
+
+    .heading-review-container p {
+        font-size: .8rem;
+        margin-bottom: 1.3rem;
+    }
+
+    .heading-review-container p span {
+        font-size: 1.1rem;
+    }
+
+    /* ****************************************   ABOUT PAGE **************************************************** */
+    .about-header,
+    .our-focus-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-header-left,
+    .our-focus {
+        width: 100%;
+    }
+
+    .about-header-right,
+    .our-focus-right {
+        width: 100%;
+    }
+
+    .about-header-right {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .about-header-right video {
+        /* height: 40vh; */
+        width: 75%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /********************* Why us in about us  ************************ */
+    .why-us-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .why-us {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .why-us-content p {
+        font-size: .8rem;
+    }
+
+    .our-focus-left video {
+        margin-top: .8rem;
+    }
+
+    .our-focus-right img {
+        margin-top: -1rem;
+        margin-bottom: -5rem;
+        width: 100%;
+    }
+
+    .our-focus-heading {
+        font-size: 1.7rem;
+    }
+
+    .user-about-count {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+
+/* ***************** LESS THEN THE 900PX WIDTH SIZE */
+@media screen and (max-width : 480px) {}
+
+/* ***************** LESS THEN THE 900PX WIDTH SIZE */
+@media screen and (max-width : 320px) {}

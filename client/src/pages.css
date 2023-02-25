@@ -433,7 +433,7 @@
 
 .about-header-right video {
   width: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 
 }
 
@@ -456,10 +456,12 @@
 
 .why-us {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
 }
 
 .why-us-content {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
   padding: 1rem;
   margin: 1rem;
 }
@@ -513,7 +515,7 @@
 
 .our-focus-right img {
   margin-top: 5rem;
-  width: 500px;
+  width: 400px;
 }
 
 .our-focus-heading {
@@ -597,7 +599,7 @@
 
 .reviews-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
 }
 
 .reviews-container .reviews {
