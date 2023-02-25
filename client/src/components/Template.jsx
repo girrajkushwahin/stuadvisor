@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import NavBar from './NavBar';
 import SideBar from './SideBar';
-import SideBar2 from './SideBar2';
+import SideBarIcon from './SideBarIcon';
 import Footer from './Footer';
 const Nav2Data = React.createContext();
 
@@ -39,7 +39,7 @@ const Template = () => {
         </Nav2Data.Provider>
         <div className="main-content">
           <SideBar setData={sidebarData} val={value} setVal={setVal} />
-          <SideBar2 setData={setVal} val={value} navValue={nav2Val} />
+          <SideBarIcon setData={setVal} val={value} navValue={nav2Val} />
           <Outlet context={{ key: getData }} />
         </div>
         <Footer />

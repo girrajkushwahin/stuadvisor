@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useOutletContext, useNavigate } from 'react-router-dom';
-import { SiteContext } from '../App';
+import { SignOut } from '../App';
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Account1 from './Account1';
 import Account2 from './Account2';
@@ -12,7 +12,7 @@ import Account5 from './Account5';
 const API = 'http://127.0.0.1:8000';
 
 const UserAccount = () => {
-  const { dispatch } = useContext(SiteContext);
+  const handleSignOut = useContext(SignOut);
   const [data, setData] = useState(0);
   let { key } = useOutletContext();
   const navigate = useNavigate();
@@ -21,18 +21,11 @@ const UserAccount = () => {
     setData(id);
   }
 
-  const handleSignOut = () => {
-    localStorage.removeItem('jwtoken');
-    dispatch({ type: 'SWITCH', payload: false });
-    navigate('/', { replace: true });
-  }
-
   const callConfidential = async url => {
     const token = localStorage.getItem('jwtoken');
     const data = { token };
     try {
-      const res = await axios.post(url, data);
-      console.log(res.data);
+      await axios.post(url, data);
     } catch (err) {
       console.log(err.response.data);
       navigate('/');
@@ -56,7 +49,7 @@ const UserAccount = () => {
         {data === 3 ? <Account4 /> : null}
         {data === 4 ? <Account5 /> : null}
       </div>
-      <ToastContainer
+      {/* <ToastContainer
         position="top-center"
         autoClose={5000}
         hideProgressBar={false}
@@ -67,7 +60,7 @@ const UserAccount = () => {
         draggable
         pauseOnHover
         theme="light"
-      />
+      /> */}
     </>
   )
 }

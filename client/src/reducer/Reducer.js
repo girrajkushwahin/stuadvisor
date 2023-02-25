@@ -1,4 +1,6 @@
-export const initialState = null;
+const token = localStorage.getItem('jwtoken');
+
+export const initialState = token;
 
 export const reducer = (state, action) => {
     if (action.type === 'SWITCH') {

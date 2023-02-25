@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SideBar2 = ({ setData, val, navValue }) => {
+const SideBarIcon = ({ setData, val, navValue }) => {
     return (
         <>
             <div className="hamburger-icon">
@@ -12,4 +12,4 @@ const SideBar2 = ({ setData, val, navValue }) => {
     )
 }
 
-export default SideBar2;
+export default SideBarIcon;
