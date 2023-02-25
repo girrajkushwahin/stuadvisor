@@ -26,6 +26,7 @@ const Home = () => {
   const homeMenu2 = [...homeData, { text: 'Sign out', icon: <i className="i-tag fa-solid fa-right-from-bracket"></i>, click: handleSignOut }];
 
   useEffect(() => {
+    document.title = 'Home';
     if (state) key(homeMenu2);
     else key(homeMenu);
     // eslint-disable-next-line react-hooks/exhaustive-deps

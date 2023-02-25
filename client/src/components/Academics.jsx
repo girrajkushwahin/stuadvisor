@@ -26,6 +26,7 @@ const Academics = () => {
   const academicsMenu2 = [...academicsData, { text: 'Sign out', icon: <i className="i-tag fa-solid fa-right-from-bracket"></i>, click: handleSignOut }];
 
   useEffect(() => {
+    document.title = 'Academics';
     if (state) key(academicsMenu2);
     else key(academicsMenu);
     // eslint-disable-next-line react-hooks/exhaustive-deps

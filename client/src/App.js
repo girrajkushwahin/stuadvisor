@@ -13,10 +13,15 @@ const API = 'http://127.0.0.1:8000';
 export const SiteContext = React.createContext();
 export const SignOut = React.createContext();
 
+let path;
+const getPath = data => {
+  path = data;
+}
+
 const Routing = () => {
   return (
     <Routes>
-      <Route path='/' element={<Template />}>
+      <Route path='/' element={<Template data={getPath} />}>
         <Route index element={<Home />} />
         <Route path='searchcolleges' element={<SearchCollege />} />
         <Route path='academics' element={<Academics />} />
@@ -36,8 +41,14 @@ const App = () => {
   const handleSignOut = () => {
     localStorage.removeItem('jwtoken');
     dispatch({ type: 'SWITCH', payload: false });
-    if (pathname === '/') navigate('/searchcolleges', { replace: true });
-    else navigate('/', { replace: true });
+    if (pathname === '/') {
+      navigate('/searchcolleges', { replace: true });
+      path('Search College');
+    }
+    else {
+      navigate('/', { replace: true });
+      path('Home');
+    }
   }
 
   const isAuthenticate = async url => {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useOutletContext, useNavigate } from 'react-router-dom';
 import { SignOut } from '../App';
+import { Nav2Data } from './Template';
 import axios from 'axios';
 // import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,6 +13,7 @@ import Account5 from './Account5';
 const API = 'http://127.0.0.1:8000';
 
 const UserAccount = () => {
+  const navData = useContext(Nav2Data);
   const handleSignOut = useContext(SignOut);
   const [data, setData] = useState(0);
   let { key } = useOutletContext();
@@ -28,6 +30,7 @@ const UserAccount = () => {
       await axios.post(url, data);
     } catch (err) {
       console.log(err.response.data);
+      navData('Home');
       navigate('/');
     }
   }
@@ -35,6 +38,7 @@ const UserAccount = () => {
   const userMenu = [{ text: 'Account1', icon: <i className="i-tag fa-solid fa-person-walking"></i>, click: menuClick }, { text: 'Account2', icon: <i className="i-tag fa-regular fa-comments"></i>, click: menuClick }, { text: 'Account3', icon: <i className="i-tag fa-solid fa-newspaper"></i>, click: menuClick }, { text: 'Account4', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'Account5', icon: <i className="i-tag fa-solid fa-address-book"></i>, click: menuClick }, { text: 'Sign out', icon: <i className="i-tag fa-solid fa-right-from-bracket"></i>, click: handleSignOut }];
 
   useEffect(() => {
+    document.title = 'My Account';
     callConfidential(`${API}/confidential`);
     key(userMenu);
     // eslint-disable-next-line react-hooks/exhaustive-deps

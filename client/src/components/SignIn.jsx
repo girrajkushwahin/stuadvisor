@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SiteContext } from '../App';
+import { Nav2Data } from './Template';
 import axios from 'axios';
 import Signin2 from './Signin2';
 import morning from '../images/morning.jpg';
@@ -12,6 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const API = 'http://127.0.0.1:8000';
 
 const SignIn = () => {
+  const navData = useContext(Nav2Data);
   const { dispatch } = useContext(SiteContext);
   const [data, getData] = useState({ username: '', password: '' });
   const navigate = useNavigate();
@@ -45,6 +47,7 @@ const SignIn = () => {
         localStorage.setItem('jwtoken', res.data.jwtoken);
         dispatch({ type: 'SWITCH', payload: true });
         navigate('/myaccount');
+        navData('My Account');
         // to home and add a link in navbar for myaccount
         // toast.success('Success', {
         //   position: "top-center",

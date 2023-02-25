@@ -26,6 +26,7 @@ const Blogs = () => {
   const blogsMenu2 = [...blogsData, { text: 'Sign out', icon: <i className="i-tag fa-solid fa-right-from-bracket"></i>, click: handleSignOut }];
 
   useEffect(() => {
+    document.title = 'Blogs';
     if (state) key(blogsMenu2);
     else key(blogsMenu);
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -6,7 +6,7 @@ import SideBarIcon from './SideBarIcon';
 import Footer from './Footer';
 const Nav2Data = React.createContext();
 
-const Template = () => {
+const Template = ({ data }) => {
   const [sidebarData, setSidebarData] = useState([]);
   const [value, setValue] = useState(false);
   const { pathname } = useLocation();
@@ -31,18 +31,20 @@ const Template = () => {
     setNav2Val(data);
   }
 
+  data(nav2Data);
+
   return (
     <>
       <div className="main-container">
         <Nav2Data.Provider value={nav2Data}>
           <NavBar />
+          <div className="main-content">
+            <SideBar setData={sidebarData} val={value} setVal={setVal} />
+            <SideBarIcon setData={setVal} val={value} navValue={nav2Val} />
+            <Outlet context={{ key: getData }} />
+          </div>
+          <Footer />
         </Nav2Data.Provider>
-        <div className="main-content">
-          <SideBar setData={sidebarData} val={value} setVal={setVal} />
-          <SideBarIcon setData={setVal} val={value} navValue={nav2Val} />
-          <Outlet context={{ key: getData }} />
-        </div>
-        <Footer />
       </div>
     </>
   )
