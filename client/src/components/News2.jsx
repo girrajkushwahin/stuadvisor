@@ -10,7 +10,9 @@ const News2 = ({ newsheading, subContent, fullContent }) => {
                     <h1>{newsheading}</h1>
                     <p>{subContent}</p>
                 </div>
-                <div className="toggle-icons-news" ><p>{toggle ? <i className="fa-regular fa-square-minus"></i> : <i className="fa-regular fa-square-plus"></i>}</p></div>
+                <div className="toggle-icons-news" >
+                    <p>{toggle ? <i className="fa-regular fa-square-minus"></i> : <i className="fa-regular fa-square-plus"></i>}</p>
+                </div>
             </div>
             {toggle && <p className='full-content'>{fullContent}</p>}
         </div >

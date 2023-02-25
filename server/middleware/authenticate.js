@@ -12,7 +12,7 @@ const authenticate = async (req, res, next) => {
         req.userID = rootUser._id;
         next();
     } catch (err) {
-        res.status(401).send('Unauthorized: Invalid token');
+        res.status(401).send('Unauthorized: Invalid user');
     }
 }
 

@@ -256,6 +256,17 @@
 }
 
 .company-details h2 {
+  margin: 1rem;
+  font-size: 1.3rem;
+}
+
+.company-details span h2 {
+  margin-left: 1rem;
+  font-size: 1.3rem;
+  display: inline-block;
+}
+
+.company-details i {
   font-size: 1.3rem;
 }
 
