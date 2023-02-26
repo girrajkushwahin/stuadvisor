@@ -3,11 +3,11 @@ import { useOutletContext } from 'react-router-dom';
 import { SignOut, SiteContext } from '../App';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
-import Search from './Search';
-import Btech from './Btech';
-import Mtech from './Mtech';
-import Bpharma from './Bpharma';
-import Phd from './Phd';
+import SearchClg from './SearchClg';
+import TopClg from './TopClg';
+import CourseWise from './CourseWise';
+import CityWise from './CityWise';
+import StateWise from './StateWise';
 
 const SearchCollege = () => {
   const { state } = useContext(SiteContext);
@@ -19,7 +19,7 @@ const SearchCollege = () => {
     setData(id);
   }
 
-  const searchCollegeData = [{ text: 'Search', icon: <i className="i-tag fa-solid fa-house"></i>, click: menuClick }, { text: 'btech', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'mtech', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i>, click: menuClick }, { text: 'b pharma', icon: <i className="i-tag fa-brands fa-blogger-b"></i>, click: menuClick }, { text: 'phd', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i>, click: menuClick }]
+  const searchCollegeData = [{ text: 'Search', icon: <i className="i-tag fa-solid fa-house"></i>, click: menuClick }, { text: 'Top Colleges', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'Course Wise', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i>, click: menuClick }, { text: 'City Wise', icon: <i className="i-tag fa-brands fa-blogger-b"></i>, click: menuClick }, { text: 'State Wise', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i>, click: menuClick }]
 
   const searchCollegeMenu = [...searchCollegeData, { text: 'Sign in', icon: <i className="i-tag fa-solid fa-door-open"></i>, click: menuClick }, { text: 'Sign up', icon: <i className="i-tag fa-solid fa-user-plus"></i>, click: menuClick }];
 
@@ -35,11 +35,11 @@ const SearchCollege = () => {
   return (
     <>
       <div className="main-item main-right">
-        {data === 0 ? <Search /> : null}
-        {data === 1 ? <Btech /> : null}
-        {data === 2 ? <Mtech /> : null}
-        {data === 3 ? <Bpharma /> : null}
-        {data === 4 ? <Phd /> : null}
+        {data === 0 ? <SearchClg /> : null}
+        {data === 1 ? <TopClg /> : null}
+        {data === 2 ? <CourseWise /> : null}
+        {data === 3 ? <CityWise /> : null}
+        {data === 4 ? <StateWise /> : null}
         {data === 5 ? <SignIn /> : null}
         {data === 6 ? <SignUp /> : null}
       </div>
