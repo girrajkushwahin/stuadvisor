@@ -3,7 +3,6 @@ import { useOutletContext, useNavigate } from 'react-router-dom';
 import { SignOut } from '../App';
 import { Nav2Data } from './Template';
 import axios from 'axios';
-import 'react-toastify/dist/ReactToastify.css';
 import Account1 from './Account1';
 import Account2 from './Account2';
 import Account3 from './Account3';

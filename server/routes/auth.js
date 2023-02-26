@@ -37,7 +37,7 @@ router.post('/login', async (req, res) => {
             if (!isMatch) res.status(400).json({ message: "Invalid Credentials" });
             else {
                 let token = await userLogin.generateAuthToken();
-                res.status(201).json({ jwtoken: token, message: "signin successfully" });
+                res.status(201).json({ jwtoken: token, message: "signin successfully", usrname: userLogin.username });
             }
         } else res.status(400).json({ message: "Invalid Credentials" });
     } catch (err) {

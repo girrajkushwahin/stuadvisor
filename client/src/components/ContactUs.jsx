@@ -21,7 +21,7 @@ const ContactUs = () => {
         setSendMsg({ ...sendMsg, message: '' });
         toast.success(res.data.message, {
           position: "top-center",
-          autoClose: 5000,
+          autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -33,7 +33,7 @@ const ContactUs = () => {
     } catch (err) {
       toast.error(err.response.data.message, {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -48,7 +48,7 @@ const ContactUs = () => {
     const { name, email, message } = sendMsg;
     if (!name || !email || !message) toast.error('Fill properly', {
       position: "top-center",
-      autoClose: 5000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -128,7 +128,7 @@ const ContactUs = () => {
       </div>
       <ToastContainer
         position="top-center"
-        autoClose={5000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
