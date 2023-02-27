@@ -799,6 +799,7 @@
   margin-top: 3rem;
 }
 
+
 .search-content {
   margin-top: 1.5rem;
   height: 50vh;
@@ -820,12 +821,16 @@
 
   width: 100%;
   height: 50vh;
-  object-fit: cover;
+  /* object-fit: cover;
+  background-size: cover; */
+  background-position: center;
   background-size: cover;
+  object-position: center;
 }
 
 .college-data {
   padding: 1rem;
+  text-transform: capitalize;
 
 }
 
