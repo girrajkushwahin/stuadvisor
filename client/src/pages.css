@@ -813,7 +813,7 @@
 
 .college-img {
   width: 100%;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 .college-img img {
@@ -898,4 +898,16 @@
   color: rgb(38, 0, 255);
   box-shadow: 0 0 10px rgba(38, 0, 255, 0.427);
   border: 2px solid rgb(38, 0, 255);
+}
+
+.search-result-content.top-clg {
+  margin-top: 0rem;
+}
+
+.search-content.top-clg-content {
+  height: 35vh;
+}
+
+.search-content.top-clg-content .college-img img {
+  height: 35vh;
 }
