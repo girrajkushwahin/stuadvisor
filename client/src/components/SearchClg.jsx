@@ -1,19 +1,18 @@
 import React from 'react';
-import searchImg from '../images/search.jpg'
-import trinityImg from '../images/Trinity.jpg'
-import lnctImg from '../images/LNCT.jpg'
-import technoCrats from '../images/Technocrats.jpg'
+import searchImg from '../images/search.jpg';
+import trinityImg from '../images/Trinity.jpg';
+
 const SearchClg = () => {
   return (
     <>
       <div className="search-main-container">
         <div className="search-box-container">
-          <h1 className='search-box-heading'>Search your dream Colleges</h1>
+          <h1 className='search-box-heading'>Search your dream College...</h1>
           <div className="search-box-img">
             <img src={searchImg} alt="search box img" />
           </div>
           <div className="search-input-box">
-            <span className='input-span'><input type="text" placeholder='Search your dream colleges...' /><i class="fa-solid fa-magnifying-glass"></i></span>
+            <span className='input-span'><input type="text" placeholder='Search your dream college...' /><i className="fa-solid fa-magnifying-glass"></i></span>
             {/* <div className="search-lables">
               <span>B.tech <i class="fa-solid fa-magnifying-glass"></i></span>
               <span>M.tech <i class="fa-solid fa-magnifying-glass"></i></span>

@@ -5,9 +5,7 @@ import SignIn from './SignIn';
 import SignUp from './SignUp';
 import SearchClg from './SearchClg';
 import TopClg from './TopClg';
-import CourseWise from './CourseWise';
-import CityWise from './CityWise';
-import StateWise from './StateWise';
+import SearchClg2 from './SearchClg2';
 
 const SearchCollege = () => {
   const { state } = useContext(SiteContext);
@@ -32,14 +30,53 @@ const SearchCollege = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const handleCourseWise = data => { }
+
+  const handleCityWise = data => { }
+
+  const handleStateWise = data => { }
+
+  const courseWise = {
+    heading: 'Search according to Courses...',
+    ph: 'Enter course name...',
+    item1: 'B.tech',
+    item2: 'M.tech',
+    item3: 'MBA',
+    item4: 'Bsc Computers',
+    item5: 'Nursing',
+    method: handleCourseWise
+  }
+
+  const cityWise = {
+    heading: 'Search according to Cities...',
+    ph: 'Enter city name...',
+    item1: 'Mumbai',
+    item2: 'Banglore',
+    item3: 'Hyderabad',
+    item4: 'Kolkata',
+    item5: 'Chennai',
+    method: handleCityWise
+  }
+
+  const stateWise = {
+    heading: 'Search according to states...',
+    ph: 'Enter state name...',
+    item1: 'MP',
+    item2: 'UP',
+    item3: 'Bihar',
+    item4: 'Delhi',
+    item5: 'Rajasthan',
+    method: handleStateWise
+  }
+
   return (
     <>
       <div className="main-item main-right">
         {data === 0 ? <SearchClg /> : null}
         {data === 1 ? <TopClg /> : null}
-        {data === 2 ? <CourseWise /> : null}
-        {data === 3 ? <CityWise /> : null}
-        {data === 4 ? <StateWise /> : null}
+        {data === 2 ? <SearchClg2 {...courseWise} /> : null}
+        {data === 3 ? <SearchClg2 {...cityWise} /> : null}
+        {data === 4 ? <SearchClg2 {...stateWise} /> : null}
         {data === 5 ? <SignIn /> : null}
         {data === 6 ? <SignUp /> : null}
       </div>
