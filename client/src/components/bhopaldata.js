@@ -119,7 +119,8 @@ const data = [
         "fee": "₹ 53,000 ",
         "course": "BE/B.Tech- 1st Year Fees",
         "state": "Madhya Pradesh"
-    }
+    },
+
 ]
 
 export default data;
