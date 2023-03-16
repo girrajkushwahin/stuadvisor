@@ -4,10 +4,10 @@ import { SignOut, SiteContext } from '../App';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import SearchBlog from './SearchBlog';
-import Technology from './Technology';
-import Studyblog from './Studyblog';
-import Newsblog from './Newsblog';
-import Trendingblogs from './Trendingblogs';
+import TrendingBlogs from './TrendingBlogs';
+import EduBlog from './EduBlog';
+import OtherBlog from './OtherBlog';
+import DataPosted2 from './DataPosted2';
 
 const Blogs = () => {
   const { state } = useContext(SiteContext);
@@ -19,7 +19,7 @@ const Blogs = () => {
     setData(id);
   }
 
-  const blogsData = [{ text: 'Search blog', icon: <i className="i-tag fa-solid fa-house"></i>, click: menuClick }, { text: 'Technology', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'study blogs', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i>, click: menuClick }, { text: 'news blogs', icon: <i className="i-tag fa-brands fa-blogger-b"></i>, click: menuClick }, { text: 'trending blogs', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i>, click: menuClick }]
+  const blogsData = [{ text: 'Search', icon: <i className="i-tag fa-solid fa-house"></i>, click: menuClick }, { text: 'Trending Blogs', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'Edu Blogs', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i>, click: menuClick }, { text: 'Other', icon: <i className="i-tag fa-brands fa-blogger-b"></i>, click: menuClick }, { text: 'Data Posted', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i>, click: menuClick }]
 
   const blogsMenu = [...blogsData, { text: 'Sign in', icon: <i className="i-tag fa-solid fa-door-open"></i>, click: menuClick }, { text: 'Sign up', icon: <i className="i-tag fa-solid fa-user-plus"></i>, click: menuClick }];
 
@@ -36,10 +36,10 @@ const Blogs = () => {
     <>
       <div className="main-item main-right">
         {data === 0 ? <SearchBlog /> : null}
-        {data === 1 ? <Technology /> : null}
-        {data === 2 ? <Studyblog /> : null}
-        {data === 3 ? <Newsblog /> : null}
-        {data === 4 ? <Trendingblogs /> : null}
+        {data === 1 ? <TrendingBlogs /> : null}
+        {data === 2 ? <EduBlog /> : null}
+        {data === 3 ? <OtherBlog /> : null}
+        {data === 4 ? <DataPosted2 /> : null}
         {data === 5 ? <SignIn /> : null}
         {data === 6 ? <SignUp /> : null}
       </div>

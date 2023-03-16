@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-const Homework = () => {
+const Notes = () => {
   const [courses, setCourses] = useState();
   const [inputValue, setInputValue] = useState();
   const [data, setData] = useState(inputValue);
@@ -78,4 +78,4 @@ const Homework = () => {
   )
 }
 
-export default Homework;
+export default Notes;

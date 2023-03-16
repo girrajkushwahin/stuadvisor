@@ -3,7 +3,7 @@ import React from 'react';
 const Impque = () => {
   return (
     <>
-        <h1>import questions page</h1>
+      <h1>Impque</h1>
     </>
   )
 }

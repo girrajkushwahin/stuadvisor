@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Prepaper = () => {
+const PrePaper = () => {
   return (
     <>
-        <h1>pre paper page</h1>
+      <h1>PrePaper page</h1>
     </>
   )
 }
 
-export default Prepaper;
+export default PrePaper;

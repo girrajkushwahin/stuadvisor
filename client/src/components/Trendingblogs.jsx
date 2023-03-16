@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Trendingblogs = () => {
+const TrendingBlogs = () => {
   return (
     <>
-        <h1>Trendingblogs page</h1>
+      <h1>TrendingBlogs</h1>
     </>
   )
 }
 
-export default Trendingblogs;
+export default TrendingBlogs;
