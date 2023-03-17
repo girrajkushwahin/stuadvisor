@@ -64,7 +64,7 @@ const SearchCollege = () => {
     item1: 'MP',
     item2: 'UP',
     item3: 'Bihar',
-    item4: 'Delhi',
+    item4: 'Maharashtra',
     item5: 'Rajasthan',
     method: handleStateWise
   }
