@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import searchImg from '../images/search2.jpg';
-import trinityImg from '../images/Trinity.jpg';
 import bhopaldata from './bhopaldata'
-import Reviews from './Reviews';
 const SearchClg2 = ({ heading, ph, item1, item2, item3, item4, item5, method }) => {
   const [data, setData] = useState('');
 
   const handleChange = e => {
     setData(e.target.value);
-    const result = method(data);
+    // const result = method(data);
     // console.log(result);
   }
   // console.log(bhopaldata)
@@ -52,9 +50,9 @@ const SearchClg2 = ({ heading, ph, item1, item2, item3, item4, item5, method }) 
                 </div>
                 <div className="redirect-college">
                   <div className="redirect-btn-box">
-                    <button className='redirect-btn'><a href={clgData.url} target="_blank">Apply Now</a></button><br />
+                    <button className='redirect-btn'><a href={clgData.url} target="_blank" rel="noreferrer">Apply Now</a></button><br />
                     <br />
-                    <button className='redirect-btn' ><a href={clgData.reviews} target="_blank">Reviews</a></button>
+                    <button className='redirect-btn' ><a href={clgData.reviews} target="_blank" rel="noreferrer">Reviews</a></button>
                   </div>
                 </div>
               </div>

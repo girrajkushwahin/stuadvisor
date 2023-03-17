@@ -1,7 +1,4 @@
 import React from 'react';
-import trinityImg from '../images/Trinity.jpg'
-import lnctImg from '../images/LNCT.jpg'
-import technoCrats from '../images/Technocrats.jpg'
 import bhopaldata from './bhopaldata'
 
 const TopClg = () => {
@@ -29,9 +26,9 @@ const TopClg = () => {
                 </div>
                 <div className="redirect-college">
                   <div className="redirect-btn-box">
-                    <button className='redirect-btn'><a href={clgData.url} target="_blank">Apply Now</a></button><br />
+                    <button className='redirect-btn'><a href={clgData.url} target="_blank" rel="noreferrer">Apply Now</a></button><br />
                     <br />
-                    <button className='redirect-btn' ><a href={clgData.reviews} target="_blank">Reviews</a></button>
+                    <button className='redirect-btn' ><a href={clgData.reviews} target="_blank" rel="noreferrer">Reviews</a></button>
                   </div>
                 </div>
               </div>
