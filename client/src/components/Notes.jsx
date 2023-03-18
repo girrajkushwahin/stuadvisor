@@ -47,7 +47,6 @@ const Notes = () => {
   ]
   const homeWorks = (course) => {
     HomeWorkCourse.map((item, i) => {
-      // console.log(item.course);
       if (item.course === course) {
         console.log(item.course);
         setCourses(course);
