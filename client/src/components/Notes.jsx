@@ -64,11 +64,11 @@ const Notes = () => {
           <div className="search-input-box">
             <span className='input-span'><input type="text" value={inputValue} placeholder='Enter your course name' onChange={(e) => setInputValue(e.target.value)} /><i className="fa-solid fa-magnifying-glass"></i></span>
             <div className="search-lables">
-              <span onClick={() => homeWorks("B.tech")}>B.tech <i class="fa-solid fa-magnifying-glass"></i></span>
-              <span onClick={() => homeWorks("M.tech")}>M.tech <i class="fa-solid fa-magnifying-glass"></i></span>
-              <span onClick={() => homeWorks("MBA")}>MBA <i class="fa-solid fa-magnifying-glass"></i></span>
-              <span onClick={() => homeWorks("Bsc Computers")}>Bsc Computers <i class="fa-solid fa-magnifying-glass"></i></span>
-              <span onClick={() => homeWorks("Nursing")}>Nursing <i class="fa-solid fa-magnifying-glass"></i></span>
+              <span onClick={() => homeWorks("B.tech")}>B.tech <i className="fa-solid fa-magnifying-glass"></i></span>
+              <span onClick={() => homeWorks("M.tech")}>M.tech <i className="fa-solid fa-magnifying-glass"></i></span>
+              <span onClick={() => homeWorks("MBA")}>MBA <i className="fa-solid fa-magnifying-glass"></i></span>
+              <span onClick={() => homeWorks("Bsc Computers")}>Bsc Computers <i className="fa-solid fa-magnifying-glass"></i></span>
+              <span onClick={() => homeWorks("Nursing")}>Nursing <i className="fa-solid fa-magnifying-glass"></i></span>
             </div>
           </div>
         </div>

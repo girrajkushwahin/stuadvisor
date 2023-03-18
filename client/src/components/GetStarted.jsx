@@ -4,6 +4,7 @@ import getStartedData from './Data';
 
 const GetStarted = () => {
   const navData = useContext(Nav2Data);
+
   return (
     <>
       {getStartedData.map((val, ind) =>

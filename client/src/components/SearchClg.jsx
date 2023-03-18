@@ -9,6 +9,7 @@ const SearchClg = () => {
   const [data, setData] = useState([]);
   const [filtered, getFiltered] = useState([]);
 
+
   const getData = async url => {
     try {
       const res = await axios.get(url);
@@ -49,7 +50,7 @@ const SearchClg = () => {
             <span className='input-span'><input type="text" placeholder='Search your dream college...' value={search} onChange={handleChange} /><i className="fa-solid fa-magnifying-glass" onClick={handleSearch}></i></span>
           </div>
         </div>
-        <div className="search-result-content">
+        {search ? <div className="search-result-content">
           {filtered.map((elem, indx) => <div className="search-content" key={indx}>
             <div className="college-img">
               <img src={elem.logo} alt="College imeges" />
@@ -74,7 +75,7 @@ const SearchClg = () => {
             </div>
           </div>
           )}
-        </div>
+        </div> : <div></div>}
       </div>
     </>
   )
