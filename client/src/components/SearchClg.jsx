@@ -9,6 +9,7 @@ const SearchClg = ({ data }) => {
   const handleSearch = () => {
     const newData = data.filter(elem => {
       const clgName = elem.title.toLowerCase().replaceAll(' ', '').replaceAll('-', '').replaceAll(',', '').replaceAll('[', '').replaceAll(']', '').replaceAll('&', 'and').replaceAll("'s", "").replaceAll('.', '').replaceAll('(', '').replaceAll(')', '');
+
       const userData = search.toLowerCase().trimEnd().replaceAll(' ', '').replaceAll('-', '').replaceAll(',', '').replaceAll('[', '').replaceAll(']', '').replaceAll('&', 'and').replaceAll("'s", "").replaceAll('.', '').replaceAll('(', '').replaceAll(')', '');
       const status = clgName.includes(userData);
       return status === true;

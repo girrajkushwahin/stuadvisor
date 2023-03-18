@@ -45,17 +45,11 @@ const SearchCollege = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const handleCourseWise = data => {
-    getInputSearch(data);
-  }
+  const handleCourseWise = data => getInputSearch(data);
 
-  const handleCityWise = data => {
-    getInputSearch(data);
-  }
+  const handleCityWise = data => getInputSearch(data);
 
-  const handleStateWise = data => {
-    getInputSearch(data);
-  }
+  const handleStateWise = data => getInputSearch(data);
 
   const handleSearchCourseWise = () => {
     const newData = dataAPI.filter(elem => {
@@ -69,7 +63,8 @@ const SearchCollege = () => {
   const handleSearchCityWise = () => {
     const newData = dataAPI.filter(elem => {
       const userData = inputSearch.toLowerCase().trimEnd().replaceAll(' ', '');
-      return elem.city === userData;
+      const status = elem.city.includes(userData);
+      return status === true;
     })
     getFiltered(newData);
   }
@@ -78,7 +73,8 @@ const SearchCollege = () => {
     const newData = dataAPI.filter(elem => {
       const state = elem.state.replaceAll(' ', '');
       const userData = inputSearch.toLowerCase().trimEnd().replaceAll(' ', '');
-      return state === userData;
+      const status = state.includes(userData);
+      return status === true;
     })
     getFiltered(newData);
   }
