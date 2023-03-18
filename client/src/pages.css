@@ -851,12 +851,10 @@ a {
 
 .college-name-container p {
   font-size: .8rem;
-  cursor: pointer;
 }
 
 .fee-structer:hover {
   text-decoration: underline;
-  cursor: pointer;
 }
 
 .fee-structer h1 {
@@ -865,7 +863,6 @@ a {
 
 .fee-structer p {
   font-size: .8rem;
-  cursor: pointer;
 }
 
 .redirect-college {

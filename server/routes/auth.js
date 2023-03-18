@@ -5,25 +5,35 @@ const authenticate = require('../middleware/authenticate');
 
 const Registration = require('../model/userSchema');
 const contactMessage = require('../model/messageSchema');
+const topclg = require('../clgdata/topclg');
+const clgData = require('../clgdata/colleges');
 
 router.get('/', (req, res) => {
-    res.send('hello world1');
+    res.send('HomePage - Express');
 })
 
 router.get('/searchcolleges', (req, res) => {
-    res.send('hello world2');
+    res.send('404 - Not found');
 })
 
 router.get('/academics', (req, res) => {
-    res.send('hello world3');
+    res.send('404 - Not found');
 })
 
 router.get('/blogs', (req, res) => {
-    res.send('hello world4');
+    res.send('404 - Not found');
+})
+
+router.get('/topclg', (req, res) => {
+    res.status(200).json(topclg);
+})
+
+router.get('/clgdata', (req, res) => {
+    res.status(200).json(clgData);
 })
 
 router.get('*', (req, res) => {
-    res.send('hello world5');
+    res.send('404 - Not found');
 })
 
 router.post('/login', async (req, res) => {

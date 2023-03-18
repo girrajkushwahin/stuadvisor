@@ -1,15 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import searchImg from '../images/search2.jpg';
-import bhopaldata from './bhopaldata'
+import axios from 'axios';
+const API = 'http://127.0.0.1:8000';
+
 const SearchClg2 = ({ heading, ph, item1, item2, item3, item4, item5, method }) => {
+
   const [data, setData] = useState('');
+  const [clgdata, setClgData] = useState([]);
+
+  const getData = async url => {
+    try {
+      const res = await axios.get(url);
+      setClgData(res.data);
+    } catch (err) {
+      console.log('Error occured while fetching the data');
+    }
+  }
+  useEffect(() => {
+    getData(`${API}/clgdata`);
+  }, [])
 
   const handleChange = e => {
     setData(e.target.value);
     // const result = method(data);
     // console.log(result);
   }
-  // console.log(bhopaldata)
+
   return (
     <>
       <div className="search-main-container">
@@ -30,34 +46,30 @@ const SearchClg2 = ({ heading, ph, item1, item2, item3, item4, item5, method }) 
           </div>
         </div>
         <div className="search-result-content">
-          {
-            bhopaldata.map((clgData) => {
-              return <div className="search-content">
-                <div className="college-img">
-                  <img src={clgData.logo} alt="College imeges" />
-                </div>
-                <div className="college-data">
-                  <div className="college-name-container">
-                    <h1 className='college-name'>{clgData.title}</h1>
-                    <p className='college-location'>{clgData.location}</p>
-                  </div>
-                  <div className="fee-structer">
-                    <h1>{clgData.fee}</h1>
-                    <p>{clgData.state}</p>
-                    <p className='course-in-fee'>{clgData.course}</p>
-                    <p>{clgData.rating}</p>
-                  </div>
-                </div>
-                <div className="redirect-college">
-                  <div className="redirect-btn-box">
-                    <button className='redirect-btn'><a href={clgData.url} target="_blank" rel="noreferrer">Apply Now</a></button><br />
-                    <br />
-                    <button className='redirect-btn' ><a href={clgData.reviews} target="_blank" rel="noreferrer">Reviews</a></button>
-                  </div>
-                </div>
+          {clgdata.map((elem, indx) => <div className="search-content" key={indx}>
+            <div className="college-img">
+              <img src={elem.logo} alt="College imeges" />
+            </div>
+            <div className="college-data">
+              <div className="college-name-container">
+                <h1 className='college-name'><a href={elem.url} target="_blank" rel="noreferrer">{elem.title}</a></h1>
+                <p className='college-location'>{elem.location}</p>
               </div>
-            })
-          }
+              <div className="fee-structer">
+                <h1>{elem.fee}</h1>
+                <p className='course-in-fee'>{elem.course}</p>
+                <p>{elem.rating}</p>
+              </div>
+            </div>
+            <div className="redirect-college">
+              <div className="redirect-btn-box">
+                <a href={elem.url} target="_blank" rel="noreferrer"><button className='redirect-btn'>Apply Now</button></a><br />
+                <br />
+                <a href={elem.reviews} target="_blank" rel="noreferrer"><button className='redirect-btn' >Reviews</button></a>
+              </div>
+            </div>
+          </div>
+          )}
         </div>
       </div>
     </>
