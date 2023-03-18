@@ -1,28 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import searchImg from '../images/search.jpg';
-import axios from 'axios';
-const API = 'http://127.0.0.1:8000';
 
-const SearchClg = () => {
+const SearchClg = ({ data }) => {
 
   const [search, setSearch] = useState('');
-  const [data, setData] = useState([]);
   const [filtered, getFiltered] = useState([]);
-
-
-  const getData = async url => {
-    try {
-      const res = await axios.get(url);
-      setData(res.data);
-    } catch (err) {
-      console.log('Error occured while fetching the data');
-    }
-  }
 
   const handleSearch = () => {
     const newData = data.filter(elem => {
       const clgName = elem.title.toLowerCase().replaceAll(' ', '').replaceAll('-', '').replaceAll(',', '').replaceAll('[', '').replaceAll(']', '').replaceAll('&', 'and').replaceAll("'s", "").replaceAll('.', '').replaceAll('(', '').replaceAll(')', '');
-      const userData = search.trimEnd().replaceAll(' ', '').replaceAll('-', '').replaceAll(',', '').replaceAll('[', '').replaceAll(']', '').replaceAll('&', 'and').replaceAll("'s", "").replaceAll('.', '').replaceAll('(', '').replaceAll(')', '');
+      const userData = search.toLowerCase().trimEnd().replaceAll(' ', '').replaceAll('-', '').replaceAll(',', '').replaceAll('[', '').replaceAll(']', '').replaceAll('&', 'and').replaceAll("'s", "").replaceAll('.', '').replaceAll('(', '').replaceAll(')', '');
       const status = clgName.includes(userData);
       return status === true;
     })
@@ -30,13 +17,9 @@ const SearchClg = () => {
   }
 
   const handleChange = e => {
-    setSearch(e.target.value.toLowerCase().trimStart());
+    setSearch(e.target.value.trimStart());
     handleSearch();
   }
-
-  useEffect(() => {
-    getData(`${API}/clgdata`);
-  }, [])
 
   return (
     <>

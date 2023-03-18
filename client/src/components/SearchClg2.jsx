@@ -1,29 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import searchImg from '../images/search2.jpg';
-import axios from 'axios';
-const API = 'http://127.0.0.1:8000';
 
-const SearchClg2 = ({ heading, ph, item1, item2, item3, item4, item5, method }) => {
+const SearchClg2 = ({ heading, ph, item1, item2, item3, item4, item5, method, handleSearch, filtered }) => {
 
   const [data, setData] = useState('');
-  const [clgdata, setClgData] = useState([]);
 
-  const getData = async url => {
-    try {
-      const res = await axios.get(url);
-      setClgData(res.data);
-    } catch (err) {
-      console.log('Error occured while fetching the data');
-    }
-  }
   useEffect(() => {
-    getData(`${API}/clgdata`);
-  }, [])
+    method(data);
+  })
 
   const handleChange = e => {
-    setData(e.target.value);
-    // const result = method(data);
-    // console.log(result);
+    setData(e.target.value.trimStart());
+    handleSearch();
   }
 
   return (
@@ -35,7 +23,7 @@ const SearchClg2 = ({ heading, ph, item1, item2, item3, item4, item5, method }) 
             <img src={searchImg} alt="search box img" />
           </div>
           <div className="search-input-box">
-            <span className='input-span'><input type="text" placeholder={ph} value={data} onChange={handleChange} /><i className="fa-solid fa-magnifying-glass" onClick={() => method(data)}></i></span>
+            <span className='input-span'><input type="text" placeholder={ph} value={data} onChange={handleChange} /><i className="fa-solid fa-magnifying-glass" onClick={handleSearch}></i></span>
             <div className="search-lables">
               <span>{item1} <i className="fa-solid fa-magnifying-glass"></i></span>
               <span>{item2} <i className="fa-solid fa-magnifying-glass"></i></span>
@@ -45,8 +33,8 @@ const SearchClg2 = ({ heading, ph, item1, item2, item3, item4, item5, method }) 
             </div>
           </div>
         </div>
-        <div className="search-result-content">
-          {clgdata.map((elem, indx) => <div className="search-content" key={indx}>
+        {data ? <div className="search-result-content">
+          {filtered.map((elem, indx) => <div className="search-content" key={indx}>
             <div className="college-img">
               <img src={elem.logo} alt="College imeges" />
             </div>
@@ -70,7 +58,7 @@ const SearchClg2 = ({ heading, ph, item1, item2, item3, item4, item5, method }) 
             </div>
           </div>
           )}
-        </div>
+        </div> : <div></div>}
       </div>
     </>
   )
