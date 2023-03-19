@@ -29,7 +29,7 @@ const Blogs = () => {
     document.title = 'Blogs';
     if (state) key(blogsMenu2);
     else key(blogsMenu);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, [])
 
   return (

@@ -29,7 +29,7 @@ const Academics = () => {
     document.title = 'Academics';
     if (state) key(academicsMenu2);
     else key(academicsMenu);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, [])
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import searchImg from '../images/search.jpg';
 
 const SearchClg = ({ data }) => {
@@ -17,10 +17,10 @@ const SearchClg = ({ data }) => {
     getFiltered(newData);
   }
 
-  const handleChange = e => {
-    setSearch(e.target.value.trimStart());
+  useEffect(() => {
     handleSearch();
-  }
+    // eslint-disable-next-line
+  }, [search])
 
   return (
     <>
@@ -31,7 +31,7 @@ const SearchClg = ({ data }) => {
             <img src={searchImg} alt="search box img" />
           </div>
           <div className="search-input-box">
-            <span className='input-span'><input type="text" placeholder='Search your dream college...' value={search} onChange={handleChange} /><i className="fa-solid fa-magnifying-glass" onClick={handleSearch}></i></span>
+            <span className='input-span'><input type="text" placeholder='Search your dream college...' value={search} onChange={e => setSearch(e.target.value.trimStart())} /><i className="fa-solid fa-magnifying-glass" onClick={handleSearch}></i></span>
           </div>
         </div>
         {search ? <div className="search-result-content">

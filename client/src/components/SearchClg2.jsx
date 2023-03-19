@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import searchImg from '../images/search2.jpg';
 
-const SearchClg2 = ({ heading, ph, item1, item2, item3, item4, item5, method, handleSearch, filtered }) => {
+const SearchClg2 = ({ heading, ph, item1, item2, item3, item4, item5, handleSearch, filtered }) => {
 
   const [data, setData] = useState('');
 
   useEffect(() => {
-    method(data);
-  })
-
-  const handleChange = e => {
-    setData(e.target.value.trimStart());
-    handleSearch();
-  }
+    handleSearch(data);
+    // eslint-disable-next-line
+  }, [data]);
 
   return (
     <>
@@ -23,7 +19,7 @@ const SearchClg2 = ({ heading, ph, item1, item2, item3, item4, item5, method, ha
             <img src={searchImg} alt="search box img" />
           </div>
           <div className="search-input-box">
-            <span className='input-span'><input type="text" placeholder={ph} value={data} onChange={handleChange} /><i className="fa-solid fa-magnifying-glass" onClick={handleSearch}></i></span>
+            <span className='input-span'><input type="text" placeholder={ph} value={data} onChange={e => setData(e.target.value.trimStart())} /><i className="fa-solid fa-magnifying-glass" onClick={handleSearch}></i></span>
             <div className="search-lables">
               <span>{item1} <i className="fa-solid fa-magnifying-glass"></i></span>
               <span>{item2} <i className="fa-solid fa-magnifying-glass"></i></span>

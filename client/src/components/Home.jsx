@@ -29,7 +29,7 @@ const Home = () => {
     document.title = 'Home';
     if (state) key(homeMenu2);
     else key(homeMenu);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, [])
 
   return (

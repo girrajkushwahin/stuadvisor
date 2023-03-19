@@ -16,7 +16,6 @@ const SearchCollege = () => {
   const { key } = useOutletContext();
   const [dataAPI, setDataAPI] = useState([]);
   const [filtered, getFiltered] = useState([]);
-  const [inputSearch, getInputSearch] = useState('');
 
   const menuClick = id => {
     setData(id);
@@ -42,37 +41,31 @@ const SearchCollege = () => {
     if (state) key(searchCollegeMenu2);
     else key(searchCollegeMenu);
     getData(`${API}/clgdata`);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+    // eslint-disable-next-line
+  }, []);
 
-  const handleCourseWise = data => getInputSearch(data);
-
-  const handleCityWise = data => getInputSearch(data);
-
-  const handleStateWise = data => getInputSearch(data);
-
-  const handleSearchCourseWise = () => {
+  const handleSearchCourseWise = (data) => {
     const newData = dataAPI.filter(elem => {
       const course = elem.bycourse.toLowerCase().replaceAll('.', '').replaceAll(' ', '');
-      const userData = inputSearch.toLowerCase().trimEnd().replaceAll('.', '').replaceAll(' ', '');
+      const userData = data.toLowerCase().trimEnd().replaceAll('.', '').replaceAll(' ', '');
       return course === userData;
     })
     getFiltered(newData);
   }
 
-  const handleSearchCityWise = () => {
+  const handleSearchCityWise = (data) => {
     const newData = dataAPI.filter(elem => {
-      const userData = inputSearch.toLowerCase().trimEnd().replaceAll(' ', '');
+      const userData = data.toLowerCase().trimEnd().replaceAll(' ', '');
       const status = elem.city.includes(userData);
       return status === true;
     })
     getFiltered(newData);
   }
 
-  const handleSearchStateWise = () => {
+  const handleSearchStateWise = (data) => {
     const newData = dataAPI.filter(elem => {
       const state = elem.state.replaceAll(' ', '');
-      const userData = inputSearch.toLowerCase().trimEnd().replaceAll(' ', '');
+      const userData = data.toLowerCase().trimEnd().replaceAll(' ', '');
       const status = state.includes(userData);
       return status === true;
     })
@@ -88,8 +81,7 @@ const SearchCollege = () => {
     item4: 'B.Sc',
     item5: 'Diploma',
     handleSearch: handleSearchCourseWise,
-    filtered: filtered,
-    method: handleCourseWise
+    filtered: filtered
   }
 
   const cityWise = {
@@ -101,8 +93,7 @@ const SearchCollege = () => {
     item4: 'Kolkata',
     item5: 'Chennai',
     handleSearch: handleSearchCityWise,
-    filtered: filtered,
-    method: handleCityWise
+    filtered: filtered
   }
 
   const stateWise = {
@@ -114,8 +105,7 @@ const SearchCollege = () => {
     item4: 'Maharashtra',
     item5: 'Rajasthan',
     handleSearch: handleSearchStateWise,
-    filtered: filtered,
-    method: handleStateWise
+    filtered: filtered
   }
 
   return (
