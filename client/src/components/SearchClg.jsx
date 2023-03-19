@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import searchImg from '../images/search.jpg';
+import searchImg from '../images/searchlogo.png';
 
 const SearchClg = ({ data }) => {
 
@@ -28,7 +28,7 @@ const SearchClg = ({ data }) => {
         <div className="search-box-container">
           <h1 className='search-box-heading'>Search your dream College...</h1>
           <div className="search-box-img">
-            <img src={searchImg} alt="search box img" />
+            <img src={searchImg} className="search-img" alt="search box img" />
           </div>
           <div className="search-input-box">
             <span className='input-span'><input type="text" placeholder='Search your dream college...' value={search} onChange={e => setSearch(e.target.value.trimStart())} /><i className="fa-solid fa-magnifying-glass" onClick={handleSearch}></i></span>
