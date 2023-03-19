@@ -825,6 +825,13 @@ a {
 
 }
 
+.search-result-content .search-content:hover {
+  background: rgb(246, 240, 255);
+  box-shadow: 0 0 10px rgba(0, 26, 255, 0.4);
+
+
+}
+
 
 .college-img {
   width: 100%;
