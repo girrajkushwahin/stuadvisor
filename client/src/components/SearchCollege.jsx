@@ -63,15 +63,18 @@ const SearchCollege = () => {
   }
 
   const handleSearchStateWise = (data) => {
+    let stateName = '';
+    if (data.toLowerCase() === 'mp') stateName = 'Madhya Pradesh';
+    else if (data.toLowerCase() === 'up') stateName = 'Uttar Pradesh';
+    else stateName = data;
     const newData = dataAPI.filter(elem => {
       const state = elem.state.replaceAll(' ', '');
-      const userData = data.toLowerCase().trimEnd().replaceAll(' ', '');
+      const userData = stateName.toLowerCase().trimEnd().replaceAll(' ', '');
       const status = state.includes(userData);
       return status === true;
     })
     getFiltered(newData);
   }
-
   const courseWise = {
     heading: 'Search according to Courses...',
     ph: 'Enter course name...',
@@ -88,7 +91,7 @@ const SearchCollege = () => {
     heading: 'Search according to Cities...',
     ph: 'Enter city name...',
     item1: 'Mumbai',
-    item2: 'Banglore',
+    item2: 'Bangalore',
     item3: 'Hyderabad',
     item4: 'Kolkata',
     item5: 'Chennai',
