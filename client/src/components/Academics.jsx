@@ -3,10 +3,7 @@ import { useOutletContext } from 'react-router-dom';
 import { SignOut, SiteContext } from '../App';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
-import Notes from './Notes';
-import Impque from './Impque';
-import SamplePaper from './SamplePaper';
-import PrePaper from './PrePaper';
+import AcademicsComp from './AcademicsComp';
 import DataPosted from './DataPosted';
 
 const Academics = () => {
@@ -19,7 +16,7 @@ const Academics = () => {
     setData(id);
   }
 
-  const academicsData = [{ text: 'Notes', icon: <i className="i-tag fa-solid fa-house"></i>, click: menuClick }, { text: 'Important Questions', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'Sample Papers', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i>, click: menuClick }, { text: 'Previous Papers', icon: <i className="i-tag fa-brands fa-blogger-b"></i>, click: menuClick }, { text: 'Data Posted', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i>, click: menuClick }]
+  const academicsData = [{ text: 'Notes', icon: <i className="i-tag fa-sharp fa-solid fa-note-sticky"></i>, click: menuClick }, { text: 'Important Questions', icon: <i className="i-tag fa-solid fa-circle-question"></i>, click: menuClick }, { text: 'Sample Papers', icon: <i className="i-tag fa-solid fa-pen-to-square"></i>, click: menuClick }, { text: 'Previous Papers', icon: <i className="i-tag fa-solid fa-star"></i>, click: menuClick }, { text: 'Data Posted', icon: <i className="i-tag fa-solid fa-server"></i>, click: menuClick }]
 
   const academicsMenu = [...academicsData, { text: 'Sign in', icon: <i className="i-tag fa-solid fa-door-open"></i>, click: menuClick }, { text: 'Sign up', icon: <i className="i-tag fa-solid fa-user-plus"></i>, click: menuClick }];
 
@@ -32,13 +29,50 @@ const Academics = () => {
     // eslint-disable-next-line
   }, [])
 
+  const handleNotes = () => { }
+
+  const handleImpQue = () => { }
+
+  const handleSamplePaper = () => { }
+
+  const handlePrePaper = () => { }
+
+  const common = {
+    ph: 'Enter course name...',
+    item1: 'B.Tech',
+    item2: 'MBBS',
+    item3: 'MBA',
+    item4: 'B.Sc',
+    item5: 'Diploma'
+  }
+
+  const Notes = {
+    heading: 'Search for Notes...',
+    handleSearch: handleNotes
+  }
+
+  const ImpQue = {
+    heading: 'Search for important questions...',
+    handleSearch: handleImpQue
+  }
+
+  const SamplePaper = {
+    heading: 'Search for sample papers...',
+    handleSearch: handleSamplePaper
+  }
+
+  const PrePaper = {
+    heading: 'Search for previous papers...',
+    handleSearch: handlePrePaper
+  }
+
   return (
     <>
       <div className="main-item main-right">
-        {data === 0 ? <Notes /> : null}
-        {data === 1 ? <Impque /> : null}
-        {data === 2 ? <SamplePaper /> : null}
-        {data === 3 ? <PrePaper /> : null}
+        {data === 0 ? <AcademicsComp {...Notes} {...common} /> : null}
+        {data === 1 ? <AcademicsComp {...ImpQue} {...common} /> : null}
+        {data === 2 ? <AcademicsComp {...SamplePaper} {...common} /> : null}
+        {data === 3 ? <AcademicsComp {...PrePaper} {...common} /> : null}
         {data === 4 ? <DataPosted /> : null}
         {data === 5 ? <SignIn /> : null}
         {data === 6 ? <SignUp /> : null}

@@ -52,7 +52,7 @@ const App = () => {
         navigate('/', { replace: true });
         path('Home');
       }
-    })
+    }, 2000);
     toast.success('Signed out', {
       position: "top-center",
       autoClose: 2000,
