@@ -29,13 +29,21 @@ const Academics = () => {
     // eslint-disable-next-line
   }, [])
 
-  const handleNotes = () => { }
+  const handleNotes = (data) => {
+    // console.log(data);
+  }
 
-  const handleImpQue = () => { }
+  const handleImpQue = (data) => {
+    // console.log(data);
+  }
 
-  const handleSamplePaper = () => { }
+  const handleSamplePaper = (data) => {
+    // console.log(data);
+  }
 
-  const handlePrePaper = () => { }
+  const handlePrePaper = (data) => {
+    // console.log(data);
+  }
 
   const common = {
     ph: 'Enter course name...',
