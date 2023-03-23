@@ -27,6 +27,114 @@ const AcademicsComp = ({ ph, item1, item2, item3, item4, item5, heading, handleS
             </div>
           </div>
         </div>
+        <div className="select-subjects">
+          <h1>Select your Branch</h1>
+          <div className="search-lables select-sub-lables">
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+        </div>
+        <div className="select-subjects">
+          <h1>Select your Year/Sem</h1>
+          <div className="search-lables select-sub-lables">
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+        </div>
+        <div className="select-subjects">
+          <h1>Select your Subject</h1>
+          <div className="search-lables select-sub-lables">
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+        </div>
+        <div className="select-subjects">
+          <h1>Select your Unit/Chapter</h1>
+          <div className="search-lables select-sub-lables">
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+            <span>fjgj<i className="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+        </div>
       </div>
     </>
   )
