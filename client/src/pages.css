@@ -782,7 +782,9 @@ a {
 }
 
 .search-lables {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .search-lables span {
@@ -792,10 +794,14 @@ a {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   /* color: rgb(51, 0, 255); */
   color: rgb(0, 0, 0);
-  padding: .5rem .8rem;
+  padding: .5rem .6rem;
   border-radius: 4rem;
   cursor: pointer;
   transition: .3s;
+}
+
+.search-lables span i {
+  margin-left: .4rem;
 }
 
 .search-lables span:hover {
@@ -922,3 +928,33 @@ a {
 .search-content.top-clg-content .college-img img {
   height: 35vh;
 } */
+
+
+.select-subjects {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  /* min-height: 30vh; */
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  transition: all .3s;
+  border-radius: 0 20px 0 20px;
+}
+
+.select-subjects:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background-color: #0000001d;
+}
+
+.select-sub-lables {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.select-subjects h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-top: .5rem;
+}
