@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/searchcolleges', (req, res) => {
-    res.send('404 - Not found');
+    res.status(200).json(clgData);
 })
 
 router.get('/academics', (req, res) => {
@@ -26,10 +26,6 @@ router.get('/blogs', (req, res) => {
 
 router.get('/topclg', (req, res) => {
     res.status(200).json(topclg);
-})
-
-router.get('/clgdata', (req, res) => {
-    res.status(200).json(clgData);
 })
 
 router.get('*', (req, res) => {

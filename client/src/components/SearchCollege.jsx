@@ -40,7 +40,7 @@ const SearchCollege = () => {
     document.title = 'Search College';
     if (state) key(searchCollegeMenu2);
     else key(searchCollegeMenu);
-    getData(`${API}/clgdata`);
+    getData(`${API}/searchcolleges`);
     // eslint-disable-next-line
   }, []);
 
@@ -84,7 +84,7 @@ const SearchCollege = () => {
     item4: 'B.Sc',
     item5: 'Diploma',
     handleSearch: handleSearchCourseWise,
-    filtered: filtered
+    filtered
   }
 
   const cityWise = {
@@ -96,7 +96,7 @@ const SearchCollege = () => {
     item4: 'Kolkata',
     item5: 'Chennai',
     handleSearch: handleSearchCityWise,
-    filtered: filtered
+    filtered
   }
 
   const stateWise = {
@@ -108,7 +108,7 @@ const SearchCollege = () => {
     item4: 'Maharashtra',
     item5: 'Rajasthan',
     handleSearch: handleSearchStateWise,
-    filtered: filtered
+    filtered
   }
 
   return (

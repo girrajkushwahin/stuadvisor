@@ -1,10 +1,12 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useOutletContext } from 'react-router-dom';
+import axios from 'axios';
 import { SignOut, SiteContext } from '../App';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import AcademicsComp from './AcademicsComp';
 import DataPosted from './DataPosted';
+const API = 'http://127.0.0.1:8000';
 
 const Academics = () => {
   const { state } = useContext(SiteContext);
@@ -16,6 +18,15 @@ const Academics = () => {
     setData(id);
   }
 
+  // const getData = async url => {
+  //   try {
+  //     const res = await axios.get(url);
+  //     setDataAPI(res.data);
+  //   } catch (err) {
+  //     console.log('Error occured while fetching the data');
+  //   }
+  // }
+
   const academicsData = [{ text: 'Notes', icon: <i className="i-tag fa-sharp fa-solid fa-note-sticky"></i>, click: menuClick }, { text: 'Important Questions', icon: <i className="i-tag fa-solid fa-circle-question"></i>, click: menuClick }, { text: 'Sample Papers', icon: <i className="i-tag fa-solid fa-pen-to-square"></i>, click: menuClick }, { text: 'Previous Papers', icon: <i className="i-tag fa-solid fa-star"></i>, click: menuClick }, { text: 'Data Posted', icon: <i className="i-tag fa-solid fa-server"></i>, click: menuClick }]
 
   const academicsMenu = [...academicsData, { text: 'Sign in', icon: <i className="i-tag fa-solid fa-door-open"></i>, click: menuClick }, { text: 'Sign up', icon: <i className="i-tag fa-solid fa-user-plus"></i>, click: menuClick }];
@@ -26,6 +37,7 @@ const Academics = () => {
     document.title = 'Academics';
     if (state) key(academicsMenu2);
     else key(academicsMenu);
+    // getData(`${API}/......`);
     // eslint-disable-next-line
   }, [])
 
