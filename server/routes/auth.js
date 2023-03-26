@@ -5,8 +5,12 @@ const authenticate = require('../middleware/authenticate');
 
 const Registration = require('../model/userSchema');
 const contactMessage = require('../model/messageSchema');
-const topclg = require('../clgdata/topclg');
-const clgData = require('../clgdata/colleges');
+const topclg = require('../data/topclg');
+const clgData = require('../data/colleges');
+const branchsem = require('../data/banchsem.json');
+const subjects = require('../data/subjects.json');
+const units = require('../data/units.json');
+const academicsData = [branchsem, subjects, units];
 
 router.get('/', (req, res) => {
     res.send('HomePage - Express');
@@ -17,7 +21,7 @@ router.get('/searchcolleges', (req, res) => {
 })
 
 router.get('/academics', (req, res) => {
-    res.send('404 - Not found');
+    res.status(200).json(academicsData);
 })
 
 router.get('/blogs', (req, res) => {

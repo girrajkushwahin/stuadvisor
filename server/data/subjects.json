@@ -1,0 +1,476 @@
+[
+    {
+        "subject": [
+            "Engineering Chemistry",
+            "Mathematics-I",
+            "English for Communication",
+            "Basic Electrical & Electronics Engineering",
+            "Engineering Graphics"
+        ],
+        "sem": "1st Sem",
+        "branch": "Computer Science and Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Engineering Physics",
+            "Mathematics-II",
+            "Basic Mechanical Engineering",
+            "Basic Civil Engineering & Mechanics",
+            "Basic Computer Engineering"
+        ],
+        "sem": "2nd Sem",
+        "branch": "Computer Science and Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Energy & Environmental Engineering",
+            "Discrete Structure",
+            "Data Structure",
+            "Digital Systems",
+            "Object Oriented Programming & Methodology"
+        ],
+        "sem": "3rd Sem",
+        "branch": "Computer Science and Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Mathematics-III",
+            "Analysis Design of Algorithm",
+            "Software Engineering",
+            "Computer Org. & Architecture",
+            "Operating Systems"
+        ],
+        "sem": "4th Sem",
+        "branch": "Computer Science and Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Theory of Computation",
+            "Database Management Systems",
+            "Cyber Security",
+            "Internet and Web Technology"
+        ],
+        "sem": "5th Sem",
+        "branch": "Computer Science and Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Machine Learning",
+            "Computer Networks",
+            "Advanced Computer Architecture",
+            "Project Management"
+        ],
+        "sem": "6th Sem",
+        "branch": "Computer Science and Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Software Architectures",
+            "Wireless & Mobile Computing",
+            "Cryptography & Information Security"
+        ],
+        "sem": "7th Sem",
+        "branch": "Computer Science and Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject 1",
+            "Subject 2",
+            "Subject 3"
+        ],
+        "sem": "8th Sem",
+        "branch": "Computer Science and Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "1st Sem",
+        "branch": "Mechanical Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "2nd Sem",
+        "branch": "Mechanical Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "3rd Sem",
+        "branch": "Mechanical Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "4th Sem",
+        "branch": "Mechanical Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "5th Sem",
+        "branch": "Mechanical Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "6th Sem",
+        "branch": "Mechanical Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "7th Sem",
+        "branch": "Mechanical Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "8th Sem",
+        "branch": "Mechanical Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "1st Sem",
+        "branch": "Electronics and Communication Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "2nd Sem",
+        "branch": "Electronics and Communication Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "3rd Sem",
+        "branch": "Electronics and Communication Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "4th Sem",
+        "branch": "Electronics and Communication Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "5th Sem",
+        "branch": "Electronics and Communication Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "6th Sem",
+        "branch": "Electronics and Communication Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "7th Sem",
+        "branch": "Electronics and Communication Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "8th Sem",
+        "branch": "Electronics and Communication Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "1st Sem",
+        "branch": "Civil Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "2nd Sem",
+        "branch": "Civil Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "3rd Sem",
+        "branch": "Civil Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "4th Sem",
+        "branch": "Civil Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "5th Sem",
+        "branch": "Civil Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "6th Sem",
+        "branch": "Civil Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "7th Sem",
+        "branch": "Civil Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "8th Sem",
+        "branch": "Civil Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Engineering Chemistry",
+            "Mathematics-I",
+            "English for Communication",
+            "Basic Electrical & Electronics Engineering",
+            "Engineering Graphics"
+        ],
+        "sem": "1st Sem",
+        "branch": "Electrical & Electronics Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Engineering Physics",
+            "Mathematics-II",
+            "Basic Mechanical Engineering",
+            "Basic Civil Engineering & Mechanics",
+            "Basic Computer Engineering"
+        ],
+        "sem": "2nd Sem",
+        "branch": "Electrical & Electronics Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "3rd Sem",
+        "branch": "Electrical & Electronics Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "4th Sem",
+        "branch": "Electrical & Electronics Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "5th Sem",
+        "branch": "Electrical & Electronics Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "6th Sem",
+        "branch": "Electrical & Electronics Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "7th Sem",
+        "branch": "Electrical & Electronics Engineering",
+        "course": "btech"
+    },
+    {
+        "subject": [
+            "Subject1",
+            "Subject2",
+            "Subject3",
+            "Subject4",
+            "Subject5"
+        ],
+        "sem": "8th Sem",
+        "branch": "Electrical & Electronics Engineering",
+        "course": "btech"
+    }
+]
