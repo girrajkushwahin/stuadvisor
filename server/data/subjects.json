@@ -1,11 +1,36 @@
 [
     {
         "subject": [
-            "Engineering Chemistry",
-            "Mathematics-I",
-            "English for Communication",
-            "Basic Electrical & Electronics Engineering",
-            "Engineering Graphics"
+            {
+                "title": "Engineering Chemistry",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Mathematics-I",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "English for Communication",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Basic Electrical & Electronics Engineering",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Engineering Graphics",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "1st Sem",
         "branch": "Computer Science and Engineering",
@@ -13,11 +38,36 @@
     },
     {
         "subject": [
-            "Engineering Physics",
-            "Mathematics-II",
-            "Basic Mechanical Engineering",
-            "Basic Civil Engineering & Mechanics",
-            "Basic Computer Engineering"
+            {
+                "title": "Engineering Physics",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Mathematics-II",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Basic Mechanical Engineering",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Basic Civil Engineering & Mechanics",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Basic Computer Engineering",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "2nd Sem",
         "branch": "Computer Science and Engineering",
@@ -25,11 +75,36 @@
     },
     {
         "subject": [
-            "Energy & Environmental Engineering",
-            "Discrete Structure",
-            "Data Structure",
-            "Digital Systems",
-            "Object Oriented Programming & Methodology"
+            {
+                "title": "Energy & Environmental Engineering",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Discrete Structure",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Data Structure",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Digital Systems",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Object Oriented Programming & Methodology",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "3rd Sem",
         "branch": "Computer Science and Engineering",
@@ -37,11 +112,36 @@
     },
     {
         "subject": [
-            "Mathematics-III",
-            "Analysis Design of Algorithm",
-            "Software Engineering",
-            "Computer Org. & Architecture",
-            "Operating Systems"
+            {
+                "title": "Mathematics-III",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Analysis Design of Algorithm",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Software Engineering",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Computer Org. & Architecture",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Operating Systems",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "4th Sem",
         "branch": "Computer Science and Engineering",
@@ -49,10 +149,30 @@
     },
     {
         "subject": [
-            "Theory of Computation",
-            "Database Management Systems",
-            "Cyber Security",
-            "Internet and Web Technology"
+            {
+                "title": "Theory of Computation",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Database Management Systems",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Cyber Security",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Internet and Web Technology",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "5th Sem",
         "branch": "Computer Science and Engineering",
@@ -60,10 +180,30 @@
     },
     {
         "subject": [
-            "Machine Learning",
-            "Computer Networks",
-            "Advanced Computer Architecture",
-            "Project Management"
+            {
+                "title": "Machine Learning",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Computer Networks",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Advanced Computer Architecture",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Project Management",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "6th Sem",
         "branch": "Computer Science and Engineering",
@@ -71,9 +211,24 @@
     },
     {
         "subject": [
-            "Software Architectures",
-            "Wireless & Mobile Computing",
-            "Cryptography & Information Security"
+            {
+                "title": "Software Architectures",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Wireless & Mobile Computing",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Cryptography & Information Security",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "7th Sem",
         "branch": "Computer Science and Engineering",
@@ -81,9 +236,24 @@
     },
     {
         "subject": [
-            "Subject 1",
-            "Subject 2",
-            "Subject 3"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "8th Sem",
         "branch": "Computer Science and Engineering",
@@ -91,11 +261,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "1st Sem",
         "branch": "Mechanical Engineering",
@@ -103,11 +298,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "2nd Sem",
         "branch": "Mechanical Engineering",
@@ -115,11 +335,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "3rd Sem",
         "branch": "Mechanical Engineering",
@@ -127,11 +372,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "4th Sem",
         "branch": "Mechanical Engineering",
@@ -139,11 +409,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "5th Sem",
         "branch": "Mechanical Engineering",
@@ -151,11 +446,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "6th Sem",
         "branch": "Mechanical Engineering",
@@ -163,11 +483,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "7th Sem",
         "branch": "Mechanical Engineering",
@@ -175,11 +520,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "8th Sem",
         "branch": "Mechanical Engineering",
@@ -187,11 +557,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "1st Sem",
         "branch": "Electronics and Communication Engineering",
@@ -199,11 +594,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "2nd Sem",
         "branch": "Electronics and Communication Engineering",
@@ -211,11 +631,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "3rd Sem",
         "branch": "Electronics and Communication Engineering",
@@ -223,11 +668,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "4th Sem",
         "branch": "Electronics and Communication Engineering",
@@ -235,11 +705,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "5th Sem",
         "branch": "Electronics and Communication Engineering",
@@ -247,11 +742,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "6th Sem",
         "branch": "Electronics and Communication Engineering",
@@ -259,11 +779,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "7th Sem",
         "branch": "Electronics and Communication Engineering",
@@ -271,11 +816,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "8th Sem",
         "branch": "Electronics and Communication Engineering",
@@ -283,11 +853,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "1st Sem",
         "branch": "Civil Engineering",
@@ -295,11 +890,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "2nd Sem",
         "branch": "Civil Engineering",
@@ -307,11 +927,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "3rd Sem",
         "branch": "Civil Engineering",
@@ -319,11 +964,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "4th Sem",
         "branch": "Civil Engineering",
@@ -331,11 +1001,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "5th Sem",
         "branch": "Civil Engineering",
@@ -343,11 +1038,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "6th Sem",
         "branch": "Civil Engineering",
@@ -355,11 +1075,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "7th Sem",
         "branch": "Civil Engineering",
@@ -367,11 +1112,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject 1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject 5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "8th Sem",
         "branch": "Civil Engineering",
@@ -379,11 +1149,36 @@
     },
     {
         "subject": [
-            "Engineering Chemistry",
-            "Mathematics-I",
-            "English for Communication",
-            "Basic Electrical & Electronics Engineering",
-            "Engineering Graphics"
+            {
+                "title": "Engineering Chemistry",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Mathematics-I",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "English for Communication",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Basic Electrical & Electronics Engineering",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Engineering Graphics",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "1st Sem",
         "branch": "Electrical & Electronics Engineering",
@@ -391,11 +1186,36 @@
     },
     {
         "subject": [
-            "Engineering Physics",
-            "Mathematics-II",
-            "Basic Mechanical Engineering",
-            "Basic Civil Engineering & Mechanics",
-            "Basic Computer Engineering"
+            {
+                "title": "Engineering Physics",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Mathematics-II",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Basic Mechanical Engineering",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Basic Civil Engineering & Mechanics",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Basic Computer Engineering",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "2nd Sem",
         "branch": "Electrical & Electronics Engineering",
@@ -403,11 +1223,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "3rd Sem",
         "branch": "Electrical & Electronics Engineering",
@@ -415,11 +1260,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "4th Sem",
         "branch": "Electrical & Electronics Engineering",
@@ -427,11 +1297,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "5th Sem",
         "branch": "Electrical & Electronics Engineering",
@@ -439,11 +1334,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "6th Sem",
         "branch": "Electrical & Electronics Engineering",
@@ -451,11 +1371,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "7th Sem",
         "branch": "Electrical & Electronics Engineering",
@@ -463,11 +1408,36 @@
     },
     {
         "subject": [
-            "Subject1",
-            "Subject2",
-            "Subject3",
-            "Subject4",
-            "Subject5"
+            {
+                "title": "Subject1",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject2",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject3",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject4",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            },
+            {
+                "title": "Subject5",
+                "impque": "",
+                "sample": "",
+                "prepaper": ""
+            }
         ],
         "sem": "8th Sem",
         "branch": "Electrical & Electronics Engineering",
