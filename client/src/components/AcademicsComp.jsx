@@ -42,7 +42,7 @@ const AcademicsComp = ({ ph, item1, item2, item3, item4, item5, heading, dataAPI
   const handleSem = (data) => {
     getFiltered({ ...filtered, two: filtered.one });
     setToggle({ one: true, two: true, three: '', four: '' });
-    setFiltered2({ ...filtered2, branch: data })
+    setFiltered2({ ...filtered2, branch: data });
   }
 
   const handleSubject = (data) => {
@@ -88,7 +88,7 @@ const AcademicsComp = ({ ph, item1, item2, item3, item4, item5, heading, dataAPI
         {toggle.three ? <div className="select-subjects">
           <h1>Select your Subject</h1>
           <div className="search-lables select-sub-lables">
-            {filtered.three.subject.map((elem, indx) => <span onClick={() => handleUnit(elem)} key={indx}>{elem}<i className="fa-solid fa-magnifying-glass"></i></span>)}
+            {filtered.three.subject.map((elem, indx) => <span onClick={() => handleUnit(elem.title)} key={indx}>{elem.title}<i className="fa-solid fa-magnifying-glass"></i></span>)}
           </div>
         </div> : ''}
         {toggle.four ? <div className="select-subjects">

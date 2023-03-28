@@ -58,7 +58,7 @@ const Academics = () => {
 
     if (newData[0]) {
       getFiltered({ ...filtered, one: newData[0] });
-      setToggle({ one: true, two: '', three: '', four: '' });;
+      setToggle({ one: true, two: '', three: '', four: '' });
     } else toast.error('Data not found', {
       position: "top-center",
       autoClose: 3000,
