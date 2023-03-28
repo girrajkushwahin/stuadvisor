@@ -42,7 +42,8 @@ const AcademicsComp2 = ({ ph, item1, item2, item3, item4, item5, heading, handle
                 {toggle.three ? <div className="select-subjects">
                     <h1>Select your Subject</h1>
                     <div className="search-lables select-sub-lables">
-                        {filtered.three.subject.map((elem, indx) => <span onClick={() => handleDownload(elem)} key={indx}>{elem}<i className="fa-solid fa-arrow-down-long"></i></span>)}
+                        <a download={true} href="https://onedrive.live.com/download?cid=9F0200C1153A2AA1&resid=9F0200C1153A2AA1%21780&authkey=AJZZSCVFwBcN09Y&em=2">Subject<i className="fa-solid fa-arrow-down-long"></i></a>
+                        {/* {filtered.three.subject.map((elem, indx) => <span onClick={() => handleDownload(elem)} key={indx}>{elem}<i className="fa-solid fa-arrow-down-long"></i></span>)} */}
                     </div>
                 </div> : ''}
             </div>

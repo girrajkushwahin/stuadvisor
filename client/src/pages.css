@@ -16,6 +16,7 @@
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 /* **************************************** SIGN IN PAGE ************************************************** */
@@ -810,6 +811,30 @@ a {
 
   color: red;
 }
+
+.search-lables a {
+  margin: 1rem;
+  /* border: 2px solid rgba(51, 0, 255, 0.724); */
+  border: 2px solid rgba(0, 0, 0, 0.724);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  /* color: rgb(51, 0, 255); */
+  color: rgb(0, 0, 0);
+  padding: .5rem .6rem;
+  border-radius: 4rem;
+  cursor: pointer;
+  transition: .3s;
+  margin-right: .2rem;
+}
+
+.search-lables a:hover {
+  box-shadow: 0 0 5px red;
+  border: 2px solid rgb(255, 0, 0);
+
+  color: red;
+}
+
+
+
 
 .search-result-content {
   margin-top: 1.5rem;

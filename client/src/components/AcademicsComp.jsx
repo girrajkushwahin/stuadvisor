@@ -94,7 +94,7 @@ const AcademicsComp = ({ ph, item1, item2, item3, item4, item5, heading, dataAPI
         {toggle.four ? <div className="select-subjects">
           <h1>Select your Unit/Chapter</h1>
           <div className="search-lables select-sub-lables">
-            {filtered.four.units.map((elem, indx) => <span key={indx}>{elem}<i className="fa-solid fa-arrow-down-long"></i></span>)}
+            {filtered.four.units.map((elem, indx) => <a download={true} href={elem.download} key={indx}>{elem.unit} <i className="fa-solid fa-arrow-down-long"></i></a>)}
           </div>
         </div> : ''}
       </div>
