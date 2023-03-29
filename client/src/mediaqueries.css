@@ -22,10 +22,10 @@
     }
 
     .main-content {
-        margin-top: 8vh;
+        /* margin-top: 8vh; */
 
         grid-template-columns: none;
-        grid-template-rows: 1fr 12fr;
+        /* grid-template-rows: 1fr 12fr; */
     }
 
     .heading-hamburger {

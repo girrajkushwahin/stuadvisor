@@ -67,6 +67,10 @@ p {
   font-size: var(--md-1);
 }
 
+ul {
+  margin-bottom: .2rem;
+}
+
 /* Main Container */
 .main-container {
   height: 100vh;
@@ -81,7 +85,7 @@ p {
   height: 8vh;
   width: 100%;
   top: 0;
-  position: fixed;
+  position: sticky;
 
 }
 
@@ -197,7 +201,7 @@ p {
 } */
 
 .footer-container {
-  position: fixed;
+  position: sticky;
   bottom: 0;
   background: var(--dark-black);
   width: 100%;
@@ -209,7 +213,7 @@ p {
 .main-content {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  margin-top: 8vh;
+  /* margin-top: 8vh; */
 }
 
 .main-item {
