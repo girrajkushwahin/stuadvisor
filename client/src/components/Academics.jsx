@@ -84,11 +84,6 @@ const Academics = () => {
     setFiltered2({ ...filtered2, sem: data });
   }
 
-  const handleTest = data => {
-    // const newData = units.filter(elem => elem.course === filtered.one.course && elem.branch === filtered2.branch && elem.sem === filtered2.sem && elem.subject === data);
-    console.log(data);
-  }
-
   const common = {
     ph: 'Enter course name...',
     item1: 'B.Tech',
@@ -108,7 +103,7 @@ const Academics = () => {
     handleSearch,
     handleSem,
     handleSubject,
-    handleDownload: handleTest,
+    handleDownload: 'impque',
     filtered,
     filtered2,
     toggle
@@ -119,7 +114,7 @@ const Academics = () => {
     handleSearch,
     handleSem,
     handleSubject,
-    handleDownload: handleTest,
+    handleDownload: 'sample',
     filtered,
     filtered2,
     toggle
@@ -130,7 +125,7 @@ const Academics = () => {
     handleSearch,
     handleSem,
     handleSubject,
-    handleDownload: handleTest,
+    handleDownload: 'prepaper',
     filtered,
     filtered2,
     toggle
