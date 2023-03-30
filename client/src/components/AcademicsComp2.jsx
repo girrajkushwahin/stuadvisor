@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import searchImg from '../images/searchlogo.png';
 
-const AcademicsComp2 = ({ ph, item1, item2, item3, item4, item5, heading, handleSearch, filtered, filtered2, toggle, handleSem, handleSubject, handleDownload }) => {
+const AcademicsComp2 = ({ ph, item1, item2, item3, item4, item5, heading, handleSearch, filtered, toggle, handleSem, handleSubject, handleDownload }) => {
 
     const [data, setData] = useState('');
 
@@ -42,8 +42,9 @@ const AcademicsComp2 = ({ ph, item1, item2, item3, item4, item5, heading, handle
                 {toggle.three ? <div className="select-subjects">
                     <h1>Select your Subject</h1>
                     <div className="search-lables select-sub-lables">
-                        <a download={true} href="https://onedrive.live.com/download?cid=9F0200C1153A2AA1&resid=9F0200C1153A2AA1%21780&authkey=AJZZSCVFwBcN09Y&em=2">Subject<i className="fa-solid fa-arrow-down-long"></i></a>
-                        {/* {filtered.three.subject.map((elem, indx) => <span onClick={() => handleDownload(elem)} key={indx}>{elem}<i className="fa-solid fa-arrow-down-long"></i></span>)} */}
+                        {handleDownload === 'impque' ? filtered.three.subject.map((elem, indx) => <a download={true} href={elem.impque} key={indx}>{elem.title}<i className="fa-solid fa-arrow-down-long"></i></a>) : ''}
+                        {handleDownload === 'sample' ? filtered.three.subject.map((elem, indx) => <a download={true} href={elem.sample} key={indx}>{elem.title}<i className="fa-solid fa-arrow-down-long"></i></a>) : ''}
+                        {handleDownload === 'prepaper' ? filtered.three.subject.map((elem, indx) => <a download={true} href={elem.prepaper} key={indx}>{elem.title}<i className="fa-solid fa-arrow-down-long"></i></a>) : ''}
                     </div>
                 </div> : ''}
             </div>

@@ -26,7 +26,7 @@ const SearchClg = ({ data }) => {
     <>
       <div className="search-main-container">
         <div className="search-box-container">
-          <h1 className='search-box-heading'>Search your dream College...</h1>
+          <h1 className='search-box-heading'><span>S</span>earch <span>y</span>our <span>d</span>ream <span>C</span>ollege...</h1>
           <div className="search-box-img">
             <img src={searchImg} className="search-img" alt="search box img" />
           </div>
