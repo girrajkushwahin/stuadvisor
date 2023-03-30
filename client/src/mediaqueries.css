@@ -17,15 +17,8 @@
         display: none;
     }
 
-    .main-right {
-        height: calc(100vh - 27vh);
-    }
-
     .main-content {
-        /* margin-top: 8vh; */
-
         grid-template-columns: none;
-        /* grid-template-rows: 1fr 12fr; */
     }
 
     .heading-hamburger {
