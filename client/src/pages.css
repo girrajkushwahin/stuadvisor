@@ -983,3 +983,85 @@ a {
   font-weight: 700;
   margin-top: .5rem;
 }
+
+/* --------------- Blogs Page -------------- */
+.blog-cards-container {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.blog-cards-container .blog-card {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: 1fr 5fr 1fr;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.269);
+  margin: .7rem .2rem;
+  padding: 1rem;
+}
+
+.blog-cards-container .blog-card:hover {
+  background-color: #b0adad24;
+}
+
+.blog-cards-container .blog-card .blog-user-profile {
+  padding: 1rem;
+}
+
+.blog-cards-container .blog-card .blog-user-profile img {
+  box-shadow: 0 0 5px rgba(44, 0, 120, 0.49);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.blog-head-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 2rem;
+  line-height: 1.2rem;
+  font-size: .9rem;
+  border-left: 3px solid rgb(44, 0, 120);
+  border-right: 3px solid rgb(44, 0, 120);
+}
+
+.blog-head-content h1 {
+  margin-bottom: 1rem;
+  color: rgb(44, 0, 120);
+  cursor: pointer;
+}
+
+.blog-head-content h1:hover {
+  margin-bottom: 1rem;
+  color: rgb(93, 0, 255);
+}
+
+
+.blog-accordian-icon {
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.blog-accordian-icon span {
+  margin-left: 3rem;
+  font-size: 2rem;
+  color: rgb(54, 0, 147);
+  cursor: pointer;
+  border: 2px solid rgb(54, 0, 147);
+  padding: 0rem .8rem;
+  border-radius: 50%;
+  transition: all .3s;
+
+}
+
+.blog-accordian-icon {
+  position: relative;
+}
+
+
+.blog-accordian-icon span:hover {
+  background-color: rgb(54, 0, 147);
+  color: white;
+}
