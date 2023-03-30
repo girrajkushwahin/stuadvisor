@@ -1,8 +1,8 @@
 import React from 'react';
 import { aboutData, aboutData2 } from './Data';
-import animation1 from "../images/animation1.mp4"
-import animation2 from "../images/animation2.mp4"
-import RangeImage from "../images/RangeImage.png"
+import animation1 from "../images/animation1.mp4";
+import animation2 from "../images/animation2.mp4";
+import RangeImage from "../images/RangeImage.png";
 const AboutUs = () => {
   return (
     <>
