@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import searchImg from '../images/searchlogo.png';
 import girlProfile from '../images/girl-profile.png'
 import boyProfile from '../images/boy-profile.png'
-const EduBlog = ({ heading, ph, item1, item2, item3, item4, item5, handleSearch, filtered }) => {
+const EduBlog = () => {
   const [data, setData] = useState('');
-  const instantData = [item1, item2, item3, item4, item5];
+  // const instantData = [item1, item2, item3, item4, item5];
+
+  const handleSearch = data => { }
 
   return (
     <>
@@ -15,7 +17,7 @@ const EduBlog = ({ heading, ph, item1, item2, item3, item4, item5, handleSearch,
             <img src={searchImg} className="search-img" alt="search box img" />
           </div>
           <div className="search-input-box">
-            <span className='input-span'><input type="text" placeholder={ph} value={data} onChange={e => setData(e.target.value.trimStart())} /><i className="fa-solid fa-magnifying-glass" onClick={() => handleSearch(data)}></i></span>
+            <span className='input-span'><input type="text" placeholder='search blog' value={data} onChange={e => setData(e.target.value.trimStart())} /><i className="fa-solid fa-magnifying-glass" onClick={() => handleSearch(data)}></i></span>
           </div>
         </div>
 
