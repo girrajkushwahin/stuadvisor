@@ -21,6 +21,10 @@
         grid-template-columns: none;
     }
 
+    /* .main-item {
+        height: 79vh;
+    } */
+
     .heading-hamburger {
         display: inline-block;
     }
