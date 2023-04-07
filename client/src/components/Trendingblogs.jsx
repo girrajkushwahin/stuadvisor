@@ -1,50 +1,38 @@
-import React, { useState } from 'react';
-
-import girlProfile from '../images/girl-profile.png'
-import boyProfile from '../images/boy-profile.png'
+import React from 'react';
+import Blogs2 from './Blogs2';
 
 const TrendingBlogs = () => {
-  const [hide, setHide] = useState(true);
 
-  const hideCardContent = () => {
-    setHide(!hide);
+  let blogdata =
+    <div>
+      <h3>introduction to Internet of things?</h3>
+      <h4>introduction to IOT</h4>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia fugit autem sequi velit corporis esse alias cupiditate atque eos expedita Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, est. Veniam ullam quod ex ducimus doloremque repudiandae debitis molestiae reprehenderit.</p>
+      <h4>History of IOT?</h4>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, modi maxime repellat veritatis fuga in dolorem eveniet quibusdam molestiae minima iusto accusamus odit sequi error tempora repellendus obcaecati odio eligendi possimus aliquid quos? Fugit accusantium ratione vero debitis porro fugiat!</p>
+      <h3>what is machine learning?</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ea, ducimus asperiores quia impedit commodi? Nam, itaque. Debitis animi sequi distinctio optio obcaecati culpa quaerat vitae dolorem vel. Beatae, eum?</p>
+      <h4>machine learning types</h4>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis exercitationem unde tempore maxime nemo autem, quo obcaecati hic repellat, adipisci voluptatem enim animi amet! Minima expedita officia vel soluta illo!</p>
+      <p>machine learning Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora animi molestiae quibusdam iste. Ad minima eius ipsa reprehenderit explicabo! Placeat unde aspernatur adipisci repellendus architecto autem sunt amet nulla ullam.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt magnam tempore quo. Provident, iusto. Autem illo labore facilis neque libero qui cupiditate deserunt aut, velit, enim, possimus ipsa veniam cumque natus excepturi numquam. Voluptatum non itaque tenetur aut qui corporis?</p>
+    </div>
+
+  const cardData = {
+    heading: 'What is IoT? What technologies have made IoT possible?',
+    author: 'Gopal singh',
+    date: '01/01/2005',
+    gender: 'male',
+    blog: blogdata
   }
+
   return (
     <>
       <div className="trending-blog-container">
         <div className="blog-cards-container">
-          <div className="blog-card" onClick={hideCardContent}>
-            <div className="blog-user-profile">
-              <img src={boyProfile} alt="boy profile" />
-            </div>
-            <div className="blog-head-content">
-              <h1>What is IoT? What technologies have made IoT possible?</h1>
-              <span>posted by : <span className="blog-username">Gopal kushwah</span></span>
-              <span>posted on : <span className="blog-date">01/01/2023</span> </span>
-            </div>
-            <div className="blog-accordian-icon">
-              <span>+</span>
-            </div>
-          </div>
-          <div className={hide ? "blog-card-content-container blog-card-content-container-hide" : "blog-card-content-container"}>
-            <div className="blog-main-content">
-              <span><h2 className='main-heading'>What is IoT? What technologies have made IoT possible?</h2></span>
-              <hr />
-              <h3>What is IoT?</h3>
-              <p>The Internet of Things (IoT) describes the network of physical objects—“things”—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the internet. These devices range from ordinary household objects to sophisticated industrial tools. With more than 7 billion connected IoT devices today, experts are expecting this number to grow to 10 billion by 2020 and 22 billion by 2025. Oracle has a network of device partners.</p>
-              <h3>Why is Internet of Things (IoT) so important?</h3>
-              <p>The Internet of Things (IoT) describes the network of physical objects—“things”—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the internet. These devices range from ordinary household objects to sophisticated industrial tools. With more than 7 billion connected IoT devices today, experts are expecting this number to grow to 10 billion by 2020 and 22 billion by 2025. Oracle has a network of device partners.</p>
-            </div>
-            <div className="blog-content-bottom">
-              <div className="blog-user-profile">
-                <img src={boyProfile} alt="boy profile" />
-                <p>Author : Gopal kushwah</p>
-                <span className="close-ic on"> ^ </span>
-              </div>
-
-            </div>
-          </div>
-
+          <Blogs2 {...cardData} />
+          <Blogs2 {...cardData} />
+          <Blogs2 {...cardData} />
         </div>
       </div>
     </>

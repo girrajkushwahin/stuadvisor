@@ -5,6 +5,10 @@ const authenticate = require('../middleware/authenticate');
 
 const Registration = require('../model/userSchema');
 const contactMessage = require('../model/messageSchema');
+const Blog = require('../model/blogSchema');
+const TrendingBlog = require('../model/trendingBlogSchema');
+const OtherBlog = require('../model/otherBlogSchema');
+const PostedBlog = require('../model/postedBlogSchema');
 const topclg = require('../data/topclg');
 const clgData = require('../data/colleges');
 const branchsem = require('../data/banchsem.json');
@@ -24,9 +28,9 @@ router.get('/academics', (req, res) => {
     res.status(200).json(academicsData);
 })
 
-router.get('/blogs', (req, res) => {
-    res.send('404 - Not found');
-})
+// router.get('/blogs', (req, res) => {
+//     // res.send('404 - Not found');
+// })
 
 router.get('/topclg', (req, res) => {
     res.status(200).json(topclg);
@@ -108,6 +112,17 @@ router.post('/getmessage', async (req, res) => {
         }
     } catch (err) {
         console.log(err);
+    }
+})
+
+router.post('/blogs', (req, res) => {
+    // res.send('404 - Not found');
+    const { type } = req.body;
+    if (type === 'get') {
+        res.status(201).json({ message: 'Get request' });
+    }
+    else {
+        res.status(201).json({ message: 'Post request' });
     }
 })
 

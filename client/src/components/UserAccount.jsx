@@ -3,11 +3,11 @@ import { useOutletContext, useNavigate } from 'react-router-dom';
 import { SignOut } from '../App';
 import { Nav2Data } from './Template';
 import axios from 'axios';
-import Account1 from './Account1';
-import Account2 from './Account2';
-import Account3 from './Account3';
-import Account4 from './Account4';
-import Account5 from './Account5';
+import PostAcademics from './PostAcademics';
+import PostBlogs from './PostBlogs';
+import PostReview from './PostReview';
+import AddCollege from './AddCollege';
+import EditProfile from './EditProfile';
 const API = 'http://127.0.0.1:8000';
 
 const UserAccount = () => {
@@ -33,7 +33,7 @@ const UserAccount = () => {
     }
   }
 
-  const userMenu = [{ text: 'Account1', icon: <i className="i-tag fa-solid fa-person-walking"></i>, click: menuClick }, { text: 'Account2', icon: <i className="i-tag fa-regular fa-comments"></i>, click: menuClick }, { text: 'Account3', icon: <i className="i-tag fa-solid fa-newspaper"></i>, click: menuClick }, { text: 'Account4', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'Account5', icon: <i className="i-tag fa-solid fa-address-book"></i>, click: menuClick }, { text: 'Sign out', icon: <i className="i-tag fa-solid fa-right-from-bracket"></i>, click: handleSignOut }];
+  const userMenu = [{ text: 'Post Academics', icon: <i className="i-tag fa-solid fa-person-walking"></i>, click: menuClick }, { text: 'Post Blogs', icon: <i className="i-tag fa-regular fa-comments"></i>, click: menuClick }, { text: 'Post Review', icon: <i className="i-tag fa-solid fa-newspaper"></i>, click: menuClick }, { text: 'Add College', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'Edit Profile', icon: <i className="i-tag fa-solid fa-address-book"></i>, click: menuClick }, { text: 'Sign out', icon: <i className="i-tag fa-solid fa-right-from-bracket"></i>, click: handleSignOut }];
 
   useEffect(() => {
     document.title = 'My Account';
@@ -45,11 +45,11 @@ const UserAccount = () => {
   return (
     <>
       <div className="main-item main-right">
-        {data === 0 ? <Account1 /> : null}
-        {data === 1 ? <Account2 /> : null}
-        {data === 2 ? <Account3 /> : null}
-        {data === 3 ? <Account4 /> : null}
-        {data === 4 ? <Account5 /> : null}
+        {data === 0 ? <PostAcademics /> : null}
+        {data === 1 ? <PostBlogs /> : null}
+        {data === 2 ? <PostReview /> : null}
+        {data === 3 ? <AddCollege /> : null}
+        {data === 4 ? <EditProfile /> : null}
       </div>
     </>
   )
