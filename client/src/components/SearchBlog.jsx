@@ -1,38 +1,76 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Blogs2 from './Blogs2';
 import searchImg from '../images/searchlogo.png';
 
-const SearchBlog = ({ heading, ph, filtered, handleSearch }) => {
+const SearchBlog = ({ heading, ph, handleComp, datadb }) => {
 
   const [data, setData] = useState('');
+  const [filtered, getFiltered] = useState([]);
+  const [filtered2, setFiltered2] = useState([]);
 
-  let blogdata =
-    <div>
-      <h3>introduction to Internet of things?</h3>
-      <h4>introduction to IOT</h4>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia fugit autem sequi velit corporis esse alias cupiditate atque eos expedita Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, est. Veniam ullam quod ex ducimus doloremque repudiandae debitis molestiae reprehenderit.</p>
-      <h4>History of IOT?</h4>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, modi maxime repellat veritatis fuga in dolorem eveniet quibusdam molestiae minima iusto accusamus odit sequi error tempora repellendus obcaecati odio eligendi possimus aliquid quos? Fugit accusantium ratione vero debitis porro fugiat!</p>
-      <h3>what is machine learning?</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ea, ducimus asperiores quia impedit commodi? Nam, itaque. Debitis animi sequi distinctio optio obcaecati culpa quaerat vitae dolorem vel. Beatae, eum?</p>
-      <h4>machine learning types</h4>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis exercitationem unde tempore maxime nemo autem, quo obcaecati hic repellat, adipisci voluptatem enim animi amet! Minima expedita officia vel soluta illo!</p>
-      <p>machine learning Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora animi molestiae quibusdam iste. Ad minima eius ipsa reprehenderit explicabo! Placeat unde aspernatur adipisci repellendus architecto autem sunt amet nulla ullam.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt magnam tempore quo. Provident, iusto. Autem illo labore facilis neque libero qui cupiditate deserunt aut, velit, enim, possimus ipsa veniam cumque natus excepturi numquam. Voluptatum non itaque tenetur aut qui corporis?</p>
-    </div>
+  const handleSearch = data => {
+    const userData = data.toLowerCase().trimEnd().replaceAll(' ', '').replaceAll('-', '').replaceAll(',', '').replaceAll('[', '').replaceAll(']', '').replaceAll('&', 'and').replaceAll("'s", "").replaceAll('.', '').replaceAll('(', '').replaceAll(')', '').replaceAll('{', '').replaceAll('}', '');
 
-  const cardData = {
-    heading: 'What is IoT? What technologies have made IoT possible?',
-    author: 'Gopal singh',
-    date: '01/01/2005',
-    gender: 'male',
-    blog: blogdata
+    if (handleComp === 'searchblog') {
+      const newData = datadb.blog.filter(elem => {
+        const heading = elem.heading.toLowerCase().replaceAll(' ', '').replaceAll('-', '').replaceAll(',', '').replaceAll('[', '').replaceAll(']', '').replaceAll('&', 'and').replaceAll("'s", "").replaceAll('.', '').replaceAll('(', '').replaceAll(')', '').replaceAll('{', '').replaceAll('}', '');
+
+        const status = heading.includes(userData);
+        return status === true;
+      })
+
+      const newData2 = datadb.postedBlog.filter(elem => {
+        const heading = elem.heading.toLowerCase().replaceAll(' ', '').replaceAll('-', '').replaceAll(',', '').replaceAll('[', '').replaceAll(']', '').replaceAll('&', 'and').replaceAll("'s", "").replaceAll('.', '').replaceAll('(', '').replaceAll(')', '').replaceAll('{', '').replaceAll('}', '');
+
+        const status = heading.includes(userData);
+        return status === true;
+      })
+      if (data) {
+        getFiltered(newData);
+        setFiltered2(newData2);
+      }
+    }
+    else if (handleComp === 'edublog') {
+      const newData = datadb.blog.filter(elem => elem.category === 'edu').filter(elem => {
+        const heading = elem.heading.toLowerCase().replaceAll(' ', '').replaceAll('-', '').replaceAll(',', '').replaceAll('[', '').replaceAll(']', '').replaceAll('&', 'and').replaceAll("'s", "").replaceAll('.', '').replaceAll('(', '').replaceAll(')', '').replaceAll('{', '').replaceAll('}', '');
+
+        const status = heading.includes(userData);
+        return status === true;
+      })
+
+      const newData2 = datadb.postedBlog.filter(elem => elem.category === 'edu').filter(elem => {
+        const heading = elem.heading.toLowerCase().replaceAll(' ', '').replaceAll('-', '').replaceAll(',', '').replaceAll('[', '').replaceAll(']', '').replaceAll('&', 'and').replaceAll("'s", "").replaceAll('.', '').replaceAll('(', '').replaceAll(')', '').replaceAll('{', '').replaceAll('}', '');
+
+        const status = heading.includes(userData);
+        return status === true;
+      })
+
+      if (data) {
+        getFiltered(newData);
+        setFiltered2(newData2);
+      }
+    }
+    else if (handleComp === 'otherblog') {
+      const newData = datadb.blog.filter(elem => elem.category === 'other').filter(elem => {
+        const heading = elem.heading.toLowerCase().replaceAll(' ', '').replaceAll('-', '').replaceAll(',', '').replaceAll('[', '').replaceAll(']', '').replaceAll('&', 'and').replaceAll("'s", "").replaceAll('.', '').replaceAll('(', '').replaceAll(')', '').replaceAll('{', '').replaceAll('}', '');
+
+        const status = heading.includes(userData);
+        return status === true;
+      })
+
+      const newData2 = datadb.postedBlog.filter(elem => elem.category === 'other').filter(elem => {
+        const heading = elem.heading.toLowerCase().replaceAll(' ', '').replaceAll('-', '').replaceAll(',', '').replaceAll('[', '').replaceAll(']', '').replaceAll('&', 'and').replaceAll("'s", "").replaceAll('.', '').replaceAll('(', '').replaceAll(')', '').replaceAll('{', '').replaceAll('}', '');
+
+        const status = heading.includes(userData);
+        return status === true;
+      })
+
+      if (data) {
+        getFiltered(newData);
+        setFiltered2(newData2);
+      }
+    }
   }
-
-  useEffect(() => {
-    handleSearch(data);
-    // eslint-disable-next-line
-  }, [data])
 
   return (
     <>
@@ -46,10 +84,9 @@ const SearchBlog = ({ heading, ph, filtered, handleSearch }) => {
             <span className='input-span'><input type="text" placeholder={ph} value={data} onChange={e => setData(e.target.value.trimStart())} /><i className="fa-solid fa-magnifying-glass" onClick={() => handleSearch(data)}></i></span>
           </div>
         </div>
-        {data ? <div className="blog-cards-container">
-          <Blogs2 {...cardData} />
-          <Blogs2 {...cardData} />
-          <Blogs2 {...cardData} />
+        {filtered || filtered2 ? <div className="blog-cards-container">
+          {filtered ? filtered.map((elem, indx) => <Blogs2 {...elem} key={indx} />) : ''}
+          {filtered2 ? filtered2.map((elem, indx) => <Blogs2 {...elem} key={indx} />) : ''}
         </div> : ''}
       </div>
     </>

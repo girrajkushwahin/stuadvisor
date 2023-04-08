@@ -14,8 +14,9 @@ const Blogs = () => {
   const handleSignOut = useContext(SignOut);
   const [data, setData] = useState(0);
   const { key } = useOutletContext();
-  const [dataAPI, setDataAPI] = useState([]);
-  const [filtered, getFiltered] = useState([]);
+  const [dataAPI, setDataAPI] = useState({});
+
+  const { blog, postedBlog, trendingBlog } = dataAPI;
 
   const menuClick = id => {
     setData(id);
@@ -23,12 +24,10 @@ const Blogs = () => {
 
   const getData = async url => {
     try {
-      // const res = await axios.get(url);
-      // setDataAPI(res.data);
       const res = await axios.post(url, { type: 'get' });
-      console.log(res.data);
+      setDataAPI(res.data);
     } catch (err) {
-      console.log('Error occured while fetching the data');
+      console.log(err.response.data.message);
     }
   }
 
@@ -46,41 +45,35 @@ const Blogs = () => {
     // eslint-disable-next-line
   }, [])
 
-  const handleSearchBlog = data => { }
-
-  const handleSearchEduBlog = data => { }
-
-  const handleSearchOtherBlog = data => { }
-
   const searchblog = {
     heading: 'Search for blogs...',
     ph: 'search blogs',
-    handleSearch: handleSearchBlog,
-    filtered
+    handleComp: 'searchblog',
+    datadb: { blog, postedBlog }
   }
 
   const edublog = {
     heading: 'Search for edu blogs...',
     ph: 'search edu blogs',
-    handleSearch: handleSearchEduBlog,
-    filtered
+    handleComp: 'edublog',
+    datadb: { blog, postedBlog }
   }
 
   const otherblog = {
     heading: 'Search other blogs...',
     ph: 'search blogs',
-    handleSearch: handleSearchOtherBlog,
-    filtered
+    handleComp: 'otherblog',
+    datadb: { blog, postedBlog }
   }
 
   return (
     <>
       <div className="main-item main-right">
         {data === 0 ? <SearchBlog {...searchblog} /> : null}
-        {data === 1 ? <TrendingBlogs /> : null}
+        {data === 1 ? <TrendingBlogs data={trendingBlog} /> : null}
         {data === 2 ? <SearchBlog {...edublog} /> : null}
         {data === 3 ? <SearchBlog {...otherblog} /> : null}
-        {data === 4 ? <DataPosted2 /> : null}
+        {data === 4 ? <DataPosted2 data={postedBlog} /> : null}
         {data === 5 ? <SignIn /> : null}
         {data === 6 ? <SignUp /> : null}
       </div>

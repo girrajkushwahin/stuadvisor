@@ -7,7 +7,6 @@ const Registration = require('../model/userSchema');
 const contactMessage = require('../model/messageSchema');
 const Blog = require('../model/blogSchema');
 const TrendingBlog = require('../model/trendingBlogSchema');
-const OtherBlog = require('../model/otherBlogSchema');
 const PostedBlog = require('../model/postedBlogSchema');
 const topclg = require('../data/topclg');
 const clgData = require('../data/colleges');
@@ -27,10 +26,6 @@ router.get('/searchcolleges', (req, res) => {
 router.get('/academics', (req, res) => {
     res.status(200).json(academicsData);
 })
-
-// router.get('/blogs', (req, res) => {
-//     // res.send('404 - Not found');
-// })
 
 router.get('/topclg', (req, res) => {
     res.status(200).json(topclg);
@@ -116,13 +111,24 @@ router.post('/getmessage', async (req, res) => {
 })
 
 router.post('/blogs', (req, res) => {
-    // res.send('404 - Not found');
     const { type } = req.body;
-    if (type === 'get') {
-        res.status(201).json({ message: 'Get request' });
-    }
-    else {
+    if (type === 'post') {
         res.status(201).json({ message: 'Post request' });
+    }
+    if (type === 'get') {
+        let blog, postedBlog, trendingBlog;
+        const getData = async () => {
+            try {
+                blog = await Blog.find();
+                postedBlog = await PostedBlog.find();
+                trendingBlog = await TrendingBlog.find();
+                if (blog && postedBlog && trendingBlog) res.status(201).json({ blog, postedBlog, trendingBlog });
+                else res.status(500).json({ message: 'Error occured while fetching the data' });
+            } catch (err) {
+                console.log(err);
+            }
+        }
+        getData();
     }
 })
 
