@@ -14,6 +14,7 @@ const Blogs2 = ({ heading, author, date, blog, gender }) => {
                 </div>
                 <div className="blog-head-content">
                     <h1>{heading}</h1>
+                    <span>Category : <span className="blog-username">edu</span></span>
                     <span>Posted by : <span className="blog-username">{author}</span></span>
                     <span>Posted on : <span className="blog-date">{date.slice(0, 10)}</span> </span>
                 </div>
@@ -23,11 +24,6 @@ const Blogs2 = ({ heading, author, date, blog, gender }) => {
             </div>
             {toggle ? <div className="blog-card-content-container">
                 <div className="blog-main-content" dangerouslySetInnerHTML={{ __html: blog }}></div>
-                <div className="blog-content-bottom">
-                    <div className="blog-user-profile">
-                        <span className="close-ic on"> GoBack </span>
-                    </div>
-                </div>
             </div> : ''}
         </>
     )

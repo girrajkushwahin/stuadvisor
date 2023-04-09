@@ -748,11 +748,16 @@ a {
 
 .search-box-heading {
   margin-bottom: 2rem;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
+  letter-spacing: .2rem;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: .5rem;
   color: rgb(0, 0, 0);
+}
+
+.search-box-heading .search-span span {
+  font-size: 2rem;
+  color: var(--dark-red-1);
+  text-transform: uppercase;
 }
 
 .search-input-box .input-span {
@@ -1074,17 +1079,12 @@ a {
 
 }
 
+
 .blog-card-content-container {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.269);
-  height: 80vh;
-  position: relative;
-
-
+  height: 73vh;
 }
 
-.blog-accordian-icon {
-  position: relative;
-}
 
 
 .blog-accordian-icon span:hover {
@@ -1101,29 +1101,24 @@ a {
 
 }
 
-/* --------------------- */
-.blog-content-bottom {
-  position: sticky;
-  /* margin-right: 2rem; */
-  display: flex;
-  align-items: center;
-  justify-content: right;
+.blog-main-content h1 {
+  font-size: 1.7rem;
+  border-bottom: 2px solid black;
+  padding-bottom: .2rem;
+  margin-bottom: 1rem;
 }
 
-.blog-content-bottom .blog-user-profile {
-  display: flex;
-  align-items: center;
-  justify-content: right;
+.blog-main-content h2 {
+  font-size: 1.4rem;
+
 }
 
-.blog-content-bottom .blog-user-profile img {
-  box-shadow: 0 0 5px rgba(44, 0, 120, 0.49);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.blog-main-content h3 {
+  font-size: 1.2rem;
+
 }
 
-.blog-content-bottom .blog-user-profile p,
-.blog-content-bottom .blog-user-profile span {
-  margin-left: 2rem;
+.blog-main-content h4 {
+  font-size: 1rem;
+
 }

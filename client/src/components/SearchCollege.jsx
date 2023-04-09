@@ -76,7 +76,7 @@ const SearchCollege = () => {
     getFiltered(newData);
   }
   const courseWise = {
-    heading: <span><span>S</span>earch <span>a</span>ccording <span>t</span>o <span>C</span>ourses...</span>,
+    heading: <span className="search-span"><span>S</span>earch <span>a</span>ccording <span>t</span>o <span>C</span>ourses...</span>,
     ph: 'Enter course name...',
     item1: 'B.Tech',
     item2: 'MBBS',
@@ -88,7 +88,7 @@ const SearchCollege = () => {
   }
 
   const cityWise = {
-    heading: <span><span>S</span>earch <span>a</span>ccording <span>t</span>o <span>C</span>ities...</span>,
+    heading: <span className="search-span"><span>S</span>earch <span>a</span>ccording <span>t</span>o <span>C</span>ities...</span>,
     ph: 'Enter city name...',
     item1: 'Mumbai',
     item2: 'Bangalore',
@@ -100,7 +100,7 @@ const SearchCollege = () => {
   }
 
   const stateWise = {
-    heading: <span><span>S</span>earch <span>a</span>ccording <span>t</span>o <span>s</span>tates...</span>,
+    heading: <span className="search-span"><span>S</span>earch <span>a</span>ccording <span>t</span>o <span>s</span>tates...</span>,
     ph: 'Enter state name...',
     item1: 'MP',
     item2: 'UP',
