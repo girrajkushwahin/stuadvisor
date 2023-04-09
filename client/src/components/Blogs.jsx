@@ -31,7 +31,7 @@ const Blogs = () => {
     }
   }
 
-  const blogsData = [{ text: 'Search', icon: <i className="i-tag fa-solid fa-house"></i>, click: menuClick }, { text: 'Trending Blogs', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'Edu Blogs', icon: <i className="i-tag fa-sharp fa-solid fa-laptop"></i>, click: menuClick }, { text: 'Other', icon: <i className="i-tag fa-brands fa-blogger-b"></i>, click: menuClick }, { text: 'Data Posted', icon: <i className="i-tag fa-solid fa-magnifying-glass-chart"></i>, click: menuClick }]
+  const blogsData = [{ text: 'Search', icon: <i className="i-tag fa-sharp fa-solid fa-magnifying-glass"></i>, click: menuClick }, { text: 'Trending Blogs', icon: <i className="i-tag fa-solid fa-fire"></i>, click: menuClick }, { text: 'Edu Blogs', icon: <i className="i-tag fa-brands fa-blogger-b"></i>, click: menuClick }, { text: 'Other', icon: <i className="i-tag fa-solid fa-blog"></i>, click: menuClick }, { text: 'Data Posted', icon: <i className="i-tag fa-solid fa-server"></i>, click: menuClick }]
 
   const blogsMenu = [...blogsData, { text: 'Sign in', icon: <i className="i-tag fa-solid fa-door-open"></i>, click: menuClick }, { text: 'Sign up', icon: <i className="i-tag fa-solid fa-user-plus"></i>, click: menuClick }];
 
