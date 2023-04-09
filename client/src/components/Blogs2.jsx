@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import girlProfile from '../images/girl-profile.png';
 import boyProfile from '../images/boy-profile.png';
 
-const Blogs2 = ({ heading, author, date, blog, gender }) => {
+const Blogs2 = ({ heading, author, date, blog, gender, category }) => {
 
     const [toggle, setToggle] = useState(false);
 
@@ -14,7 +14,7 @@ const Blogs2 = ({ heading, author, date, blog, gender }) => {
                 </div>
                 <div className="blog-head-content">
                     <h1>{heading}</h1>
-                    <span>Category : <span className="blog-username">edu</span></span>
+                    <span>Category : <span className="blog-username">{category}</span></span>
                     <span>Posted by : <span className="blog-username">{author}</span></span>
                     <span>Posted on : <span className="blog-date">{date.slice(0, 10)}</span> </span>
                 </div>
