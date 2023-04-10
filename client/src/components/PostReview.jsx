@@ -10,7 +10,7 @@ const PostReview = () => {
                     <label htmlFor="">Enter your name</label>
                     <input className='your-name' type="text" placeholder='Enter your name...' />
                     <label htmlFor="">Enter your review</label>
-                    <textarea name="" id="" cols="20" rows="10"></textarea>
+                    <textarea name="" id="" cols="5" rows="10"></textarea>
                     <div className="rating">
                         <label htmlFor="">Select rating</label>
                         <div className="input-rating-div">
@@ -27,6 +27,9 @@ const PostReview = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="save-first-btn-box logout-from-all">
+                <button>Post Review</button>
             </div>
         </>
     )

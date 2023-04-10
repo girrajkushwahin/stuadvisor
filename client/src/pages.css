@@ -1300,7 +1300,7 @@ a {
   border: 2px solid rgb(110, 110, 110);
   outline: none;
   resize: none;
-  padding: .7rem 0rem;
+  padding: .7rem .5rem;
 }
 
 .rating>label {
@@ -1326,6 +1326,7 @@ a {
   margin-right: .5rem;
   width: 1.5rem;
   height: 1.5rem;
+  cursor: pointer;
 
 }
 
