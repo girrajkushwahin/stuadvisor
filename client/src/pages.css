@@ -1120,5 +1120,9 @@ a {
 
 .blog-main-content h4 {
   font-size: 1rem;
+}
+
+.edit-profile-container {
+  display: flex;
 
 }
