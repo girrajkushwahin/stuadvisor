@@ -1330,9 +1330,76 @@ a {
 
 }
 
-/* .input-rating-div input:checked {
-  border: 0px;
+/* Add college details page */
+
+.add-clg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.add-clg-container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.add-clg-container h1 span {
+  font-size: 2.5rem;
+  color: red;
+}
+
+.add-clg-container p {
+  font-size: 1.3rem;
+}
+
+.add-clg-input-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-right: .2rem;
-height: 1rem;
-} */
+  margin-top: 1.5rem;
+  /* align-items: flex-start; */
+  padding: 2rem;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.205);
+}
+
+.add-clg-input-container label {
+  margin-top: 1.5rem;
+  margin-bottom: .2rem;
+  font-size: 1.3rem;
+}
+
+.add-clg-input-container input {
+  padding: .5rem 1rem;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid gray;
+  border-radius: .2rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.205);
+}
+
+.add-clg-input-container .add-clg-btn-container {
+  margin: 0 auto;
+}
+
+.add-clg-input-container .add-clg-btn-container button {
+  margin-top: 1rem;
+  padding: .7rem 3rem;
+  border: none;
+  outline: none;
+  background-color: var(--btngreen);
+  color: white;
+  font-size: 1.2rem;
+  border-radius: .4rem;
+  transition: all .3s linear;
+  font-weight: 600;
+}
+
+.add-clg-input-container .add-clg-btn-container button:hover {
+  background-color: white;
+  color: var(--btngreen);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.313);
+
+}
