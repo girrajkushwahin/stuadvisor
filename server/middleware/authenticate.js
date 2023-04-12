@@ -10,6 +10,7 @@ const authenticate = async (req, res, next) => {
         req.token = token;
         req.rootUser = rootUser;
         req.userID = rootUser._id;
+        req.uniqueID = verification._id;
         next();
     } catch (err) {
         res.status(401).send('Unauthorized: Invalid user');

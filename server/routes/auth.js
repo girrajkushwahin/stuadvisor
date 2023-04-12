@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const authenticate = require('../middleware/authenticate');
 
 const Registration = require('../model/userSchema');
@@ -70,6 +71,7 @@ router.post('/register', async (req, res) => {
         else if (password != cpassword) res.status(422).json({ message: 'Password not matching' });
         else {
             const user = new Registration({ name, number, email, username, password, cpassword, gender });
+            await user.generateAuthToken();
             const userRegister = await user.save();
 
             if (userRegister) res.status(201).json({ message: 'User registered successfully' });
@@ -110,7 +112,7 @@ router.post('/getmessage', async (req, res) => {
     }
 })
 
-router.post('/blogs', (req, res) => {
+router.post('/blogs', async (req, res) => {
     const { type } = req.body;
     if (type === 'post') {
         res.status(201).json({ message: 'Post request' });
@@ -130,6 +132,86 @@ router.post('/blogs', (req, res) => {
         }
         getData();
     }
+})
+
+router.post('/updateprofile', authenticate, async (req, res) => {
+    const { name, email, number, username, gender } = req.body.data;
+    const uniqueID = req.uniqueID;
+    const secretKey = 'mynameisgirrajtechnicalakarootkaalsec';
+    let mailToken, numToken, usrnameToken, mailID, numID, usrnameID, status = 'false';
+
+    try {
+        const mailExist = await Registration.findOne({ email });
+        const numExist = await Registration.findOne({ number });
+        const usrnameExist = await Registration.findOne({ username });
+
+        if (mailExist) {
+            mailToken = mailExist.tokens[0].token;
+            const verification = jwt.verify(mailToken, secretKey);
+            if (status === 'false') {
+                if (uniqueID !== verification._id) res.status(422).json({ message: 'Email already exists' });
+                // else mailID = 'true';
+                else status = 'true';
+            }
+        }
+        if (numExist) {
+            numToken = numExist.tokens[0].token;
+            const verification = jwt.verify(numToken, secretKey);
+            if (status === 'false') {
+                if (uniqueID !== verification._id) res.status(422).json({ message: 'Number already exists' });
+                // else numID = 'true';
+                else status = 'true';
+            }
+        }
+        if (usrnameExist) {
+            usrnameToken = usrnameExist.tokens[0].token;
+            const verification = jwt.verify(usrnameToken, secretKey);
+            if (status === 'false') {
+                if (uniqueID !== verification._id) res.status(422).json({ message: 'Username already exists' });
+                // else usrnameID = 'true';
+                else status = 'true';
+            }
+        }
+        if (status === 'true') {
+            const result = await Registration.updateOne({ _id: req.uniqueID }, {
+                $set: { name, email, number, username, gender }
+            })
+            if (result) res.status(201).json({ message: 'Updated' });
+            else res.status(500).json({ message: 'Failed' });
+        }
+        // if (mailID && numID && usrnameID) {
+        //     const result = await Registration.updateOne({ _id: req.uniqueID }, {
+        //         $set: { name, email, number, username, gender }
+        //     })
+        //     if (result) res.status(201).json({ message: 'Updated' });
+        //     else res.status(500).json({ message: 'Failed' });
+        // }
+    } catch (err) {
+        console.log(err);
+    }
+})
+
+router.post('/changepassword', async (req, res) => {
+    // const { curpass, newpass, cnewpass } = req.body;
+    // res.status(201).json({ message: 'Updated Successfully' });
+    // res.status(500).json({ message: 'Error Occured' });
+})
+
+router.post('/logoutall', async (req, res) => {
+    const logOutAll = async username => {
+        try {
+            const result = await Registration.updateOne({ username }, {
+                $unset: {
+                    tokens: ''
+                }
+            })
+            if (result) res.status(201).json({ message: 'Signed Out' });
+            else res.status(500).json({ message: 'Error Occured' });
+        } catch (err) {
+            console.log(err);
+        }
+    }
+    logOutAll(req.body.data);
 })
 
 module.exports = router;
