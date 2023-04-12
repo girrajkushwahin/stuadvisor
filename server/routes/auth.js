@@ -39,7 +39,7 @@ router.get('*', (req, res) => {
 router.post('/login', async (req, res) => {
     try {
         const { username, password } = req.body;
-        if (!username || !password) return res.status(400).json({ message: "pls fill the data" });
+        if (!username || !password) return res.status(400).json({ message: "Please fill the data" });
 
         const userLogin = await Registration.findOne({ username });
         if (userLogin) {
@@ -115,6 +115,7 @@ router.post('/getmessage', async (req, res) => {
 router.post('/blogs', async (req, res) => {
     const { type } = req.body;
     if (type === 'post') {
+        // if (!name || !email || !message) return res.status(422).json({ message: 'Enter data properly' });
         res.status(201).json({ message: 'Post request' });
     }
     if (type === 'get') {
@@ -136,6 +137,7 @@ router.post('/blogs', async (req, res) => {
 
 router.post('/updateprofile', authenticate, async (req, res) => {
     const { name, email, number, username, gender } = req.body.data;
+    if (!name || !email || !number || !username || !gender) return res.status(422).json({ message: 'Enter data properly' });
     const uniqueID = req.uniqueID;
     const secretKey = 'mynameisgirrajtechnicalakarootkaalsec';
     let mailToken, numToken, usrnameToken, existMail, existNum, existUsrname;
@@ -175,13 +177,30 @@ router.post('/updateprofile', authenticate, async (req, res) => {
     }
 })
 
-router.post('/changepassword', async (req, res) => {
-    const { curpass, newpass, cnewpass } = req.body;
-    // res.status(201).json({ message: 'Updated Successfully' });
-    // res.status(500).json({ message: 'Error Occured' });
+router.post('/changepassword', authenticate, async (req, res) => {
+    const { curpass, newpass, cnewpass } = req.body.data2;
+    if (!curpass || !newpass || !cnewpass) return res.status(422).json({ message: 'Enter data properly' });
+    if (newpass !== cnewpass) return res.status(422).json({ message: 'Password not matching' });
+    let hashedPass, hashedPass2;
+    try {
+        const isMatch = await bcrypt.compare(curpass, req.rootUser.password);
+        if (!isMatch) res.status(400).json({ message: "Invalid current password" });
+        else {
+            hashedPass = await bcrypt.hash(newpass, 12);
+            hashedPass2 = await bcrypt.hash(cnewpass, 12);
+            const check = await Registration.updateOne({ _id: req.uniqueID }, {
+                $set: { password: hashedPass, cpassword: hashedPass2 }
+            })
+            if (check) res.status(201).json({ message: 'Password Changed' });
+            else res.status(500).json({ message: 'Failed' });
+        }
+    } catch (err) {
+        console.log(err);
+    }
 })
 
 router.post('/logoutall', async (req, res) => {
+    if (!req.body.data) return res.status(422).json({ message: 'Enter data properly' });
     const logOutAll = async username => {
         try {
             const result = await Registration.updateOne({ username }, {

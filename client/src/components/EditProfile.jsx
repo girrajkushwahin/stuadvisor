@@ -51,8 +51,9 @@ const EditProfile = () => {
     }
 
     const updatePassword = async url => {
+        const token = localStorage.getItem('jwtoken');
         try {
-            const res = await axios.post(url, data2);
+            const res = await axios.post(url, { data2, token });
             if (res) {
                 toast.success(res.data.message, {
                     position: "top-center",
@@ -278,7 +279,7 @@ const EditProfile = () => {
                 </div>
             </div>
             <div className="edit-profile-container pass-profile-container">
-                <h1><span>E</span>dit <span>P</span>assword</h1>
+                <h1><span>C</span>hange <span>P</span>assword</h1>
                 <div className="edit-password">
                     <label>Current Password</label>
                     <input type="password" name="curpass" value={data2.curpass} onChange={handleInputPassword} style={validation.curpass} placeholder='Enter current password' />

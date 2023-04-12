@@ -7,23 +7,23 @@ const PostReview = () => {
                 <h1>Your <span>Reviews</span>  are important to develop our community more strong . Reviews help people to know more about us</h1>
                 <hr />
                 <div className="post-revies-input-container">
-                    <label htmlFor="">Enter your name</label>
+                    <label>Enter your name</label>
                     <input className='your-name' type="text" placeholder='Enter your name...' />
-                    <label htmlFor="">Enter your review</label>
+                    <label>Enter your review</label>
                     <textarea name="" id="" cols="5" rows="10"></textarea>
                     <div className="rating">
-                        <label htmlFor="">Select rating</label>
+                        <label>Select rating</label>
                         <div className="input-rating-div">
                             <input type="radio" name='rating' />
-                            <label htmlFor="">1</label>
+                            <label htmlFor="">1 star</label>
                             <input type="radio" name='rating' />
-                            <label htmlFor="">2</label>
+                            <label htmlFor="">2 stars</label>
                             <input type="radio" name='rating' />
-                            <label htmlFor="">3</label>
+                            <label htmlFor="">3 stars</label>
                             <input type="radio" name='rating' />
-                            <label htmlFor="">4</label>
+                            <label htmlFor="">4 stars</label>
                             <input type="radio" name='rating' />
-                            <label htmlFor="">5</label>
+                            <label htmlFor="">5 stars</label>
                         </div>
                     </div>
                 </div>
