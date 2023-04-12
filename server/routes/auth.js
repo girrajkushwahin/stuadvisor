@@ -176,7 +176,7 @@ router.post('/updateprofile', authenticate, async (req, res) => {
 })
 
 router.post('/changepassword', async (req, res) => {
-    // const { curpass, newpass, cnewpass } = req.body;
+    const { curpass, newpass, cnewpass } = req.body;
     // res.status(201).json({ message: 'Updated Successfully' });
     // res.status(500).json({ message: 'Error Occured' });
 })

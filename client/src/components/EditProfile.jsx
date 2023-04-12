@@ -294,7 +294,7 @@ const EditProfile = () => {
                 </div>
             </div>
             <div className="save-first-btn-box logout-from-all">
-                <button onClick={handleSecurity}>Log Out All Devices</button>
+                <button onClick={handleSecurity}>Sign Out All Devices</button>
             </div>
             <ToastContainer
                 position="top-center"
