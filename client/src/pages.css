@@ -1182,6 +1182,7 @@ a {
   font-size: 1rem;
   border: none;
   border-bottom: 2px solid rgb(110, 110, 110);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.205);
 
   outline: none;
   padding: .7rem 1rem;
@@ -1198,10 +1199,14 @@ a {
   margin-right: 2rem;
   font-size: 1.2rem;
 
+
 }
 
 .radio-container input {
   margin-right: .5rem;
+  width: 1rem;
+  height: 1rem;
+
 }
 
 .save-first-btn-box {
@@ -1334,9 +1339,224 @@ a {
 
 }
 
-/* .input-rating-div input:checked {
-  border: 0px;
+/* Add college details page */
+
+.add-clg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.add-clg-container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.add-clg-container h1 span {
+  font-size: 2.5rem;
+  color: red;
+}
+
+.add-clg-container p {
+  font-size: 1.3rem;
+}
+
+.add-clg-input-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-right: .2rem;
-height: 1rem;
-} */
+  margin-top: 1.5rem;
+  /* align-items: flex-start; */
+  padding: 2rem;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.205);
+}
+
+.add-clg-input-container label {
+  margin-top: 1.5rem;
+  margin-bottom: .2rem;
+  font-size: 1.3rem;
+}
+
+.add-clg-input-container input {
+  padding: .5rem 1rem;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid gray;
+  border-radius: .2rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.205);
+}
+
+.add-clg-input-container .add-clg-btn-container {
+  margin: 0 auto;
+}
+
+.add-clg-input-container .add-clg-btn-container button,
+.tag-button-container button {
+  margin-top: 1rem;
+  padding: .7rem 3rem;
+  border: none;
+  outline: none;
+  background-color: var(--btngreen);
+  color: white;
+  font-size: 1.2rem;
+  border-radius: .4rem;
+  transition: all .3s linear;
+  font-weight: 600;
+}
+
+.add-clg-input-container .add-clg-btn-container button:hover {
+  background-color: white;
+  color: var(--btngreen);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.313);
+
+}
+
+/* post blogs page */
+.post-blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.post-blog-container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.post-blog-container h1 span {
+  font-size: 2.5rem;
+  color: red;
+}
+
+.post-blog-content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.205);
+}
+
+.post-blog-content-container>label {
+  margin-bottom: .2rem;
+  font-size: 1.3rem;
+}
+
+.post-blog-content-container>input {
+  padding: .5rem 1rem;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid gray;
+  border-radius: .2rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.205);
+  margin-bottom: 1rem;
+}
+
+.category-radio-container {
+  display: flex;
+  align-items: center;
+}
+
+.category-radio-container label {
+  margin: 1rem 1.5rem 1rem .5rem;
+  font-size: 1.2rem;
+}
+
+.category-radio-container input[type='radio'] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.tag-button-container button {
+  margin-top: 1rem;
+  padding: .5rem 1.2rem;
+  border: none;
+  outline: none;
+  background-color: var(--btngreen);
+  color: white;
+  font-size: 1.2rem;
+  border-radius: .4rem;
+  transition: all .3s linear;
+  font-weight: 600;
+  margin-right: .5rem;
+  margin-bottom: 1rem;
+}
+
+.tag-button-container button:hover {
+  background-color: white;
+  color: var(--btngreen);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.313);
+
+}
+
+.post-blog-content-container textarea {
+  resize: none;
+  height: 10rem;
+}
+
+.post-blog-content-container>button {
+  padding: .5rem 1.2rem;
+  border: none;
+  outline: none;
+  background-color: var(--btngreen);
+  color: white;
+  font-size: 1.2rem;
+  border-radius: .4rem;
+  transition: all .3s linear;
+  font-weight: 600;
+  width: 300px;
+  margin: 1rem auto;
+}
+
+.post-blog-content-container>button:hover {
+  background-color: white;
+  color: var(--btngreen);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.313);
+
+}
+
+.post-blog-content-container>h1 {
+  text-align: center;
+
+}
+
+.blog-preview-container h1 {
+  font-size: 1.7rem;
+  border-bottom: 2px solid black;
+  padding-bottom: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-preview-container h3 {
+  font-size: 1.2rem;
+}
+
+.tags-div {
+  position: relative;
+}
+
+.tags-div button {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  border: none;
+  outline: none;
+  padding: .1rem .5rem;
+  background-color: var(--btngreen);
+  color: white;
+  font-size: 1rem;
+  border-radius: .4rem;
+  transition: all .3s linear;
+  font-weight: 300;
+}
+
+.tags-div button:hover {
+  background-color: white;
+  color: var(--btngreen);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.313);
+}
