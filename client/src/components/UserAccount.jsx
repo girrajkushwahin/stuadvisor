@@ -16,6 +16,7 @@ const UserAccount = () => {
   const [data, setData] = useState(0);
   let { key } = useOutletContext();
   const navigate = useNavigate();
+  const [info, setInfo] = useState({});
 
   const menuClick = id => {
     setData(id);
@@ -33,11 +34,20 @@ const UserAccount = () => {
     }
   }
 
+  const userContact = async url => {
+    const token = localStorage.getItem('jwtoken');
+    try {
+      const res = await axios.post(url, { token });
+      setInfo(res.data);
+    } catch (err) { }
+  }
+
   const userMenu = [{ text: 'Post Academics', icon: <i className="i-tag fa-solid fa-person-walking"></i>, click: menuClick }, { text: 'Post Blogs', icon: <i className="i-tag fa-regular fa-comments"></i>, click: menuClick }, { text: 'Post Review', icon: <i className="i-tag fa-solid fa-newspaper"></i>, click: menuClick }, { text: 'Add College', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'Edit Profile', icon: <i className="i-tag fa-solid fa-address-book"></i>, click: menuClick }, { text: 'Sign out', icon: <i className="i-tag fa-solid fa-right-from-bracket"></i>, click: handleSignOut }];
 
   useEffect(() => {
     document.title = 'My Account';
     callConfidential(`${API}/confidential`);
+    userContact(`${API}/getcontact`);
     key(userMenu);
     // eslint-disable-next-line
   }, [])
@@ -47,9 +57,9 @@ const UserAccount = () => {
       <div className="main-item main-right">
         {data === 0 ? <PostAcademics /> : null}
         {data === 1 ? <PostBlogs /> : null}
-        {data === 2 ? <PostReview /> : null}
+        {data === 2 ? <PostReview resp={info} /> : null}
         {data === 3 ? <AddCollege /> : null}
-        {data === 4 ? <EditProfile /> : null}
+        {data === 4 ? <EditProfile resp={info} /> : null}
       </div>
     </>
   )

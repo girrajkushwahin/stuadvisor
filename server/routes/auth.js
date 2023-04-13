@@ -9,6 +9,7 @@ const contactMessage = require('../model/messageSchema');
 const Blog = require('../model/blogSchema');
 const TrendingBlog = require('../model/trendingBlogSchema');
 const PostedBlog = require('../model/postedBlogSchema');
+const Review = require('../model/reviewSchema');
 const topclg = require('../data/topclg');
 const clgData = require('../data/colleges');
 const branchsem = require('../data/banchsem.json');
@@ -215,6 +216,23 @@ router.post('/logoutall', async (req, res) => {
         }
     }
     logOutAll(req.body.data);
+})
+
+router.post('/reviews', async (req, res) => {
+    if (req.body.type === 'get') {
+        // console.log('get request');
+    } else {
+        const { name, review, stars } = req.body.data;
+        if (!name || !review || !stars) return res.status(422).json({ message: 'Enter data properly' });
+        try {
+            const status = new Review(req.body.data);
+            const result = await status.save();
+            if (result) res.status(201).json({ message: 'Posted' });
+            else res.status(500).json({ message: 'Failed' });
+        } catch (err) {
+            console.log(err);
+        }
+    }
 })
 
 module.exports = router;

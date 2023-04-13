@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { SignOut } from '../App';
 import axios from 'axios';
 import profileLogo from '../images/boy-profile.png';
@@ -7,8 +7,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const API = 'http://127.0.0.1:8000';
 
-const EditProfile = () => {
-    const [data, getData] = useState({ name: '', email: '', number: '', username: '', gender: '' });
+const EditProfile = ({ resp }) => {
+    const [data, getData] = useState({ name: resp.name, email: resp.email, number: resp.number, username: resp.username, gender: resp.gender });
     const [data2, getData2] = useState({ curpass: '', newpass: '', cnewpass: '' });
     const [validation, setValidation] = useState({
         name: {}, email: {}, curpass: {}, newpass: {}, number: {}, username: {}
@@ -18,24 +18,21 @@ const EditProfile = () => {
         successStyle: { borderBottom: '3px solid green' },
         errStyle: { borderBottom: '3px solid red' }
     });
-    const [signOutAll, setSignOutAll] = useState('');
 
     const updateProfile = async url => {
         const token = localStorage.getItem('jwtoken');
         try {
             const res = await axios.post(url, { data, token });
-            if (res) {
-                toast.success(res.data.message, {
-                    position: "top-center",
-                    autoClose: 3000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                });
-            }
+            if (res) toast.success(res.data.message, {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
         } catch (err) {
             toast.error(err.response.data.message, {
                 position: "top-center",
@@ -54,18 +51,16 @@ const EditProfile = () => {
         const token = localStorage.getItem('jwtoken');
         try {
             const res = await axios.post(url, { data2, token });
-            if (res) {
-                toast.success(res.data.message, {
-                    position: "top-center",
-                    autoClose: 3000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                });
-            }
+            if (res) toast.success(res.data.message, {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
         } catch (err) {
             toast.error(err.response.data.message, {
                 position: "top-center",
@@ -171,7 +166,7 @@ const EditProfile = () => {
 
     const handleSecurity = async () => {
         try {
-            const res = await axios.post(`${API}/logoutall`, { data: signOutAll });
+            const res = await axios.post(`${API}/logoutall`, { data: resp.username });
             if (res) {
                 handleSignOut();
             }
@@ -187,16 +182,6 @@ const EditProfile = () => {
                 theme: "light",
             });
         }
-    }
-
-    const userContact = async url => {
-        const token = localStorage.getItem('jwtoken');
-        try {
-            const res = await axios.post(url, { token });
-            const { name, email, number, username, gender } = res.data;
-            getData({ name, email, number, username, gender });
-            setSignOutAll(username);
-        } catch (err) { }
     }
 
     const nameReg = /^[a-zA-Z][a-zA-Z ]{2,29}$/
@@ -232,10 +217,6 @@ const EditProfile = () => {
             else setValidation({ ...validation, [name]: { ...styleVal.errStyle } });
         }
     }
-
-    useEffect(() => {
-        userContact(`${API}/getcontact`);
-    }, [])
 
     return (
         <>
