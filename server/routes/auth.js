@@ -220,7 +220,14 @@ router.post('/logoutall', async (req, res) => {
 
 router.post('/reviews', async (req, res) => {
     if (req.body.type === 'get') {
-        // console.log('get request');
+        let reviews;
+        try {
+            reviews = await Review.find();
+            if (reviews) res.status(201).json({ reviews });
+            else res.status(500).json({ message: 'Error occured fetching the data' });
+        } catch (err) {
+            console.log(err);
+        }
     } else {
         const { name, review, stars } = req.body.data;
         if (!name || !review || !stars) return res.status(422).json({ message: 'Enter data properly' });
