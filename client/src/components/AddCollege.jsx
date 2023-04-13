@@ -23,12 +23,14 @@ const AddCollege = () => {
                     <input type="text" placeholder='Enter state name here....' />
 
                     <label htmlFor="">Enter logo link</label>
+                    <input type="text" placeholder='Enter college logo url....' />
+
+                    <label htmlFor="">Enter college link</label>
                     <input type="text" placeholder='Enter college website url....' />
 
                     <div className="add-clg-btn-container">
                         <button>Submit</button>
                     </div>
-
                 </div>
             </div>
         </>
