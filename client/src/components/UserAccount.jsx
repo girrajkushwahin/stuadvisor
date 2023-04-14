@@ -56,7 +56,7 @@ const UserAccount = () => {
     <>
       <div className="main-item main-right">
         {data === 0 ? <PostAcademics /> : null}
-        {data === 1 ? <PostBlogs /> : null}
+        {data === 1 ? <PostBlogs resp={info} /> : null}
         {data === 2 ? <PostReview resp={info} /> : null}
         {data === 3 ? <AddCollege /> : null}
         {data === 4 ? <EditProfile resp={info} /> : null}

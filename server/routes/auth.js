@@ -116,8 +116,19 @@ router.post('/getmessage', async (req, res) => {
 router.post('/blogs', async (req, res) => {
     const { type } = req.body;
     if (type === 'post') {
-        // if (!name || !email || !message) return res.status(422).json({ message: 'Enter data properly' });
-        res.status(201).json({ message: 'Post request' });
+        const { heading, blog, category, author, gender } = req.body.data;
+        if (!heading || !blog || !category || !author || !gender) return res.status(422).json({ message: 'Enter data properly' });
+        else res.status(201).json({ message: 'Data reached' });
+        // res.status(201).json({ message: 'Post request' });
+        try {
+            console.log(heading);
+            console.log(blog);
+            console.log(category);
+            console.log(author);
+            console.log(gender);
+        } catch (err) {
+            console.log(err);
+        }
     }
     if (type === 'get') {
         let blog, postedBlog, trendingBlog;
