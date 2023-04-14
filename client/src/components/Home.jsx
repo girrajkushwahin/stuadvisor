@@ -17,6 +17,7 @@ const Home = () => {
   const [data, setData] = useState(0);
   let { key } = useOutletContext();
   const [review, setReview] = useState([]);
+  const [news, setNews] = useState([]);
 
   const menuClick = id => {
     setData(id);
@@ -26,6 +27,15 @@ const Home = () => {
     try {
       const res = await axios.post(url, { type: 'get' });
       setReview(res.data.reviews);
+    } catch (err) {
+      console.log(err.response.data.message);
+    }
+  }
+
+  const getNews = async url => {
+    try {
+      const res = await axios.get(url);
+      setNews(res.data);
     } catch (err) {
       console.log(err.response.data.message);
     }
@@ -42,6 +52,7 @@ const Home = () => {
     if (state) key(homeMenu2);
     else key(homeMenu);
     getReview(`${API}/reviews`);
+    getNews(`${API}/news`);
     // eslint-disable-next-line
   }, [])
 
@@ -50,7 +61,7 @@ const Home = () => {
       <div className="main-item main-right">
         {data === 0 ? <GetStarted /> : null}
         {data === 1 ? <Reviews data={review} /> : null}
-        {data === 2 ? <News /> : null}
+        {data === 2 ? <News data={news} /> : null}
         {data === 3 ? <AboutUs /> : null}
         {data === 4 ? <ContactUs /> : null}
         {data === 5 ? <SignIn /> : null}

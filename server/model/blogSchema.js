@@ -4,15 +4,12 @@ const blogSchema = new mongoose.Schema({
     heading: {
         type: String,
         required: true,
-        trim: true,
-        minlength: 3,
-        maxlength: 120
+        trim: true
     },
     blog: {
         type: String,
         required: true,
         trim: true,
-        minlength: 3
     },
     category: {
         type: String,

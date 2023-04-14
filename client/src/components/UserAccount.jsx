@@ -42,7 +42,7 @@ const UserAccount = () => {
     } catch (err) { }
   }
 
-  const userMenu = [{ text: 'Post Academics', icon: <i className="i-tag fa-solid fa-person-walking"></i>, click: menuClick }, { text: 'Post Blogs', icon: <i className="i-tag fa-regular fa-comments"></i>, click: menuClick }, { text: 'Post Review', icon: <i className="i-tag fa-solid fa-newspaper"></i>, click: menuClick }, { text: 'Add College', icon: <i className="i-tag fa-solid fa-address-card"></i>, click: menuClick }, { text: 'Edit Profile', icon: <i className="i-tag fa-solid fa-address-book"></i>, click: menuClick }, { text: 'Sign out', icon: <i className="i-tag fa-solid fa-right-from-bracket"></i>, click: handleSignOut }];
+  const userMenu = [{ text: 'Post Academics', icon: <i className="i-tag fa-solid fa-book"></i>, click: menuClick }, { text: 'Post Blogs', icon: <i className="i-tag fa-solid fa-blog"></i>, click: menuClick }, { text: 'Post Review', icon: <i className="i-tag fa-regular fa-comments"></i>, click: menuClick }, { text: 'Add College', icon: <i className="i-tag fa-solid fa-graduation-cap"></i>, click: menuClick }, { text: 'Edit Profile', icon: <i className="i-tag fa-solid fa-address-book"></i>, click: menuClick }, { text: 'Sign out', icon: <i className="i-tag fa-solid fa-right-from-bracket"></i>, click: handleSignOut }];
 
   useEffect(() => {
     document.title = 'My Account';

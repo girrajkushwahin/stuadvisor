@@ -10,6 +10,7 @@ const Blog = require('../model/blogSchema');
 const TrendingBlog = require('../model/trendingBlogSchema');
 const PostedBlog = require('../model/postedBlogSchema');
 const Review = require('../model/reviewSchema');
+const News = require('../model/newsSchema');
 const topclg = require('../data/topclg');
 const clgData = require('../data/colleges');
 const branchsem = require('../data/banchsem.json');
@@ -31,6 +32,16 @@ router.get('/academics', (req, res) => {
 
 router.get('/topclg', (req, res) => {
     res.status(200).json(topclg);
+})
+
+router.get('/news', async (req, res) => {
+    try {
+        const result = await News.find();
+        if (result) res.status(200).json(result);
+        else res.status(500).json({ message: 'Internal error' });
+    } catch (err) {
+        console.log(err);
+    }
 })
 
 router.get('*', (req, res) => {
@@ -118,16 +129,15 @@ router.post('/blogs', async (req, res) => {
     if (type === 'post') {
         const { heading, blog, category, author, gender } = req.body.data;
         if (!heading || !blog || !category || !author || !gender) return res.status(422).json({ message: 'Enter data properly' });
-        else res.status(201).json({ message: 'Data reached' });
-        // res.status(201).json({ message: 'Post request' });
-        try {
-            console.log(heading);
-            console.log(blog);
-            console.log(category);
-            console.log(author);
-            console.log(gender);
-        } catch (err) {
-            console.log(err);
+        else {
+            try {
+                const result = new PostedBlog(req.body.data);
+                const reslt = await result.save();
+                if (reslt) res.status(201).json({ message: 'Posted Successfully' });
+                else res.status(500).json({ message: 'Internal error' });
+            } catch (err) {
+                console.log(err);
+            }
         }
     }
     if (type === 'get') {
@@ -251,6 +261,14 @@ router.post('/reviews', async (req, res) => {
             console.log(err);
         }
     }
+})
+
+router.post('/academics', (req, res) => {
+    console.log('HELLO');
+})
+
+router.post('/addcollege', (req, res) => {
+    console.log('HELLO');
 })
 
 module.exports = router;

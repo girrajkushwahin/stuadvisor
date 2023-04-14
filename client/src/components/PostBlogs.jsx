@@ -125,16 +125,19 @@ const PostBlogs = ({ resp }) => {
 
     const postData = async url => {
         const { heading, blog, category } = data;
-        if (!heading || !blog || !category) toast.error('Enter valid data', {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-        });
+        if (!heading || !blog || !category) {
+            toast.error('Enter valid data', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+            setToggle({ button: 'false', icon: true });
+        }
         else {
             try {
                 const res = await axios.post(url, { type: 'post', data });

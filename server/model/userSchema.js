@@ -36,13 +36,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         minlength: 8,
-        // maxlength: 25
     },
     cpassword: {
         type: String,
         required: true,
         minlength: 8,
-        // maxlength: 25
     },
     gender: {
         type: String,
@@ -61,7 +59,6 @@ const userSchema = new mongoose.Schema({
                 required: true,
                 trim: true,
                 minlength: 3,
-                maxlength: 30
             },
             email: {
                 type: String,
