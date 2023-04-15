@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const fs = require('fs');
 const authenticate = require('../middleware/authenticate');
 
 const Registration = require('../model/userSchema');
@@ -263,12 +264,33 @@ router.post('/reviews', async (req, res) => {
     }
 })
 
+router.post('/addcollege', (req, res) => {
+    const { college, course, fee, city, state, logo, link } = req.body;
+    if (!college || !course || !fee || !city || !state || !logo || !link) return res.status(422).json({ message: 'Enter data properly' });
+    else {
+        // res.status(201).json({ message: 'success' });
+    }
+})
+
 router.post('/academics', (req, res) => {
     console.log('HELLO');
 })
 
-router.post('/addcollege', (req, res) => {
-    console.log('HELLO');
-})
+// const writeData = data => {
+//     fs.writeFile(`${__dirname}/../data/colleges.json`, data, err => {
+//         if (err) throw err;
+//         else console.log('successful');
+//     })
+// }
+
+// fs.readFile(`${__dirname}/../data/colleges.json`, 'utf-8', (err, data) => {
+//     if (err) throw err;
+//     else {
+//         let setcollege = JSON.parse(data)
+//         setcollege.push(obj)
+//         finaldata = JSON.stringify(setcollege)
+//         writeData(finaldata);
+//     }
+// })
 
 module.exports = router;
