@@ -1083,9 +1083,9 @@ a {
 
 }
 
-.blog-accordian-icon span.download-btn {
+.blog-accordian-icon a.download-btn {
   margin-left: 3rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: rgb(54, 0, 147);
   cursor: pointer;
   border: 2px solid rgb(54, 0, 147);
@@ -1101,7 +1101,7 @@ a {
 
 
 
-.blog-accordian-icon span:hover {
+.blog-accordian-icon a:hover {
   background-color: rgb(54, 0, 147);
   color: white;
 }
