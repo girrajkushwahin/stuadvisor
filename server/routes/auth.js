@@ -272,7 +272,7 @@ router.post('/addcollege', (req, res) => {
             if (err) res.status(500).json({ message: 'Internal Error' });
             else {
                 let getData = JSON.parse(data);
-                getData.push({ title: college, logo, location: `${city}, ${state}`, url: `https://${link}`, reviews: '', rating: '', fee: `₹ ${fee}`, course, city, bycourse: course, state });
+                getData.push({ title: college, logo, location: `${city}, ${state}`, url: `https://www.${link}`, reviews: '', rating: '', fee: `₹ ${fee}`, course, city, bycourse: course, state });
                 finalData = JSON.stringify(getData)
                 fs.writeFile(`${__dirname}/../data/colleges.json`, finalData, err => {
                     if (err) res.status(500).json({ message: 'Internal Error' });
