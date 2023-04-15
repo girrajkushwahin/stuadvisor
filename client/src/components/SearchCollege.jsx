@@ -46,9 +46,10 @@ const SearchCollege = () => {
 
   const handleSearchCourseWise = (data) => {
     const newData = dataAPI.filter(elem => {
-      const course = elem.bycourse.toLowerCase().replaceAll('.', '').replaceAll(' ', '');
-      const userData = data.toLowerCase().trimEnd().replaceAll('.', '').replaceAll(' ', '');
-      return course === userData;
+      const course = elem.bycourse.trim().toLowerCase().replaceAll('.', '').replaceAll(' ', '');
+      const userData = data.toLowerCase().trim().replaceAll('.', '').replaceAll(' ', '');
+      const status = course.includes(userData);
+      return status === true;
     })
     getFiltered(newData);
   }
@@ -56,7 +57,8 @@ const SearchCollege = () => {
   const handleSearchCityWise = (data) => {
     const newData = dataAPI.filter(elem => {
       const userData = data.toLowerCase().trimEnd().replaceAll(' ', '');
-      const status = elem.city.includes(userData);
+      const city = elem.city.toLowerCase().trim().replaceAll('.', '').replaceAll(' ', '');
+      const status = city.includes(userData);
       return status === true;
     })
     getFiltered(newData);
@@ -68,7 +70,7 @@ const SearchCollege = () => {
     else if (data.toLowerCase() === 'up') stateName = 'Uttar Pradesh';
     else stateName = data;
     const newData = dataAPI.filter(elem => {
-      const state = elem.state.replaceAll(' ', '');
+      const state = elem.state.toLowerCase().trim().replaceAll(' ', '').replaceAll('.', '');
       const userData = stateName.toLowerCase().trimEnd().replaceAll(' ', '');
       const status = state.includes(userData);
       return status === true;

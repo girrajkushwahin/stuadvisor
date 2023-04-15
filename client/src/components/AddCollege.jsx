@@ -5,20 +5,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import AddCollege2 from './AddCollege2';
 const API = 'http://127.0.0.1:8000';
 
-// {
-//     "title": "title1",
-//     "logo": "logo1",
-//     "location": "location1",
-//     "url": "url1",
-//     "reviews": "reviews1",
-//     "rating": "rating1",
-//     "fee": "fee1",
-//     "course": "course1",
-//     "city": "city1",
-//     "bycourse": "bycourse1",
-//     "state": "state1"
-// }
-
 const AddCollege = () => {
 
     const [data, setData] = useState({ college: '', course: '', fee: '', city: '', state: '', logo: '', link: '' });
@@ -74,7 +60,7 @@ const AddCollege = () => {
         }
     }
 
-    const item = [{ data: 'Enter college name', name: 'college', value: data.college, ph: 'Enter your college name here....', inputData: handleInput }, { data: 'Enter course', name: 'course', value: data.course, ph: 'Enter course name here....', inputData: handleInput }, { data: 'Enter fee for above course', name: 'fee', value: data.fee, ph: 'Enter fee here....', inputData: handleInput }, { data: 'Enter city name', name: 'city', value: data.city, ph: 'Enter city name here....', inputData: handleInput }, { data: 'Enter state name', name: 'state', value: data.state, ph: 'Enter state name here....', inputData: handleInput }, { data: 'Enter college logo link', name: 'logo', value: data.logo, ph: 'Enter college logo url....', inputData: handleInput }, { data: 'Enter college website', name: 'link', value: data.link, ph: 'Enter college website url....', inputData: handleInput }];
+    const item = [{ data: 'Enter college name', name: 'college', value: data.college, ph: 'Enter your college name here....', inputData: handleInput }, { data: 'Enter course', name: 'course', value: data.course, ph: 'Enter one course at a time', inputData: handleInput }, { data: 'Enter fee for above course', name: 'fee', value: data.fee, ph: 'Enter fee here....', inputData: handleInput }, { data: 'Enter city name', name: 'city', value: data.city, ph: 'Enter city name here....', inputData: handleInput }, { data: 'Enter state name', name: 'state', value: data.state, ph: 'Enter state name here....', inputData: handleInput }, { data: 'Enter college logo link', name: 'logo', value: data.logo, ph: 'Enter college logo url....', inputData: handleInput }, { data: 'Enter college website', name: 'link', value: data.link, ph: 'without https and www', inputData: handleInput }];
 
     return (
         <>

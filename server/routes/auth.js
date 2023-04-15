@@ -268,29 +268,23 @@ router.post('/addcollege', (req, res) => {
     const { college, course, fee, city, state, logo, link } = req.body;
     if (!college || !course || !fee || !city || !state || !logo || !link) return res.status(422).json({ message: 'Enter data properly' });
     else {
-        // res.status(201).json({ message: 'success' });
+        fs.readFile(`${__dirname}/../data/colleges.json`, 'utf-8', (err, data) => {
+            if (err) res.status(500).json({ message: 'Internal Error' });
+            else {
+                let getData = JSON.parse(data);
+                getData.push({ title: college, logo, location: `${city}, ${state}`, url: `https://${link}`, reviews: '', rating: '', fee: `₹ ${fee}`, course, city, bycourse: course, state });
+                finalData = JSON.stringify(getData)
+                fs.writeFile(`${__dirname}/../data/colleges.json`, finalData, err => {
+                    if (err) res.status(500).json({ message: 'Internal Error' });
+                    else res.status(201).json({ message: 'Added Successfully' });
+                })
+            }
+        })
     }
 })
 
 router.post('/academics', (req, res) => {
     console.log('HELLO');
 })
-
-// const writeData = data => {
-//     fs.writeFile(`${__dirname}/../data/colleges.json`, data, err => {
-//         if (err) throw err;
-//         else console.log('successful');
-//     })
-// }
-
-// fs.readFile(`${__dirname}/../data/colleges.json`, 'utf-8', (err, data) => {
-//     if (err) throw err;
-//     else {
-//         let setcollege = JSON.parse(data)
-//         setcollege.push(obj)
-//         finaldata = JSON.stringify(setcollege)
-//         writeData(finaldata);
-//     }
-// })
 
 module.exports = router;

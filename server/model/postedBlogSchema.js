@@ -4,8 +4,7 @@ const postedBlogSchema = new mongoose.Schema({
     heading: {
         type: String,
         required: true,
-        trim: true,
-        minlength: 3,
+        trim: true
     },
     blog: {
         type: String,
