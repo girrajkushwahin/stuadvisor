@@ -20,6 +20,7 @@ const Blogs2 = ({ heading, author, date, blog, gender, category }) => {
                 </div>
                 <div className="blog-accordian-icon">
                     {toggle ? <span>-</span> : <span>+</span>}
+                    {/* <span className='download-btn'>Download</span> */}
                 </div>
             </div>
             {toggle ? <div className="blog-card-content-container">

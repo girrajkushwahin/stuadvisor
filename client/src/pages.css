@@ -1083,6 +1083,16 @@ a {
 
 }
 
+.blog-accordian-icon span.download-btn {
+  margin-left: 3rem;
+  font-size: 2rem;
+  color: rgb(54, 0, 147);
+  cursor: pointer;
+  border: 2px solid rgb(54, 0, 147);
+  padding: 0rem .8rem;
+  border-radius: .4rem;
+  transition: all .3s;
+}
 
 .blog-card-content-container {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.269);
@@ -1345,7 +1355,8 @@ a {
 
 /* Add college details page */
 
-.add-clg-container {
+.add-clg-container,
+.post-accademics-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1353,12 +1364,14 @@ a {
   margin: 0 auto;
 }
 
-.add-clg-container h1 {
+.add-clg-container h1,
+.post-accademics-container h1 {
   font-size: 2rem;
   font-weight: 600;
 }
 
-.add-clg-container h1 span {
+.add-clg-container h1 span,
+.post-accademics-container h1 span {
   font-size: 2.5rem;
   color: red;
 }
@@ -1367,7 +1380,8 @@ a {
   font-size: 1.3rem;
 }
 
-.add-clg-input-container {
+.add-clg-input-container,
+.post-accademics-input-container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1377,13 +1391,15 @@ a {
   box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.205);
 }
 
-.add-clg-input-container label {
+.add-clg-input-container label,
+.post-accademics-input-container label {
   margin-top: 1.5rem;
   margin-bottom: .2rem;
   font-size: 1.3rem;
 }
 
-.add-clg-input-container input {
+.add-clg-input-container input,
+.post-accademics-input-container input {
   padding: .5rem 1rem;
   font-size: 1.1rem;
   border: none;
@@ -1393,12 +1409,14 @@ a {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.205);
 }
 
-.add-clg-input-container .add-clg-btn-container {
+.add-clg-input-container .add-clg-btn-container,
+.post-accademics-input-container div {
   margin: 0 auto;
 }
 
 .add-clg-input-container .add-clg-btn-container button,
-.tag-button-container button {
+.tag-button-container button,
+.post-accademics-input-container div button {
   margin-top: 1rem;
   padding: .7rem 3rem;
   border: none;
@@ -1411,10 +1429,22 @@ a {
   font-weight: 600;
 }
 
-.add-clg-input-container .add-clg-btn-container button:hover {
+.add-clg-input-container .add-clg-btn-container button:hover,
+.post-accademics-input-container div button:hover {
   background-color: white;
   color: var(--btngreen);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.313);
+
+}
+
+.post-accademics-input-container .file-input {
+  padding: .5rem 1rem;
+  font-size: 1.1rem;
+
+  border: none;
+  outline: none;
+  border-radius: .2rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.205);
 
 }
 
