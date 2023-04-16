@@ -235,7 +235,7 @@ const PostBlogs = ({ resp }) => {
                         })}
                     </div>
                 </div>
-                {toggle.button === 'false' ? <button onClick={handlePost}>Submit</button> : toggle.button === 'true' ? <button onClick={() => postData(`${API}/blogs`)}>Post Now</button> : ''}
+                {toggle.button === 'false' ? <button onClick={handlePost}>Submit</button> : toggle.button === 'true' ? <button onClick={() => postData(`${API}/blogs`)} className='post-now'>Post Now</button> : ''}
             </div>
             <ToastContainer
                 position="top-center"

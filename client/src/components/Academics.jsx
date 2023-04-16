@@ -94,12 +94,12 @@ const Academics = () => {
   }
 
   const Notes = {
-    heading: <span><span>S</span>earch <span>f</span>or <span>N</span>otes...</span>,
+    heading: <span className="search-span"><span>S</span>earch <span>f</span>or <span>N</span>otes...</span>,
     dataAPI: dataAPI
   }
 
   const ImpQue = {
-    heading: <span><span>S</span>earch <span>f</span>or <span>i</span>mportant <span>q</span>uestions...</span>,
+    heading: <span className="search-span"><span>S</span>earch <span>f</span>or <span>i</span>mportant <span>q</span>uestions...</span>,
     handleSearch,
     handleSem,
     handleSubject,
@@ -110,7 +110,7 @@ const Academics = () => {
   }
 
   const SamplePaper = {
-    heading: <span><span>S</span>earch <span>f</span>or <span>s</span>ample <span>p</span>apers...</span>,
+    heading: <span className="search-span"><span>S</span>earch <span>f</span>or <span>s</span>ample <span>p</span>apers...</span>,
     handleSearch,
     handleSem,
     handleSubject,
@@ -121,7 +121,7 @@ const Academics = () => {
   }
 
   const PrePaper = {
-    heading: <span><span>S</span>earch <span>f</span>or <span>p</span>revious <span>p</span>apers...</span>,
+    heading: <span className="search-span"><span>S</span>earch <span>f</span>or <span>p</span>revious <span>p</span>apers...</span>,
     handleSearch,
     handleSem,
     handleSubject,

@@ -48,27 +48,33 @@ const PostReview = ({ resp }) => {
 
     return (
         <>
-            <div className="post-revies-container">
-                <h1>Your <span>Reviews</span>  are important to develop our community more strong . Reviews help people to know more about us</h1>
-                <hr />
-                <div className="post-revies-input-container">
-                    <label>Enter your name :</label>
-                    <input className='your-name' type="text" name='name' placeholder='Enter your name...' readOnly defaultValue={resp.name} />
-                    <label>Enter your review :</label>
-                    <textarea name="review" cols="5" rows="10" value={data.review} onChange={handleInput}></textarea>
-                    <div className="rating">
-                        <label>Give us stars -</label>
-                        <div className="input-rating-div">
-                            {item.map((elem, indx) => <div key={indx}>
-                                <input type="radio" name='stars' value={elem.val} id={elem.id} checked={elem.check} onChange={elem.inputData} />
-                                <label htmlFor={elem.for}>{elem.data}</label>
-                            </div>)}
+            <div className="post-reviews-inner">
+                <div className="h1-div">
+                    <h1><span>P</span>ost <span>R</span>eviews</h1>
+                </div>
+                <div className="post-revies-container">
+
+                    <h1>Your <span>Reviews</span>  are important to develop our community more strong . Reviews help people to know more about us</h1>
+                    <hr />
+                    <div className="post-revies-input-container">
+                        <label>Enter your name :</label>
+                        <input className='your-name' type="text" name='name' placeholder='Enter your name...' readOnly defaultValue={resp.name} />
+                        <label>Enter your review :</label>
+                        <textarea name="review" cols="5" rows="10" value={data.review} onChange={handleInput}></textarea>
+                        <div className="rating">
+                            <label>Give us stars -</label>
+                            <div className="input-rating-div">
+                                {item.map((elem, indx) => <div key={indx}>
+                                    <input type="radio" name='stars' value={elem.val} id={elem.id} checked={elem.check} onChange={elem.inputData} />
+                                    <label htmlFor={elem.for}>{elem.data}</label>
+                                </div>)}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="save-first-btn-box logout-from-all">
-                <button onClick={handleSubmit}>Post Review</button>
+                <div className="save-first-btn-box logout-from-all">
+                    <button onClick={handleSubmit}>Post Review</button>
+                </div>
             </div>
             <ToastContainer
                 position="top-center"
@@ -82,6 +88,7 @@ const PostReview = ({ resp }) => {
                 pauseOnHover
                 theme="light"
             />
+
         </>
     )
 }

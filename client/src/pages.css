@@ -1365,16 +1365,23 @@ a {
 }
 
 .add-clg-container h1,
-.post-accademics-container h1 {
+.post-accademics-container h1,
+.post-reviews-inner .h1-div h1 {
   font-size: 2rem;
   font-weight: 600;
 }
 
+.post-reviews-inner .h1-div {
+  text-align: center;
+}
+
 .add-clg-container h1 span,
-.post-accademics-container h1 span {
+.post-accademics-container .h1-div h1 span,
+.post-reviews-inner .h1-div h1 span {
   font-size: 2.5rem;
   color: red;
 }
+
 
 .add-clg-container p {
   font-size: 1.3rem;
@@ -1533,7 +1540,8 @@ a {
   height: 10rem;
 }
 
-.post-blog-content-container>button {
+.post-blog-content-container>button,
+.post-blog-container>button {
   padding: .5rem 1.2rem;
   border: none;
   outline: none;
@@ -1547,11 +1555,32 @@ a {
   margin: 1rem auto;
 }
 
-.post-blog-content-container>button:hover {
+.post-blog-content-container>button:hover,
+.post-blog-container>button:hover {
   background-color: white;
   color: var(--btngreen);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.313);
 
+}
+
+.post-blog-container>button.post-now {
+  padding: .5rem 1.2rem;
+  border: none;
+  outline: none;
+  background-color: blue;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: .4rem;
+  transition: all .3s linear;
+  font-weight: 600;
+  width: 300px;
+  margin: 1rem auto;
+}
+
+.post-blog-container>button.post-now:hover {
+  background-color: white;
+  color: blue;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.313);
 }
 
 .post-blog-content-container>h1 {

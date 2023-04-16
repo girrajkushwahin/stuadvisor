@@ -46,21 +46,21 @@ const Blogs = () => {
   }, [])
 
   const searchblog = {
-    heading: 'Search for blogs...',
+    heading: <span className='search-span'><span>S</span>earch <span>f</span>or <span>b</span>logs...</span>,
     ph: 'search blogs',
     handleComp: 'searchblog',
     datadb: { blog, postedBlog }
   }
 
   const edublog = {
-    heading: 'Search for edu blogs...',
+    heading: <span className='search-span'><span>S</span>earch <span>f</span>or <span>e</span>du <span>b</span>logs...</span>,
     ph: 'search edu blogs',
     handleComp: 'edublog',
     datadb: { blog, postedBlog }
   }
 
   const otherblog = {
-    heading: 'Search other blogs...',
+    heading: <span className='search-span'><span>S</span>earch <span>o</span>ther <span>b</span>logs...</span>,
     ph: 'search blogs',
     handleComp: 'otherblog',
     datadb: { blog, postedBlog }
