@@ -50,7 +50,7 @@ const PostBlogs = ({ resp }) => {
         const { name } = e.target;
         const value = e.target.value.trimStart();
         setUpdateData({ ...updateData, [name]: value });
-        handleUniqueID({ ...uniqueID, updateText: value })
+        handleUniqueID({ ...uniqueID, updateText: value });
     }
 
     const saveData = data => {

@@ -283,8 +283,16 @@ router.post('/addcollege', (req, res) => {
     }
 })
 
-router.post('/academics', (req, res) => {
-    console.log('HELLO');
+router.post('/academics', authenticate, (req, res) => {
+    const { title, content, file } = req.body.data;
+    // console.log(req.rootUser.name);
+    // console.log(req.uniqueID);
+    // console.log(title);
+    // console.log(content);
+    if (!title || !content || !file) return res.status(422).json({ message: 'Enter data properly' });
+    else {
+        console.log(file);
+    }
 })
 
 module.exports = router;
