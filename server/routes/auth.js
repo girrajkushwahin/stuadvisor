@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const authenticate = require('../middleware/authenticate');
+const upload = require('../middleware/multer');
 
 const Registration = require('../model/userSchema');
 const contactMessage = require('../model/messageSchema');
@@ -283,16 +284,8 @@ router.post('/addcollege', (req, res) => {
     }
 })
 
-router.post('/academics', authenticate, (req, res) => {
-    const { title, content, file } = req.body.data;
-    // console.log(req.rootUser.name);
-    // console.log(req.uniqueID);
-    // console.log(title);
-    // console.log(content);
-    if (!title || !content || !file) return res.status(422).json({ message: 'Enter data properly' });
-    else {
-        console.log(file);
-    }
+router.post('/academics', (req, res) => {
+    console.log('Hello World');
 })
 
 module.exports = router;
