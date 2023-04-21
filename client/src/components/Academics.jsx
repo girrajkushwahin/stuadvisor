@@ -15,6 +15,7 @@ const Academics = () => {
   const { state } = useContext(SiteContext);
   const handleSignOut = useContext(SignOut);
   const [data, setData] = useState(0);
+  const [dataPosted, getDataPosted] = useState([]);
   const { key } = useOutletContext();
   const [dataAPI, setDataAPI] = useState([]);
   const [filtered, getFiltered] = useState({ one: '', two: '', three: '' });
@@ -36,6 +37,15 @@ const Academics = () => {
     }
   }
 
+  const getPostedData = async url => {
+    try {
+      const res = await axios.get(url);
+      getDataPosted(res.data);
+    } catch (err) {
+      console.log('Error occured while fetching the data');
+    }
+  }
+
   const academicsData = [{ text: 'Notes', icon: <i className="i-tag fa-sharp fa-solid fa-note-sticky"></i>, click: menuClick }, { text: 'Important Questions', icon: <i className="i-tag fa-solid fa-circle-question"></i>, click: menuClick }, { text: 'Sample Papers', icon: <i className="i-tag fa-solid fa-pen-to-square"></i>, click: menuClick }, { text: 'Previous Papers', icon: <i className="i-tag fa-solid fa-star"></i>, click: menuClick }, { text: 'Data Posted', icon: <i className="i-tag fa-solid fa-server"></i>, click: menuClick }]
 
   const academicsMenu = [...academicsData, { text: 'Sign in', icon: <i className="i-tag fa-solid fa-door-open"></i>, click: menuClick }, { text: 'Sign up', icon: <i className="i-tag fa-solid fa-user-plus"></i>, click: menuClick }];
@@ -47,6 +57,7 @@ const Academics = () => {
     if (state) key(academicsMenu2);
     else key(academicsMenu);
     getData(`${API}/academics`);
+    getPostedData(`${API}/academicsposted`);
     // eslint-disable-next-line
   }, [])
 
@@ -138,7 +149,7 @@ const Academics = () => {
         {data === 1 ? <AcademicsComp2 {...ImpQue} {...common} /> : null}
         {data === 2 ? <AcademicsComp2 {...SamplePaper} {...common} /> : null}
         {data === 3 ? <AcademicsComp2 {...PrePaper} {...common} /> : null}
-        {data === 4 ? <DataPosted /> : null}
+        {data === 4 ? <DataPosted resp={dataPosted} /> : null}
         {data === 5 ? <SignIn /> : null}
         {data === 6 ? <SignUp /> : null}
       </div>

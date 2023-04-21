@@ -13,6 +13,7 @@ const TrendingBlog = require('../model/trendingBlogSchema');
 const PostedBlog = require('../model/postedBlogSchema');
 const Review = require('../model/reviewSchema');
 const News = require('../model/newsSchema');
+const UserUploads = require('../model/uploadSchema');
 const topclg = require('../data/topclg');
 const clgData = require('../data/colleges');
 const branchsem = require('../data/banchsem.json');
@@ -41,6 +42,16 @@ router.get('/news', async (req, res) => {
         const result = await News.find();
         if (result) res.status(200).json(result);
         else res.status(500).json({ message: 'Internal error' });
+    } catch (err) {
+        console.log(err);
+    }
+})
+
+router.get('/academicsposted', async (req, res) => {
+    try {
+        const result = await UserUploads.find();
+        if (result) res.status(201).json(result);
+        else res.status(500).json({ message: 'Error occured fetching the data' });
     } catch (err) {
         console.log(err);
     }
@@ -284,8 +295,19 @@ router.post('/addcollege', (req, res) => {
     }
 })
 
-router.post('/academics', (req, res) => {
-    console.log('Hello World');
+router.post('/academics', upload.single('file'), async (req, res) => {
+    const { title, content } = req.body;
+    if (!title || !content) return res.status(422).json({ message: 'Enter data properly' });
+    else {
+        const user = await Registration.findOne({ _id: req.headers.id });
+        if (user) {
+            const { name, gender } = user;
+            const status = new UserUploads({ title, content, path: req.file.path, name, gender });
+            const resp = status.save();
+            if (resp) res.status(201).json({ message: 'Posted Successfully' });
+            else res.status(500).json({ message: 'Internal Error' });
+        }
+    }
 })
 
 module.exports = router;

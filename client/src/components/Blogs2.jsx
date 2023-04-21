@@ -16,7 +16,7 @@ const Blogs2 = ({ heading, author, date, blog, gender, category }) => {
                     <h1>{heading}</h1>
                     <span>Category : <span className="blog-username">{category}</span></span>
                     <span>Posted by : <span className="blog-username">{author}</span></span>
-                    <span>Posted on : <span className="blog-date">{date.slice(0, 10)}</span> </span>
+                    <span>Posted on : <span className="blog-date">{date.slice(0, 10)}</span></span>
                 </div>
                 <div className="blog-accordian-icon">
                     {toggle ? <span>-</span> : <span>+</span>}

@@ -1,12 +1,15 @@
 const multer = require('multer');
+const fs = require('fs');
 
 const storage = multer.diskStorage({
-    destination: function (req, file, callback) {
-        return callback(null, './data/uploads')
+    destination: (req, file, cb) => {
+        const dest = `./data/uploads/${req.headers.id}`;
+        fs.access(dest, err => {
+            if (err) return fs.mkdir(dest, err => cb(err, dest));
+            else cb(null, dest);
+        })
     },
-    filename: function (req, file, callback) {
-        return callback(null, `${Date.now()}-${file.originalname}`)
-    }
+    filename: (req, file, cb) => cb(null, `${Date.now()}-${file.originalname}`)
 });
 
 const upload = multer({ storage });

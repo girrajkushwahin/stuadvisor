@@ -11,7 +11,8 @@ const PostAcademics = ({ resp }) => {
         try {
             const res = await axios.post(url, formData, {
                 headers: {
-                    "Content-Type": "multipart/form-data"
+                    "Content-Type": "multipart/form-data",
+                    id: resp._id
                 }
             });
             if (res) toast.success(res.data.message, {
@@ -41,7 +42,6 @@ const PostAcademics = ({ resp }) => {
     const handleSubmit = e => {
         e.preventDefault();
         const { title, content, file } = data;
-        const token = localStorage.getItem('jwtoken');
         if (!title || !content) toast.error('Enter valid data', {
             position: "top-center",
             autoClose: 3000,
@@ -67,7 +67,6 @@ const PostAcademics = ({ resp }) => {
             formData.append('title', data.title);
             formData.append('content', data.content);
             formData.append('file', data.file);
-            formData.append('token', token);
             PostAcademics(`${API}/academics`, formData);
             setData({ title: '', content: '', file: '' });
         }
