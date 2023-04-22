@@ -18,7 +18,7 @@ const DataPosted = ({ resp }) => {
               <span>Posted on : <span className="blog-date">{val.date.slice(0, 10)}</span> </span>
             </div>
             <div className="blog-accordian-icon">
-              <a href={val.path} download={true} className='download-btn'>Download</a>
+              <a href={val.path} download={true} target='_blank' rel="noreferrer" className='download-btn'>Download</a>
             </div>
           </div>)}
         </div>
