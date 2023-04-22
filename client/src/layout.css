@@ -218,6 +218,7 @@ ul {
 
 .main-item {
   background: var(--white);
+  /* height: calc(100vh - var(--total-height)); */
   height: calc(100vh - var(--total-height));
   margin: 10px;
   overflow: auto;

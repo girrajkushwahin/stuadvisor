@@ -44,7 +44,8 @@ const PostReview = ({ resp }) => {
         setData({ ...data, review: '', stars: '' });
     }
 
-    const item = [{ for: '1star', data: '1 star', id: '1star', val: '1 star', check: data.stars === '1 star', inputData: handleInput }, { for: '2star', data: '2 stars', id: '2star', val: '2 stars', check: data.stars === '2 stars', inputData: handleInput }, { for: '3star', data: '3 stars', id: '3star', val: '3 stars', check: data.stars === '3 stars', inputData: handleInput }, { for: '4star', data: '4 stars', id: '4star', val: '4 stars', check: data.stars === '4 stars', inputData: handleInput }, { for: '5star', data: '5 stars', id: '5star', val: '5 stars', check: data.stars === '5 stars', inputData: handleInput }];
+    // const item = [{ for: '1star', data: '1 star', id: '1star', val: '1 star', check: data.stars === '1 star', inputData: handleInput }, { for: '2star', data: '2 stars', id: '2star', val: '2 stars', check: data.stars === '2 stars', inputData: handleInput }, { for: '3star', data: '3 stars', id: '3star', val: '3 stars', check: data.stars === '3 stars', inputData: handleInput }, { for: '4star', data: '4 stars', id: '4star', val: '4 stars', check: data.stars === '4 stars', inputData: handleInput }, { for: '5star', data: '5 stars', id: '5star', val: '5 stars', check: data.stars === '5 stars', inputData: handleInput }];
+    const item = [{ for: '1star', data: '⭐', id: '1star', val: '1 star', check: data.stars === '1 star', inputData: handleInput }, { for: '2star', data: '⭐⭐', id: '2star', val: '2 stars', check: data.stars === '2 stars', inputData: handleInput }, { for: '3star', data: '⭐⭐⭐', id: '3star', val: '3 stars', check: data.stars === '3 stars', inputData: handleInput }, { for: '4star', data: '⭐⭐⭐⭐', id: '4star', val: '4 stars', check: data.stars === '4 stars', inputData: handleInput }, { for: '5star', data: '⭐⭐⭐⭐⭐', id: '5star', val: '5 stars', check: data.stars === '5 stars', inputData: handleInput }];
 
     return (
         <>
@@ -53,14 +54,13 @@ const PostReview = ({ resp }) => {
                     <h1><span>P</span>ost <span>R</span>eviews</h1>
                 </div>
                 <div className="post-revies-container">
-
                     <h1>Your <span>Reviews</span>  are important to develop our community more strong . Reviews help people to know more about us</h1>
                     <hr />
                     <div className="post-revies-input-container">
                         <label>Enter your name :</label>
                         <input className='your-name' type="text" name='name' placeholder='Enter your name...' readOnly defaultValue={resp.name} />
                         <label>Enter your review :</label>
-                        <textarea name="review" cols="5" rows="10" value={data.review} onChange={handleInput}></textarea>
+                        <textarea name="review" cols="5" rows="10" value={data.review} onChange={handleInput} placeholder='Enter reviews here...'></textarea>
                         <div className="rating">
                             <label>Give us stars -</label>
                             <div className="input-rating-div">

@@ -161,7 +161,7 @@ const SignUp = () => {
     <>
       <div className="cont">
         <div className="sign-in-container">
-          <div className="left-sign-in">
+          <div className="left-sign-in left-sign-up">
             <img className='left-sign-img' src={imageStatus} alt="img" />
           </div>
           <div className="right-sign-in">

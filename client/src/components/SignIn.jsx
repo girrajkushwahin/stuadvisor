@@ -94,7 +94,7 @@ const SignIn = () => {
     })
   }
 
-  const item = [{ data: 'Username', ph: 'Username', typ: 'text', name: 'username', val: data.username, inputData: handleInput }, { data: 'Password', ph: 'Password', typ: 'password', name: 'password', val: data.password, inputData: handleInput }];
+  const item = [{ data: 'Username', ph: 'Enter username', typ: 'text', name: 'username', val: data.username, inputData: handleInput }, { data: 'Password', ph: 'Emter password', typ: 'password', name: 'password', val: data.password, inputData: handleInput }];
 
   return (
     <>

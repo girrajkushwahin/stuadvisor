@@ -46,8 +46,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: rgba(255, 255, 255, 0.4); */
-  backdrop-filter: blur(2px);
 }
 
 .left-sign-in,
@@ -138,7 +136,7 @@ a {
 }
 
 .sign-up-form .btn-div {
-  width: 90%;
+  width: 100%;
 
   margin: 0 auto;
   margin-left: var(--md-2);
@@ -468,18 +466,11 @@ a {
 
 .about-header-right video {
   width: 100%;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-
 }
 
 /* Why us in about us page */
 .why-choose-us-about {
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
-  /* padding: 1rem; */
   margin-top: 2rem;
-  /* border-top: 2px solid gray;
-  border-bottom: 2px solid gray; */
-
 }
 
 .why-choose-us-about h1 {
@@ -562,8 +553,10 @@ a {
 
 .user-about-count {
   margin-top: 2rem;
-  align-items: center;
-  justify-content: space-around;
+  /* align-items: center;
+  justify-content: space-around; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .user-count {
@@ -1135,12 +1128,6 @@ a {
 .blog-main-content h4 {
   font-size: 1rem;
 }
-
-.edit-profile-container {
-  display: flex;
-
-}
-
 
 /* Edit Profile page */
 

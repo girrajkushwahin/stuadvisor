@@ -23,7 +23,7 @@ const SearchClg2 = ({ heading, ph, item1, item2, item3, item4, item5, handleSear
           <div className="search-input-box">
             <span className='input-span'><input type="text" placeholder={ph} value={data} onChange={e => setData(e.target.value.trimStart())} /><i className="fa-solid fa-magnifying-glass" onClick={() => handleSearch(data)}></i></span>
             <div className="search-lables">
-              {instantData.map((elem, indx) => <span onClick={() => setData(elem)} key={indx}>{elem} <i className="fa-solid fa-magnifying-glass"></i></span>)}
+              {instantData.map((elem, indx) => <span onClick={() => setData(elem)} key={indx}>{elem}<i className="fa-solid fa-magnifying-glass"></i></span>)}
             </div>
           </div>
         </div>

@@ -21,9 +21,11 @@
         grid-template-columns: none;
     }
 
-    /* .main-item {
-        height: 79vh;
-    } */
+    .main-right {
+        height: 75vh;
+        padding: .5rem;
+        text-align: justify;
+    }
 
     .heading-hamburger {
         display: inline-block;
@@ -69,9 +71,198 @@
         display: flex;
         align-items: center;
     }
+
+    .footer-container p {
+        font-size: .6rem;
+    }
+
+    .footer-container .footer-img {
+        width: 2rem;
+        height: 2rem;
+        margin-top: -0.5rem;
+    }
+
+    /* ***************** contact ***************** */
+
+    .company-contact {
+        padding: .5rem;
+    }
+
+    .company-details {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .company-details span {
+        /* box-shadow: 0 2px 10px #0003; */
+        margin: 1rem;
+        padding: .5rem;
+        border-radius: 4px;
+
+    }
+
+    .company-details h2 {
+        margin: .81rem;
+        font-size: 1.1rem;
+    }
+
+
+    .company-details i {
+        font-size: 1.2rem;
+        color: red;
+    }
+
+    .company-details p {
+        margin-top: .5rem;
+        font-size: .8rem;
+    }
+
+    .message-contact-form {
+        /* box-shadow: 0 2px 10px #0003; */
+        padding: .2rem;
+    }
+
+    .contact-form {
+        grid-template-columns: none;
+    }
+
+    .contact-form span h1 {
+        font-size: 1.5rem;
+        margin-left: 0rem;
+        margin-left: .5rem;
+        margin-top: 1rem;
+    }
+
+    .contact-form span input {
+        margin-top: 0rem;
+        padding: .3rem 1rem;
+        width: 95%;
+        margin-left: .5rem;
+        font-size: 1.3rem;
+    }
+
+    .contact-textarea {
+        margin-left: .5rem;
+    }
+
+    .contact-form-map iframe {
+        width: 100%;
+        height: 40vh;
+        border: none;
+    }
+
+
+
+    /* ****************************************   ABOUT PAGE **************************************************** */
+    .about-container {
+        margin: .5rem;
+    }
+
+    .about-header div {
+        padding: .8rem;
+    }
+
+    .about-header-left h1 {
+        font-size: 2rem;
+    }
+
+    .about-header-left h1 span {
+        font-size: 3rem;
+    }
+
+    /********************* Why us in about us  ************************ */
+    .why-choose-us-about {
+        margin-top: 1.5rem;
+    }
+
+    .why-choose-us-about h1 {
+        font-size: 2rem;
+    }
+
+    .why-us {
+        grid-template-columns: auto auto;
+
+    }
+
+    .why-us-content {
+        padding: 1rem;
+        margin: .7rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .why-us-content i {
+        padding: 1rem;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .why-us-content i {
+        font-size: 1.2rem;
+    }
+
+    .why-us-content h2 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    }
+
+    .why-us-content p {
+        font-size: 1rem;
+    }
+
+    .our-focus {
+        padding: 0rem;
+
+    }
+
+    .our-focus-left video {
+        margin-top: .8rem;
+    }
+
+    .our-focus-left h1 {
+        font-size: 1.5rem;
+        color: #591a8b;
+        margin-bottom: 1rem;
+    }
+
+
+    .our-focus-right img {
+        margin-top: 5rem;
+        width: 350px;
+    }
+
+    .our-focus-heading {
+        font-size: 2rem;
+    }
+
+    .user-about-count {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 1.5rem;
+    }
+
+    .user-count {
+        margin: .5rem;
+        padding: 1.5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .user-count h1 {
+        font-size: 1.5rem;
+    }
+
+    .our-focus-container,
+    .user-about-count {
+        padding: .8rem;
+    }
+
+
 }
 
-/* ***************** LESS THEN THE 1030PX WIDTH SIZE */
+/* ***************** LESS THEN THE 1030PX WIDTH SIZE *******************/
 @media screen and (max-width : 1080px) {
     .nav-bar {
         height: 3.1rem;
@@ -96,8 +287,6 @@
         ;
         padding-right: var(--md-1);
         padding-left: var(--md-1);
-
-
     }
 
     .nav-bar .search-box .search-btn i {
@@ -224,6 +413,9 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         margin-bottom: .7rem;
     }
+
+
+
 }
 
 
@@ -292,7 +484,7 @@
     }
 
     .our-focus {
-        padding: .8rem;
+        padding: 0rem;
 
     }
 
@@ -317,6 +509,9 @@
     }
 
     .user-about-count {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
         margin-top: 1.5rem;
     }
 
@@ -364,10 +559,6 @@
 
     }
 
-    .company-details h2 {
-        font-size: 1.2rem;
-    }
-
     .company-details p {
         font-size: .9rem;
     }
@@ -381,12 +572,13 @@
         font-size: 1.2rem;
     }
 
+    /* 
     .contact-form span input {
         margin-top: .8rem;
         padding: .3rem 1rem;
         margin-left: 1.2rem;
         font-size: 1rem;
-    }
+    } */
 
     .contact-textarea {
         font-size: 1rem;
@@ -421,6 +613,7 @@
     .social-icons-contact a i {
         font-size: 1.3rem;
     }
+
 
 }
 
@@ -512,7 +705,7 @@
     }
 
     .our-focus {
-        padding: .8rem;
+        padding: 0rem;
 
     }
 
@@ -576,9 +769,6 @@
 
     }
 
-    .company-details h2 {
-        font-size: 1.1rem;
-    }
 
     .company-details p {
         margin-top: 0rem;
@@ -608,12 +798,13 @@
         font-size: 1.2rem;
     }
 
+    /* 
     .contact-form span input {
         margin-top: .8rem;
         padding: .3rem 1rem;
         margin-left: 1.2rem;
         font-size: 1rem;
-    }
+    } */
 
     .contact-textarea {
         font-size: 1rem;
@@ -632,6 +823,1037 @@
 
     .contact-margin {
         margin-bottom: 1rem;
+    }
+
+    /* ***************************************** SEARCH BOX CONTAINER ************************ */
+    .search-box-container {
+        width: 100%;
+        height: 100%;
+        border: 2px solid rgba(0, 0, 0, 0.3);
+        padding: .5rem;
+    }
+
+    .search-box-img {
+        width: 100%;
+    }
+
+    .search-img {
+        padding: 0rem 0rem;
+        width: 100%;
+        height: 100px;
+    }
+
+    .search-input-box {
+        margin-top: 2rem;
+    }
+
+    .search-box-heading {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        letter-spacing: .1rem;
+    }
+
+    .search-box-heading .search-span span {
+        font-size: 1.5rem;
+    }
+
+    .search-input-box .input-span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .search-input-box .input-span input {
+        width: 70vw;
+        padding: .4rem;
+        font-size: 1rem;
+        border: 1.5px solid rgba(0, 0, 0, 0.724);
+        margin-right: .5rem;
+    }
+
+    .search-input-box .input-span i {
+        padding: .5rem;
+        font-size: 1.2rem;
+        border: 1.5px solid rgba(0, 0, 0, 0.724);
+    }
+
+
+    .search-input-box .input-span input:focus {
+        box-shadow: 0 0 5px rgb(0, 0, 0);
+        border: 1.5px solid rgb(0, 0, 0);
+    }
+
+    .search-result-content {
+        margin-top: 1rem;
+        border: none;
+        padding: 0rem;
+    }
+
+
+    .search-result-content .search-content {
+        height: 40vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        border-radius: 0rem 0.5rem;
+        width: 100%;
+        margin: .5rem auto;
+
+    }
+
+    .search-result-content .search-content:hover {
+        box-shadow: 0 0 5px rgba(0, 26, 255, 0.4);
+    }
+
+
+    .college-img {
+        width: 100%;
+        height: 8.5vh;
+        display: flex;
+        align-items: left;
+        justify-content: flex-start;
+        overflow: auto;
+        margin-top: .5rem;
+
+    }
+
+    .college-img img {
+        padding: .5rem;
+        width: 20%;
+        height: 8vh;
+        margin-left: .5rem;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.386);
+
+    }
+
+    .search-content .college-data {
+        padding: .5rem;
+        text-transform: capitalize;
+        margin-bottom: -25px;
+
+    }
+
+    .college-name-container .college-name {
+        font-size: .9rem;
+    }
+
+    .college-name-container p {
+        font-size: .7rem;
+    }
+
+    .fee-structer:hover {
+        text-decoration: underline;
+    }
+
+    .fee-structer h1 {
+        font-size: .9rem;
+    }
+
+    .fee-structer p {
+        font-size: .7rem;
+    }
+
+    .redirect-college {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .redirect-btn-box br {
+        display: none;
+    }
+
+    .redirect-btn {
+        padding: .5rem 0;
+        width: 100px;
+        border-radius: .4rem;
+        margin: .5rem;
+    }
+
+    .redirect-btn:hover {
+        box-shadow: 0 0 5px rgba(38, 0, 255, 0.427);
+    }
+
+
+    /* ***************************************** SEARCH BOX CONTAINER ************************ */
+    .search-box-container {
+        width: 100%;
+        height: 100%;
+        border: 2px solid rgba(0, 0, 0, 0.3);
+        padding: .5rem;
+    }
+
+    .search-box-img {
+        width: 100%;
+    }
+
+    .search-img {
+        padding: 0rem 0rem;
+        width: 100%;
+        height: 100px;
+    }
+
+    .search-input-box {
+        margin-top: 2rem;
+    }
+
+    .search-box-heading {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        letter-spacing: .1rem;
+    }
+
+    .search-box-heading .search-span span {
+        font-size: 1.5rem;
+    }
+
+    .search-input-box .input-span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .search-input-box .input-span input {
+        width: 70vw;
+        padding: .4rem;
+        font-size: 1rem;
+        border: 1.5px solid rgba(0, 0, 0, 0.724);
+        margin-right: .5rem;
+    }
+
+    .search-input-box .input-span i {
+        padding: .5rem;
+        font-size: 1.2rem;
+        border: 1.5px solid rgba(0, 0, 0, 0.724);
+    }
+
+
+    .search-input-box .input-span input:focus {
+        box-shadow: 0 0 5px rgb(0, 0, 0);
+        border: 1.5px solid rgb(0, 0, 0);
+    }
+
+    .search-result-content {
+        margin-top: 1rem;
+        border: none;
+        padding: 0rem;
+    }
+
+
+    .search-result-content .search-content {
+        height: 40vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        border-radius: 0rem 0.5rem;
+        width: 100%;
+        margin: .5rem auto;
+
+    }
+
+    .search-result-content .search-content:hover {
+        box-shadow: 0 0 5px rgba(0, 26, 255, 0.4);
+    }
+
+
+    .college-img {
+        width: 100%;
+        height: 8.5vh;
+        display: flex;
+        align-items: left;
+        justify-content: flex-start;
+        overflow: auto;
+        margin-top: .5rem;
+
+    }
+
+    .college-img img {
+        padding: .5rem;
+        width: 20%;
+        height: 8vh;
+        margin-left: .5rem;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.386);
+
+    }
+
+    .search-content .college-data {
+        padding: .5rem;
+        text-transform: capitalize;
+        margin-bottom: -25px;
+
+    }
+
+    .college-name-container .college-name {
+        font-size: .9rem;
+    }
+
+    .college-name-container p {
+        font-size: .7rem;
+    }
+
+    .fee-structer:hover {
+        text-decoration: underline;
+    }
+
+    .fee-structer h1 {
+        font-size: .9rem;
+    }
+
+    .fee-structer p {
+        font-size: .7rem;
+    }
+
+    .redirect-college {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .redirect-btn-box br {
+        display: none;
+    }
+
+    .redirect-btn {
+        padding: .5rem 0;
+        width: 100px;
+        border-radius: .4rem;
+        margin: .5rem;
+    }
+
+    .redirect-btn:hover {
+        box-shadow: 0 0 5px rgba(38, 0, 255, 0.427);
+    }
+
+    .search-lables {
+        margin-bottom: .5rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .search-lables span {
+        margin: .5rem;
+        border: 2px solid rgba(0, 0, 0, 0.724);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        padding: .1rem .5rem;
+        font-size: 0.7rem;
+    }
+
+    .search-lables span i {
+        margin-left: .5rem;
+    }
+
+    .search-lables span:hover {
+        box-shadow: 0 0 5px red;
+        border: 2px solid rgb(255, 0, 0);
+
+        color: red;
+    }
+
+    .search-lables a {
+        margin: 1rem;
+        border: 1.5px solid rgba(0, 0, 0, 0.724);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        color: rgb(0, 0, 0);
+        padding: .5rem .6rem;
+        border-radius: 4rem;
+        cursor: pointer;
+        transition: .3s;
+        margin-right: .2rem;
+    }
+
+    .search-lables a:hover {
+        box-shadow: 0 0 5px red;
+        border: 2px solid rgb(255, 0, 0);
+
+        color: red;
+    }
+
+
+    /* **************************************** SIGN IN PAGE ************************************************** */
+    .sign-in-container {
+
+        margin-top: 4rem;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .left-sign-up {
+        margin-top: 6rem;
+    }
+
+    .left-sign-in,
+    .right-sign-in {
+        width: 100%;
+        height: 100%;
+        padding: .5rem;
+    }
+
+    .left-sign-in .left-sign-img {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+        padding: .2rem;
+    }
+
+    .right-sign-in .right-heading {
+        font-size: 1.5rem;
+        margin-left: 0;
+
+    }
+
+    .heding-inside {
+        text-align: center;
+        display: block;
+        margin-bottom: var(--md-1);
+
+    }
+
+    .heading {
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+    .sign-in-tags {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .sign-in-tags,
+    .sign-in-btn {
+        display: block;
+        margin-left: 0;
+    }
+
+    .input-sign,
+    .sign-in-btn {
+        margin-bottom: var(--md-1-5);
+    }
+
+    .sign-in-form .input-sign,
+    .sign-up-form .input-sign {
+        width: 100%;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        border-radius: 0rem .5rem;
+    }
+
+    .sign-in-form .btn-div {
+        width: 100%;
+        margin: 0 auto;
+        /* margin-left: 0rem; */
+    }
+
+    .sign-up-form div.btn-div {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 1.5rem;
+        margin-left: 0rem;
+    }
+
+    .sign-up-form .sign-up-btn,
+    .sign-in-form .sign-up-btn {
+        width: 100%;
+        margin-top: 0rem;
+        padding: .3rem 0rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        border-radius: 0rem .5rem;
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .form-container {
+        margin-left: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .gender-container {
+        margin-left: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .gender-container div {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .radio-btn {
+        cursor: pointer;
+    }
+
+    .gender-lable {
+        margin-left: 0rem;
+        margin-right: 1rem;
+    }
+
+    /* ****************** Accadmics ************** */
+    .select-subjects {
+        border: 2px solid rgba(0, 0, 0, 0.3);
+        margin-top: 1rem;
+        padding: .5rem;
+    }
+
+    .select-subjects:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    }
+
+    .select-sub-lables {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+    }
+
+    .select-sub-lables span {
+        margin: .2rem;
+        border: 1px solid rgba(0, 0, 0, 0.724);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        padding: .3rem .3rem;
+        font-size: .7rem;
+    }
+
+    .search-lables a {
+        margin: .2rem;
+        border: 1px solid rgba(0, 0, 0, 0.724);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        padding: .3rem .3rem;
+        font-size: .7rem;
+    }
+
+    .select-subjects h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        margin-top: .5rem;
+    }
+
+    /* --------------- Blogs Page -------------- */
+    .blog-cards-container {
+        width: 100%;
+        margin-top: 0rem;
+        /* position: relative; */
+    }
+
+    .blog-cards-container .blog-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.269);
+        margin: .5rem 0rem;
+        padding: 1rem;
+    }
+
+    .blog-cards-container .blog-card:hover {
+        background-color: #b0adad24;
+    }
+
+    .blog-cards-container .blog-card .blog-user-profile {
+        padding: 0rem;
+        margin-bottom: .5rem;
+    }
+
+    .blog-cards-container .blog-card .blog-user-profile img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .blog-head-content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0 0rem;
+        line-height: 1.2rem;
+        font-size: .9rem;
+        border-left: none;
+        border-right: none;
+    }
+
+    .blog-head-content h1 {
+        margin-bottom: .5rem;
+        color: rgb(44, 0, 120);
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .blog-head-content h1:hover {
+        margin-bottom: .5rem;
+        color: rgb(93, 0, 255);
+    }
+
+
+    .blog-accordian-icon {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .blog-accordian-icon span {
+        margin-left: 0rem;
+        font-size: 1.5rem;
+        padding: 0rem .7rem;
+        border-radius: 20rem;
+        transition: all .3s;
+
+    }
+
+    .blog-accordian-icon a.download-btn {
+        margin-left: 0rem;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+
+
+    .blog-main-content {
+        padding: .5rem .5rem;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .blog-main-content h1 {
+        font-size: 1.7rem;
+        border-bottom: 2px solid black;
+        padding-bottom: .2rem;
+        margin-bottom: 1rem;
+    }
+
+    .blog-main-content h2 {
+        font-size: 1.4rem;
+
+    }
+
+    .blog-main-content h3 {
+        font-size: 1.1rem;
+
+    }
+
+    .blog-main-content h4 {
+        font-size: .9rem;
+    }
+
+    .blog-main-content p {
+        font-size: .75rem;
+    }
+
+    .edit-profile-container {
+        display: flex;
+
+    }
+
+
+    /* Add college details page */
+
+    .add-clg-container,
+    .post-accademics-container {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .post-accademics-container form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .add-clg-container h1,
+    .post-accademics-container h1,
+    .post-reviews-inner .h1-div h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .post-reviews-inner .h1-div {
+        text-align: center;
+    }
+
+    .add-clg-container h1 span,
+    .post-accademics-container .h1-div h1 span,
+    .post-reviews-inner .h1-div h1 span {
+        font-size: 2rem;
+        color: red;
+    }
+
+
+    .add-clg-container p {
+        font-size: .92rem;
+    }
+
+    .add-clg-input-container,
+    .post-accademics-input-container {
+        width: 100%;
+        margin-top: .5rem;
+        padding: .8rem;
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.205);
+    }
+
+    .add-clg-input-container label,
+    .post-accademics-input-container label {
+        margin-top: 1rem;
+        margin-bottom: .2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #591a8b;
+    }
+
+    .add-clg-input-container input,
+    .post-accademics-input-container input {
+        padding: .5rem .5rem;
+        font-size: 1rem;
+
+    }
+
+    .add-clg-input-container .add-clg-btn-container,
+    .post-accademics-input-container div {
+        margin: 0 auto;
+    }
+
+    .add-clg-input-container .add-clg-btn-container button,
+    .tag-button-container button,
+    .post-accademics-input-container div button {
+        margin-top: .8rem;
+        padding: .5rem 3rem;
+        font-weight: 500;
+    }
+
+    .add-clg-input-container .add-clg-btn-container button:hover,
+    .post-accademics-input-container div button:hover {
+        background-color: white;
+        color: var(--btngreen);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.313);
+    }
+
+    .post-accademics-input-container .file-input {
+        padding: .5rem .5rem;
+        font-size: 1rem;
+    }
+
+    /* post blogs page */
+    .post-blog-container {
+        width: 100%;
+    }
+
+    .post-blog-container h1 {
+        font-size: 1.5rem;
+
+    }
+
+    .post-blog-container h1 span {
+        font-size: 2rem;
+
+    }
+
+    .post-blog-content-container {
+        width: 100%;
+        padding: .7rem;
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.205);
+    }
+
+    .post-blog-content-container>label {
+        margin-bottom: .2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .post-blog-content-container>input {
+        padding: .5rem .7rem;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .category-radio-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .category-radio-container label {
+        margin: .3rem .5rem;
+        font-size: 1rem;
+    }
+
+    .category-radio-container input[type='radio'] {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .tag-button-container button {
+        margin-top: .5rem;
+        padding: .4rem 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-right: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    .tag-button-container button:hover {
+        background-color: white;
+        color: var(--btngreen);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.313);
+
+    }
+
+    .post-blog-content-container textarea {
+        resize: none;
+        height: 10rem;
+    }
+
+    .post-blog-content-container>button,
+    .post-blog-container>button {
+        padding: .3rem 1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        width: 200px;
+        margin: .5rem auto;
+    }
+
+    .post-blog-container>button.post-now {
+        padding: .3rem 1rem;
+        font-size: 1.2rem;
+        border-radius: .4rem;
+        font-weight: 500;
+        width: 200px;
+        margin: .5rem auto;
+    }
+
+    .post-blog-container>button.post-now:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.313);
+    }
+
+    .post-blog-content-container>h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .post-blog-content-container>h1 span {
+        font-size: 2rem;
+    }
+
+    .blog-preview-container h1 {
+        font-size: 1.3rem;
+        border-bottom: 2px solid black;
+        padding-bottom: 0.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .blog-preview-container h3 {
+        font-size: 1.1rem;
+    }
+
+    .blog-preview-container p {
+        font-size: .92rem;
+    }
+
+    .tags-div {
+        position: relative;
+    }
+
+    .tags-div div {
+        position: absolute;
+        right: 0;
+        top: 0px;
+        display: flex;
+    }
+
+    .tags-div button {
+        padding: .04rem .3rem;
+        font-size: .9rem;
+        font-weight: 300;
+    }
+
+    .tags-div button:hover {
+        background-color: white;
+        color: var(--btngreen);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.313);
+    }
+
+    .tags-div p {
+        width: 90%;
+    }
+
+    /* post reviews */
+    .post-revies-container {
+        width: 100%;
+        padding: .7rem;
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.262);
+        margin-top: .7rem;
+
+    }
+
+    .post-revies-container h1 {
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+
+    .post-revies-container h1 span {
+        font-size: 1.3rem;
+        color: #591a8b;
+    }
+
+    .post-revies-input-container>label {
+        font-size: 1.3rem;
+        color: #591a8b;
+        font-weight: 500;
+        margin-top: .9rem;
+    }
+
+    .post-revies-input-container>input {
+        font-size: 1rem;
+        margin-top: .2rem;
+        padding: .5rem .8rem;
+    }
+
+    .post-revies-input-container>textarea {
+        font-size: 1rem;
+        margin-top: .8rem;
+        padding: .5rem .5rem;
+    }
+
+    .rating>label {
+        font-size: 1.7rem;
+        color: #591a8b;
+        font-weight: 500;
+        margin-top: 2rem;
+    }
+
+    .input-rating-div {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .input-rating-div label {
+        margin-right: .8rem;
+        font-size: 1.2rem;
+    }
+
+    .input-rating-div input {
+        border: 0px;
+        margin-right: .5rem;
+        width: 1rem;
+        height: 1rem;
+        cursor: pointer;
+
+    }
+
+    /* Edit Profile page */
+
+    .edit-profile-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: .8rem auto;
+        padding: .6rem;
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.262);
+
+    }
+
+    .pass-profile-container h1 {
+        padding: 0 2rem;
+        text-align: center;
+        letter-spacing: .1rem;
+        font-size: 1.2rem;
+    }
+
+    .pass-profile-container h1 span {
+        font-size: 1.8rem;
+        color: red;
+
+    }
+
+    .edit-profile .profile-logo-container {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+    .profile-data h1 {
+        font-size: 1.2rem;
+    }
+
+    .profile-data p {
+        font-size: 1rem;
+    }
+
+    .profile-logo-container img {
+        width: 100px;
+        height: 70px;
+    }
+
+    .edit-data-form {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .input-container {
+        padding: .5rem 1rem;
+    }
+
+    .input-container label {
+        font-size: 1.1rem;
+        color: #591a8b;
+        font-weight: 500;
+        margin-bottom: 0rem;
+        margin-top: .5rem;
+    }
+
+    .radio-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+
+    .radio-container label {
+        margin-right: 2rem;
+        font-size: 1.2rem;
+
+
+    }
+
+    .radio-container input {
+        margin-right: .5rem;
+        width: 1rem;
+        height: 1rem;
+
+    }
+
+    .save-first-btn-box {
+        width: 100%;
+    }
+
+    .save-first-btn-box button {
+        padding: .4rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .save-first-btn-box button:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.365);
+    }
+
+    .edit-password {
+        padding: 1rem;
+    }
+
+    .edit-password label {
+        font-size: 1.1rem;
+        color: #591a8b;
+        font-weight: 500;
+        margin-bottom: 0rem;
+        margin-top: .5rem;
+    }
+
+    .logout-from-all {
+        margin: 1.5rem 0;
     }
 
 }
@@ -717,8 +1939,164 @@
 
     .user-about-count {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: repeat(2, 1fr);
+
     }
+
+
+
+    /* ***************************************** SEARCH BOX CONTAINER ************************ */
+    .search-box-container {
+        width: 100%;
+        height: 100%;
+        border: 2px solid rgba(0, 0, 0, 0.3);
+        padding: .5rem;
+    }
+
+    .search-box-img {
+        width: 100%;
+    }
+
+    .search-img {
+        padding: 0rem 0rem;
+        width: 100%;
+        height: 100px;
+    }
+
+    .search-input-box {
+        margin-top: 2rem;
+    }
+
+    .search-box-heading {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        letter-spacing: .1rem;
+    }
+
+    .search-box-heading .search-span span {
+        font-size: 1.5rem;
+    }
+
+    .search-input-box .input-span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .search-input-box .input-span input {
+        width: 70vw;
+        padding: .4rem;
+        font-size: 1rem;
+        border: 1.5px solid rgba(0, 0, 0, 0.724);
+        margin-right: .5rem;
+    }
+
+    .search-input-box .input-span i {
+        padding: .5rem;
+        font-size: 1.2rem;
+        border: 1.5px solid rgba(0, 0, 0, 0.724);
+    }
+
+
+    .search-input-box .input-span input:focus {
+        box-shadow: 0 0 5px rgb(0, 0, 0);
+        border: 1.5px solid rgb(0, 0, 0);
+    }
+
+    .search-result-content {
+        margin-top: 1rem;
+        border: none;
+        padding: 0rem;
+    }
+
+
+    .search-result-content .search-content {
+        height: 40vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        border-radius: 0rem 0.5rem;
+        width: 100%;
+        margin: .5rem auto;
+
+    }
+
+    .search-result-content .search-content:hover {
+        box-shadow: 0 0 5px rgba(0, 26, 255, 0.4);
+    }
+
+
+    .college-img {
+        width: 100%;
+        height: 8.5vh;
+        display: flex;
+        align-items: left;
+        justify-content: flex-start;
+        overflow: auto;
+        margin-top: .5rem;
+
+    }
+
+    .college-img img {
+        padding: .5rem;
+        width: 20%;
+        height: 8vh;
+        margin-left: .5rem;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.386);
+
+    }
+
+    .search-content .college-data {
+        padding: .5rem;
+        text-transform: capitalize;
+        margin-bottom: -25px;
+
+    }
+
+    .college-name-container .college-name {
+        font-size: .9rem;
+    }
+
+    .college-name-container p {
+        font-size: .7rem;
+    }
+
+    .fee-structer:hover {
+        text-decoration: underline;
+    }
+
+    .fee-structer h1 {
+        font-size: .9rem;
+    }
+
+    .fee-structer p {
+        font-size: .7rem;
+    }
+
+    .redirect-college {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .redirect-btn-box br {
+        display: none;
+    }
+
+    .redirect-btn {
+        padding: .5rem 0;
+        width: 100px;
+        border-radius: .4rem;
+        margin: .5rem;
+    }
+
+    .redirect-btn:hover {
+        box-shadow: 0 0 5px rgba(38, 0, 255, 0.427);
+    }
+
 }
 
 

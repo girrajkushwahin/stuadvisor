@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <>
       <div className="footer-container">
-        <p></p>
+        {/* <p></p> */}
         <p className='copyright-pera'>©️ {year} StuAdvisor. All rights reserved | Terms & Conditions</p>
         <Link to='/'><img src={logofooter} alt="stuadvisor" className='footer-img' onClick={() => navData('Home')} /></Link>
       </div>
