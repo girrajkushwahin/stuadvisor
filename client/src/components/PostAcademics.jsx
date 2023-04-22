@@ -7,10 +7,14 @@ const API = 'http://127.0.0.1:8000';
 const PostAcademics = ({ resp }) => {
     const [data, setData] = useState({ title: '', content: '', file: '' });
 
-    const PostAcademics = async url => {
-        const token = localStorage.getItem('jwtoken');
+    const PostAcademics = async (url, formData) => {
         try {
-            const res = await axios.post(url, { data, token });
+            const res = await axios.post(url, formData, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                    id: resp._id
+                }
+            });
             if (res) toast.success(res.data.message, {
                 position: "top-center",
                 autoClose: 3000,
@@ -35,7 +39,8 @@ const PostAcademics = ({ resp }) => {
         }
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = e => {
+        e.preventDefault();
         const { title, content, file } = data;
         if (!title || !content) toast.error('Enter valid data', {
             position: "top-center",
@@ -58,10 +63,13 @@ const PostAcademics = ({ resp }) => {
             theme: "light",
         });
         else {
-            PostAcademics(`${API}/academics`);
+            const formData = new FormData();
+            formData.append('title', data.title);
+            formData.append('content', data.content);
+            formData.append('file', data.file);
+            PostAcademics(`${API}/academics`, formData);
             setData({ title: '', content: '', file: '' });
         }
-
     }
 
     const handleChange = e => {
@@ -76,7 +84,7 @@ const PostAcademics = ({ resp }) => {
                 <div className="h1-div">
                     <h1><span>P</span>ost <span>S</span>tudy <span>M</span>aterial</h1>
                 </div>
-                <form action="">
+                <form onSubmit={handleSubmit} method='POST' encType='multipart/form-data'>
                     <div className="post-accademics-input-container">
                         <label>Enter your name</label>
                         <input name="name" readOnly defaultValue={resp.name} type="text" />
@@ -87,7 +95,7 @@ const PostAcademics = ({ resp }) => {
                         <label>Upload file</label>
                         <input name="file" type="file" onChange={handleChange} className='file-input' />
                         <div>
-                            <button onClick={handleSubmit}>submit</button>
+                            <button type='submit'>submit</button>
                         </div>
                     </div>
                 </form>

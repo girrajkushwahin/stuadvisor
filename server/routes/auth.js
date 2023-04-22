@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const authenticate = require('../middleware/authenticate');
+const upload = require('../middleware/multer');
 
 const Registration = require('../model/userSchema');
 const contactMessage = require('../model/messageSchema');
@@ -12,6 +13,7 @@ const TrendingBlog = require('../model/trendingBlogSchema');
 const PostedBlog = require('../model/postedBlogSchema');
 const Review = require('../model/reviewSchema');
 const News = require('../model/newsSchema');
+const UserUploads = require('../model/uploadSchema');
 const topclg = require('../data/topclg');
 const clgData = require('../data/colleges');
 const branchsem = require('../data/banchsem.json');
@@ -40,6 +42,16 @@ router.get('/news', async (req, res) => {
         const result = await News.find();
         if (result) res.status(200).json(result);
         else res.status(500).json({ message: 'Internal error' });
+    } catch (err) {
+        console.log(err);
+    }
+})
+
+router.get('/academicsposted', async (req, res) => {
+    try {
+        const result = await UserUploads.find();
+        if (result) res.status(201).json(result);
+        else res.status(500).json({ message: 'Error occured fetching the data' });
     } catch (err) {
         console.log(err);
     }
@@ -283,15 +295,18 @@ router.post('/addcollege', (req, res) => {
     }
 })
 
-router.post('/academics', authenticate, (req, res) => {
-    const { title, content, file } = req.body.data;
-    // console.log(req.rootUser.name);
-    // console.log(req.uniqueID);
-    // console.log(title);
-    // console.log(content);
-    if (!title || !content || !file) return res.status(422).json({ message: 'Enter data properly' });
+router.post('/academics', upload.single('file'), async (req, res) => {
+    const { title, content } = req.body;
+    if (!title || !content) return res.status(422).json({ message: 'Enter data properly' });
     else {
-        console.log(file);
+        const user = await Registration.findOne({ _id: req.headers.id });
+        if (user) {
+            const { name, gender } = user;
+            const status = new UserUploads({ title, content, path: req.file.path, name, gender });
+            const resp = status.save();
+            if (resp) res.status(201).json({ message: 'Posted Successfully' });
+            else res.status(500).json({ message: 'Internal Error' });
+        }
     }
 })
 

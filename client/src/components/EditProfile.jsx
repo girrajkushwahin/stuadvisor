@@ -286,11 +286,7 @@ const EditProfile = ({ resp }) => {
             <div className="edit-profile-container">
                 <div className="edit-profile">
                     <div className="profile-logo-container">
-                        {data.gender === "female" ? (
-                            <img src={profileLogo2} alt="girl-img" />
-                        ) : (
-                            <img src={profileLogo} alt="boy-img" />
-                        )}
+                        {data.gender === "female" ? <img src={profileLogo2} alt="girl-img" /> : <img src={profileLogo} alt="boy-img" />}
                         <div className="profile-data">
                             <h1>{data.name}</h1>
                             <p>Registered User</p>
@@ -348,19 +344,18 @@ const EditProfile = ({ resp }) => {
                     </div>
                     <div className="radio-container">
                         <label>Edit Gender : </label>
-                        {item2.map((value, indx) => (
-                            <div key={indx}>
-                                <input
-                                    type="radio"
-                                    name="gender"
-                                    id={value.id}
-                                    value={value.val}
-                                    checked={value.check}
-                                    onChange={value.inputData}
-                                />
-                                <label htmlFor={value.for}>{value.data}</label>
-                            </div>
-                        ))}
+                        {item2.map((value, indx) => <div key={indx}>
+                            <input
+                                type="radio"
+                                name="gender"
+                                id={value.id}
+                                value={value.val}
+                                checked={value.check}
+                                onChange={value.inputData}
+                            />
+                            <label htmlFor={value.for}>{value.data}</label>
+                        </div>
+                        )}
                     </div>
                     <div className="save-first-btn-box">
                         <button onClick={handleProfile}>Save Info</button>

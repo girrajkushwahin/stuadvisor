@@ -11,6 +11,8 @@ const NavBar = () => {
     const [screenSize, getDimension] = useState({
         dynamicWidth: window.innerWidth,
     });
+    const [search, setSearch] = useState('');
+
     const navToggle = () => {
         if (toggle === false) setToggle(true);
         else setToggle(false);
@@ -24,7 +26,6 @@ const NavBar = () => {
 
     useEffect(() => {
         window.addEventListener('resize', setDimension);
-
         return (() => {
             window.removeEventListener('resize', setDimension);
         })
@@ -37,8 +38,8 @@ const NavBar = () => {
                 {toggle === false ? <NavToggle toggle={navToggle} data='mid-link' /> : <NavToggle toggle={navToggle} data='mid-link show' />}
                 <div className="left-nav">
                     <div className="search-box">
-                        <input type="text" placeholder='Search ' className='nav-search-input' />
-                        <button className='search-btn'><i className="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="text" value={search} placeholder='Search' onChange={e => setSearch(e.target.value.trimStart())} className='nav-search-input' />
+                        <button className='search-btn' onClick={() => window.find(search)}><i className="fa-solid fa-magnifying-glass"></i></button>
                     </div>
                     {toggle === false ? <div className="humberger-icon-nav"><i className="fa-solid fa-bars" id="nav-toggle" onClick={navToggle}></i></div> : <div className="humberger-icon-nav"  ><i className="fa-solid fa-xmark" id="nav-toggle" onClick={navToggle}></i></div>}
                 </div>
