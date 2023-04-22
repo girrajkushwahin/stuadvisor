@@ -88,7 +88,6 @@ const PostReview = ({ resp }) => {
                 pauseOnHover
                 theme="light"
             />
-
         </>
     )
 }

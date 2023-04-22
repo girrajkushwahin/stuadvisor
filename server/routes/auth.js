@@ -20,6 +20,7 @@ const branchsem = require('../data/banchsem.json');
 const subjects = require('../data/subjects.json');
 const units = require('../data/units.json');
 const academicsData = [branchsem, subjects, units];
+const API = 'http://127.0.0.1:8000';
 
 router.get('/', (req, res) => {
     res.send('HomePage - Express');
@@ -302,7 +303,7 @@ router.post('/academics', upload.single('file'), async (req, res) => {
         const user = await Registration.findOne({ _id: req.headers.id });
         if (user) {
             const { name, gender } = user;
-            const status = new UserUploads({ title, content, path: req.file.path, name, gender });
+            const status = new UserUploads({ title, content, path: `${API}${req.file.path.slice(7)}`, name, gender });
             const resp = status.save();
             if (resp) res.status(201).json({ message: 'Posted Successfully' });
             else res.status(500).json({ message: 'Internal Error' });
