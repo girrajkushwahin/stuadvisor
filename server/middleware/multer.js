@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        const dest = `./data/uploads/${req.headers.id}`;
+        const dest = `./uploads/${req.headers.id}`;
         fs.access(dest, err => {
             if (err) return fs.mkdir(dest, err => cb(err, dest));
             else cb(null, dest);
