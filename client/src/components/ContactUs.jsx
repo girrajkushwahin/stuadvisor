@@ -88,7 +88,7 @@ const ContactUs = () => {
             <a href="https://www.instagram.com/" rel="noreferrer" target="_blank"><i className="fa-brands fa-instagram"></i></a>
             <a href="https://facebook.com/" rel="noreferrer" target="_blank"><i className="fa-brands fa-facebook"></i></a>
             <a href="https://twitter.com" rel="noreferrer" target="_blank"><i className="fa-brands fa-twitter"></i></a>
-            <a href="https://github.com/" rel="noreferrer" target="_blank"><i className="fa-brands fa-github"></i></a>
+            <a href="https://github.com/rootkaalsec/stuadvisor" rel="noreferrer" target="_blank"><i className="fa-brands fa-github"></i></a>
           </div>
         </div>
         <hr />
