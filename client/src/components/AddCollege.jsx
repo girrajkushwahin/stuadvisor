@@ -20,7 +20,7 @@ const AddCollege = () => {
             const res = await axios.post(url, data);
             if (res) toast.success(res.data.message, {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -31,7 +31,7 @@ const AddCollege = () => {
         } catch (err) {
             toast.error(err.response.data.message, {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -46,7 +46,7 @@ const AddCollege = () => {
         const { college, course, fee, city, state, logo, link } = data;
         if (!college || !course || !fee || !city || !state || !logo || !link) toast.error('Enter valid data', {
             position: "top-center",
-            autoClose: 3000,
+            autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -76,7 +76,7 @@ const AddCollege = () => {
             </div>
             <ToastContainer
                 position="top-center"
-                autoClose={3000}
+                autoClose={2000}
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick

@@ -29,7 +29,7 @@ const AcademicsComp = ({ ph, item1, item2, item3, item4, item5, heading, dataAPI
       setToggle({ one: true, two: '', three: '', four: '' });
     } else toast.error('Data not found', {
       position: "top-center",
-      autoClose: 3000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -100,7 +100,7 @@ const AcademicsComp = ({ ph, item1, item2, item3, item4, item5, heading, dataAPI
       </div>
       <ToastContainer
         position="top-center"
-        autoClose={3000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

@@ -17,7 +17,7 @@ const PostReview = ({ resp }) => {
             const res = await axios.post(url, { data, type: 'post' });
             if (res) toast.success(res.data.message, {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -28,7 +28,7 @@ const PostReview = ({ resp }) => {
         } catch (err) {
             toast.error(err.response.data.message, {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -44,7 +44,6 @@ const PostReview = ({ resp }) => {
         setData({ ...data, review: '', stars: '' });
     }
 
-    // const item = [{ for: '1star', data: '1 star', id: '1star', val: '1 star', check: data.stars === '1 star', inputData: handleInput }, { for: '2star', data: '2 stars', id: '2star', val: '2 stars', check: data.stars === '2 stars', inputData: handleInput }, { for: '3star', data: '3 stars', id: '3star', val: '3 stars', check: data.stars === '3 stars', inputData: handleInput }, { for: '4star', data: '4 stars', id: '4star', val: '4 stars', check: data.stars === '4 stars', inputData: handleInput }, { for: '5star', data: '5 stars', id: '5star', val: '5 stars', check: data.stars === '5 stars', inputData: handleInput }];
     const item = [{ for: '1star', data: '⭐', id: '1star', val: '1 star', check: data.stars === '1 star', inputData: handleInput }, { for: '2star', data: '⭐⭐', id: '2star', val: '2 stars', check: data.stars === '2 stars', inputData: handleInput }, { for: '3star', data: '⭐⭐⭐', id: '3star', val: '3 stars', check: data.stars === '3 stars', inputData: handleInput }, { for: '4star', data: '⭐⭐⭐⭐', id: '4star', val: '4 stars', check: data.stars === '4 stars', inputData: handleInput }, { for: '5star', data: '⭐⭐⭐⭐⭐', id: '5star', val: '5 stars', check: data.stars === '5 stars', inputData: handleInput }];
 
     return (
@@ -78,7 +77,7 @@ const PostReview = ({ resp }) => {
             </div>
             <ToastContainer
                 position="top-center"
-                autoClose={3000}
+                autoClose={2000}
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick

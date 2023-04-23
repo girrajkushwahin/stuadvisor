@@ -58,7 +58,7 @@ const PostBlogs = ({ resp }) => {
             if (data === 'h1') {
                 if (!data2.newheading) toast.error('Enter valid data', {
                     position: "top-center",
-                    autoClose: 3000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -71,7 +71,7 @@ const PostBlogs = ({ resp }) => {
             else if (data === 'h3') {
                 if (!data2.newsubheading) toast.error('Enter valid data', {
                     position: "top-center",
-                    autoClose: 3000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -84,7 +84,7 @@ const PostBlogs = ({ resp }) => {
             else {
                 if (!data2.para) toast.error('Enter valid data', {
                     position: "top-center",
-                    autoClose: 3000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -98,7 +98,7 @@ const PostBlogs = ({ resp }) => {
             handleInputField({ ...InputField, field1: '' });
         } else toast.error('Blog submitted already', {
             position: "top-center",
-            autoClose: 3000,
+            autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -128,7 +128,7 @@ const PostBlogs = ({ resp }) => {
         if (!heading || !blog || !category) {
             toast.error('Enter valid data', {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -143,7 +143,7 @@ const PostBlogs = ({ resp }) => {
                 const res = await axios.post(url, { type: 'post', data });
                 if (res) toast.success(res.data.message, {
                     position: "top-center",
-                    autoClose: 3000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -154,7 +154,7 @@ const PostBlogs = ({ resp }) => {
             } catch (err) {
                 toast.error(err.response.data.message, {
                     position: "top-center",
-                    autoClose: 3000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -239,7 +239,7 @@ const PostBlogs = ({ resp }) => {
             </div>
             <ToastContainer
                 position="top-center"
-                autoClose={3000}
+                autoClose={2000}
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick

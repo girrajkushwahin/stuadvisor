@@ -17,7 +17,7 @@ const PostAcademics = ({ resp }) => {
             });
             if (res) toast.success(res.data.message, {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -28,7 +28,7 @@ const PostAcademics = ({ resp }) => {
         } catch (err) {
             toast.error(err.response.data.message, {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -44,7 +44,7 @@ const PostAcademics = ({ resp }) => {
         const { title, content, file } = data;
         if (!title || !content) toast.error('Enter valid data', {
             position: "top-center",
-            autoClose: 3000,
+            autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -54,7 +54,7 @@ const PostAcademics = ({ resp }) => {
         });
         else if (!file) toast.error('Please select file', {
             position: "top-center",
-            autoClose: 3000,
+            autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -102,7 +102,7 @@ const PostAcademics = ({ resp }) => {
             </div>
             <ToastContainer
                 position="top-center"
-                autoClose={3000}
+                autoClose={2000}
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick

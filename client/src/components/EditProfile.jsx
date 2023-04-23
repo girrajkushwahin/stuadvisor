@@ -41,7 +41,7 @@ const EditProfile = ({ resp }) => {
             if (res)
                 toast.success(res.data.message, {
                     position: "top-center",
-                    autoClose: 3000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -52,7 +52,7 @@ const EditProfile = ({ resp }) => {
         } catch (err) {
             toast.error(err.response.data.message, {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -70,7 +70,7 @@ const EditProfile = ({ resp }) => {
             if (res)
                 toast.success(res.data.message, {
                     position: "top-center",
-                    autoClose: 3000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -81,7 +81,7 @@ const EditProfile = ({ resp }) => {
         } catch (err) {
             toast.error(err.response.data.message, {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -153,7 +153,7 @@ const EditProfile = ({ resp }) => {
             )
                 toast.error("Enter valid data", {
                     position: "top-center",
-                    autoClose: 3000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -165,7 +165,7 @@ const EditProfile = ({ resp }) => {
         } else
             toast.error("Enter valid data", {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -185,7 +185,7 @@ const EditProfile = ({ resp }) => {
             )
                 toast.error("Enter valid data", {
                     position: "top-center",
-                    autoClose: 3000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -196,7 +196,7 @@ const EditProfile = ({ resp }) => {
             else if (newpass !== cnewpass)
                 toast.error("Password not matching", {
                     position: "top-center",
-                    autoClose: 3000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -208,7 +208,7 @@ const EditProfile = ({ resp }) => {
         } else
             toast.error("Enter valid data", {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -228,7 +228,7 @@ const EditProfile = ({ resp }) => {
         } catch (err) {
             toast.error(err.response.data.message, {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -406,7 +406,7 @@ const EditProfile = ({ resp }) => {
             </div>
             <ToastContainer
                 position="top-center"
-                autoClose={3000}
+                autoClose={2000}
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick

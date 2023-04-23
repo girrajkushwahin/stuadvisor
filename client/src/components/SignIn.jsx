@@ -52,7 +52,7 @@ const SignIn = () => {
         }, 2000);
         toast.success('Signed in', {
           position: "top-center",
-          autoClose: 2000,
+          autoClose: 1000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -64,7 +64,7 @@ const SignIn = () => {
     } catch (err) {
       toast.error('Invalid Credentials', {
         position: "top-center",
-        autoClose: 3000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -118,7 +118,7 @@ const SignIn = () => {
       </div>
       <ToastContainer
         position="top-center"
-        autoClose={3000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

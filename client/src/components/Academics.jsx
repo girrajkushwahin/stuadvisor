@@ -72,7 +72,7 @@ const Academics = () => {
       setToggle({ one: true, two: '', three: '', four: '' });
     } else toast.error('Data not found', {
       position: "top-center",
-      autoClose: 3000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -155,7 +155,7 @@ const Academics = () => {
       </div>
       <ToastContainer
         position="top-center"
-        autoClose={3000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

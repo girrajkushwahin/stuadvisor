@@ -21,7 +21,7 @@ const ContactUs = () => {
         setSendMsg({ ...sendMsg, message: '' });
         toast.success(res.data.message, {
           position: "top-center",
-          autoClose: 3000,
+          autoClose: 1000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -33,7 +33,7 @@ const ContactUs = () => {
     } catch (err) {
       toast.error(err.response.data.message, {
         position: "top-center",
-        autoClose: 3000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -48,7 +48,7 @@ const ContactUs = () => {
     const { name, email, message } = sendMsg;
     if (!name || !email || !message) toast.error('Fill properly', {
       position: "top-center",
-      autoClose: 3000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -82,7 +82,7 @@ const ContactUs = () => {
           <div className="company-details">
             <span><i className="fa-regular fa-envelope"></i><h2>Email</h2><p>contact@stuadvisor.com</p></span>
             <span><i className="fa-solid fa-phone"></i><h2>Phone</h2><p>+91 9876543210</p></span>
-            <span><i className="fa-solid fa-location-dot"></i><h2>Address</h2><p>Indrapuri, Bhopal (M.P.) </p></span>
+            <span><i className="fa-solid fa-location-dot"></i><h2>Address</h2><p>Bhopal (M.P.) , India </p></span>
           </div>
           <div className="social-icons-contact">
             <a href="https://www.instagram.com/" rel="noreferrer" target="_blank"><i className="fa-brands fa-instagram"></i></a>
@@ -128,7 +128,7 @@ const ContactUs = () => {
       </div>
       <ToastContainer
         position="top-center"
-        autoClose={3000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
