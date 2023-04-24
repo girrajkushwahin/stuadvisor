@@ -34,7 +34,7 @@ If you face any problem while doing this, then you can take help from google, yo
 
 1. Open command prompt inside server directory and run the express server by using following command - 'nodemon app.js'. This will create liveserver for our application.
 
-2. Now open the 'routes' directory available inside server directory and open 'auth.js' file with VS Code and paste the code i am giving in next point before 'module.exports = router' line (at the end of file) and save it (ctrl + s). Don't try to save it more than one time otherwise it will create duplicate data inside our database due to liveserver and then delete the code you pasted there and again save the file. This step is done one time only.
+2. Now open the 'routes' directory available inside server directory and open 'auth.js' file with VS Code and paste the code i am giving in next point. Before 'module.exports = router' line (at the end of file) and save it (ctrl + s). Don't try to save it more than one time otherwise it will create duplicate data inside our database due to liveserver. Now, delete the code you pasted there and again save the file. This step is done one time only.
 
 3. The code is given below for adding data in database - (Open downloaded README.md file for getting proper code)
 
@@ -176,7 +176,7 @@ UserUploads.insertMany([{ title: 'unit 1 Basic Computer Engineering', content: '
 # Run the project -
 
 1. For running the project, make sure that your server is running which you have done in previous step for running the server.
-2. Now, open command prompt inside client directory and enter this command to run the project - 'npm start'. It will take some time and then browser window will open for interacting with the project.
+2. Now, open command prompt inside client directory and enter this command to run the project - 'npm start'. It will take some time and then browser window will open for interacting with the project. This can take some time so wait for browser to open the project.
 
 
 => This file will be updated soon to give info about back-end part in which i will tell that how can you add more data in the project...

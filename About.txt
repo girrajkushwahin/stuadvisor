@@ -1,7 +1,24 @@
-Developers - 
+=> Developers - 
 
-1. Girraj Kushwah (github - @rootkaalsec )
+1. Girraj Kushwah ( github - @rootkaalsec )
     (React, Express, Node, MongoDB)
 
-2. Gopal Kushwah (github - @gopalkushwah )
+2. Gopal Kushwah ( github - @gopalkushwah )
       (HTML, CSS & MediaQueries)
+
+
+=> Hepled to develop this project -
+
+1. Binamra Lamsal Sir ( github - @binamralamsal )
+    (helped to solve Technical Problems)
+
+2. Vipin Gourkhede Sir (Integration IT Services, Bhopal)
+     (helped to solve Technical Problems)
+
+3. Susheel Gupta Sir (Assistant Professor at TITR, Bhopal)
+(Provided theoretical help and gave ideas while development )
+
+
+=> And great thanks to -
+
+Google, Stackoverflow, youtube, medium, freecodecamp...
