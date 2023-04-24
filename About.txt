@@ -1,0 +1,7 @@
+Developers - 
+
+1. Girraj Kushwah (github - @rootkaalsec )
+    (React, Express, Node, MongoDB)
+
+2. Gopal Kushwah (github - @gopalkushwah )
+      (HTML, CSS & MediaQueries)
