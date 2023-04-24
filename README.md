@@ -36,7 +36,7 @@ If you face any problem while doing this, then you can take help from google, yo
 
 2. Now open the 'routes' directory available inside server directory and open 'auth.js' file with VS Code and paste the code i am giving in next point before 'module.exports = router' line (at the end of file) and save it (ctrl + s). Don't try to save it more than one time otherwise it will create duplicate data inside our database due to liveserver and then delete the code you pasted there and again save the file. This step is done one time only.
 
-3. The code is given below for adding data in database -
+3. The code is given below for adding data in database - (Open downloaded README.md file for getting proper code)
 
 *************************************************************************************************************************************************************************
 
