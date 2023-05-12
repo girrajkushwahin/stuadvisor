@@ -177,6 +177,3 @@ UserUploads.insertMany([{ title: 'unit 1 Basic Computer Engineering', content: '
 
 1. For running the project, make sure that your server is running which you have done in previous step for running the server.
 2. Now, open command prompt inside client directory and enter this command to run the project - 'npm start'. It will take some time and then browser window will open for interacting with the project. This can take some time so wait for browser to open the project.
-
-
-=> This file will be updated soon to give info about back-end part in which i will tell that how can you add more data in the project...
