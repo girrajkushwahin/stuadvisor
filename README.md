@@ -1,7 +1,7 @@
 ### [MIT License](LICENSE)
 
 
-# Clone this repo using git or download zip from this repo (https://github.com/rootkaalsec/stuadvisor) -
+# Clone this repo using git or download zip from this repo (https://github.com/cybersecboy/stuadvisor) -
 
 You can download zip from here and then extract zip in your system or you can clone this repo if you have git installed in your Computer.
 
