@@ -7,7 +7,7 @@ import SignUp from './SignUp';
 import SearchBlog from './SearchBlog';
 import TrendingBlogs from './TrendingBlogs';
 import DataPosted2 from './DataPosted2';
-const API = 'http://127.0.0.1:8000';
+const API = process.env.REACT_APP_API;
 
 const Blogs = () => {
   const { state } = useContext(SiteContext);

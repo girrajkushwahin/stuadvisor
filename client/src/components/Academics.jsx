@@ -9,7 +9,7 @@ import SignUp from './SignUp';
 import AcademicsComp from './AcademicsComp';
 import AcademicsComp2 from './AcademicsComp2';
 import DataPosted from './DataPosted';
-const API = 'http://127.0.0.1:8000';
+const API = process.env.REACT_APP_API;
 
 const Academics = () => {
   const { state } = useContext(SiteContext);

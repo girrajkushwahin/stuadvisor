@@ -5,7 +5,7 @@ import profileLogo from "../images/boy-profile.png";
 import profileLogo2 from "../images/girl-profile.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const API = "http://127.0.0.1:8000";
+const API = process.env.REACT_APP_API;
 
 const EditProfile = ({ resp }) => {
     const [data, getData] = useState({

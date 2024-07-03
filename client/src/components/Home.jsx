@@ -9,7 +9,7 @@ import News from './News';
 import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 import Reviews from './Reviews';
-const API = 'http://127.0.0.1:8000';
+const API = process.env.REACT_APP_API;
 
 const Home = () => {
   const { state } = useContext(SiteContext);

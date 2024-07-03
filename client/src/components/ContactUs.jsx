@@ -4,7 +4,7 @@ import { Carousel } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { contactSlider } from './Data';
-const API = 'http://127.0.0.1:8000';
+const API = process.env.REACT_APP_API;
 
 const ContactUs = () => {
   const [sendMsg, setSendMsg] = useState({ name: '', email: '', message: '' });

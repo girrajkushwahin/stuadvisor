@@ -8,7 +8,7 @@ import PostBlogs from './PostBlogs';
 import PostReview from './PostReview';
 import AddCollege from './AddCollege';
 import EditProfile from './EditProfile';
-const API = 'http://127.0.0.1:8000';
+const API = process.env.REACT_APP_API;
 
 const UserAccount = () => {
   const navData = useContext(Nav2Data);

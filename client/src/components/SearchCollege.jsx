@@ -7,7 +7,7 @@ import SignUp from './SignUp';
 import SearchClg from './SearchClg';
 import TopClg from './TopClg';
 import SearchClg2 from './SearchClg2';
-const API = 'http://127.0.0.1:8000';
+const API = process.env.REACT_APP_API;
 
 const SearchCollege = () => {
   const { state } = useContext(SiteContext);
