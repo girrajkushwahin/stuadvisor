@@ -7,7 +7,7 @@ const DataPosted2 = ({ data }) => {
     <>
       <div className="trending-blog-container">
         <div className="blog-cards-container">
-          {data.map((elem, indx) => <Blogs2 {...elem} key={indx} />)}
+          {data && data.map((elem, indx) => <Blogs2 {...elem} key={indx} />)}
         </div>
       </div>
     </>

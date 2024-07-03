@@ -7,7 +7,7 @@ const DataPosted = ({ resp }) => {
     <>
       <div className="trending-blog-container">
         <div className="blog-cards-container">
-          {resp.map((val, indx) => <div className="blog-card" key={indx}>
+          {resp && resp.map((val, indx) => <div className="blog-card" key={indx}>
             <div className="blog-user-profile">
               {val.gender === 'female' ? <img src={girlProfile} alt="girl profile" /> : <img src={boyProfile} alt="girl profile" />}
             </div>
