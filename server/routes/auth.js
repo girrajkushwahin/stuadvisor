@@ -175,7 +175,7 @@ router.post('/updateprofile', authenticate, async (req, res) => {
     const { name, email, number, username, gender } = req.body.data;
     if (!name || !email || !number || !username || !gender) return res.status(422).json({ message: 'Enter data properly' });
     const uniqueID = req.uniqueID;
-    const secretKey = 'mynameisgirrajtechnicalakarootkaalsec';
+    const secretKey = process.env.SECRET;
     let mailToken, numToken, usrnameToken, existMail, existNum, existUsrname;
 
     try {
