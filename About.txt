@@ -1,6 +1,6 @@
 => Developers - 
 
-1. Girraj Kushwah ( github - @cybersecboy )
+1. Girraj Kushwah ( github - @girrajkushwahind )
     (React, Express, Node, MongoDB)
 
 2. Gopal Kushwah ( github - @gopalkushwah )
